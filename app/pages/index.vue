@@ -118,4 +118,5 @@ const { t } = useI18n();
       </div>
     </section>
   </main>
+  <p>&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
 </template>
