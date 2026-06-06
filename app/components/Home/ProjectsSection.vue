@@ -27,9 +27,11 @@ const projects = computed(
 
     <div class="grid gap-4 lg:grid-cols-3">
       <article
-        v-for="project in projects"
+        v-for="(project, index) in projects"
         :key="project.title"
+        data-card
         class="group flex h-full flex-col justify-between rounded-[1.75rem] border border-border-default bg-surface/70 p-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        :data-delay="index * 120"
       >
         <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between gap-3">

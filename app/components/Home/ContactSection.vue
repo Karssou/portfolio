@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { Icon } from "@iconify/vue";
 import { useClipboard } from "@vueuse/core";
 
@@ -21,6 +21,8 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
   copiedDuring: 1500,
   legacy: true,
 });
+
+const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
 </script>
 
 <template>
@@ -33,7 +35,9 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
 
     <div class="grid gap-4 sm:grid-cols-2">
       <button
+        data-card
         class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        data-delay="60"
         @click="emailCopy()"
       >
         <Icon
@@ -51,7 +55,9 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
       </button>
 
       <button
+        data-card
         class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        data-delay="130"
         @click="phoneCopy()"
       >
         <Icon icon="material-symbols:call" class="size-6 text-primary" />
@@ -68,7 +74,9 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
       <NuxtLink
         :to="github"
         target="_blank"
+        data-card
         class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        data-delay="200"
       >
         <Icon icon="mdi:github" class="size-6 text-primary" />
         <span class="flex flex-col">
@@ -84,7 +92,9 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
       <NuxtLink
         :to="linkedin"
         target="_blank"
+        data-card
         class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        data-delay="270"
       >
         <Icon icon="mdi:linkedin" class="size-6 text-primary" />
         <span class="flex flex-col">
@@ -96,7 +106,9 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
       </NuxtLink>
 
       <div
+        data-card
         class="sm:col-span-2 rounded-[1.75rem] border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-lg backdrop-blur-xl"
+        data-delay="340"
       >
         <div
           class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
@@ -108,10 +120,10 @@ const { copy: phoneCopy, copied: phoneCopied } = useClipboard({
               {{ t("contact.ctaTitle") }}
             </h3>
             <p class="mt-2 max-w-xl font-sora text-sm leading-7 text-muted">
-              {{ tm("contact.ctaCopy")[0] }}
+              {{ contactCtaCopy[0] }}
             </p>
             <p class="mt-2 max-w-xl font-sora text-sm leading-7 text-muted">
-              {{ tm("contact.ctaCopy")[1] }}
+              {{ contactCtaCopy[1] }}
             </p>
           </div>
 

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 useSeoMeta({
   title: "Alexandre Larue | Portfolio",
   description:
@@ -6,15 +8,20 @@ useSeoMeta({
 });
 
 const { t } = useI18n();
+const pageRoot = ref<HTMLElement | null>(null);
+
+usePortfolioMotion(pageRoot);
 </script>
 
 <template>
-  <main class="relative overflow-x-hidden pb-36">
+  <main ref="pageRoot" class="relative overflow-x-hidden pb-36">
     <div class="pointer-events-none absolute inset-0 -z-10">
       <div
+        data-orb
         class="absolute left-0 top-0 h-72 w-72 -translate-x-1/3 rounded-full bg-primary/10 blur-3xl"
       />
       <div
+        data-orb
         class="absolute bottom-24 right-0 h-80 w-80 translate-x-1/3 rounded-full bg-primary/10 blur-3xl"
       />
     </div>
@@ -82,13 +89,13 @@ const { t } = useI18n();
     </section>
 
     <section id="about" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-7xl" data-section>
         <HomeAboutSection />
       </div>
     </section>
 
     <section id="skills" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-7xl" data-section>
         <HomeSectionHeading
           kicker="Skills"
           :title="$t('navbar.skills')"
@@ -101,7 +108,7 @@ const { t } = useI18n();
     </section>
 
     <section id="education" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-7xl" data-section>
         <div class="grid gap-8">
           <SkillsEducation />
           <SkillsLanguage />
@@ -110,13 +117,13 @@ const { t } = useI18n();
     </section>
 
     <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-7xl" data-section>
         <HomeProjectsSection />
       </div>
     </section>
 
     <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl">
+      <div class="mx-auto max-w-7xl" data-section>
         <HomeContactSection />
       </div>
     </section>

@@ -34,6 +34,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
     <div class="relative flex flex-col gap-8">
       <div class="flex flex-col gap-4">
         <span
+          data-hero="eyebrow"
           class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm font-semibold text-primary"
         >
           <span class="size-2 rounded-full bg-primary" />
@@ -41,6 +42,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         </span>
 
         <h1
+          data-hero="title"
           class="max-w-4xl font-['Share Tech'] text-5xl font-bold uppercase tracking-tight sm:text-7xl lg:text-8xl"
         >
           Alexandre <br />
@@ -48,6 +50,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         </h1>
 
         <p
+          data-hero="tagline"
           class="max-w-2xl font-sora text-base leading-7 text-muted sm:text-lg"
         >
           {{ t("mainTitle.tagline") }}
@@ -56,6 +59,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         <div class="flex flex-wrap gap-3 pt-2">
           <NuxtLink
             to="#projects"
+            data-hero="cta"
             class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
           >
             {{ t("mainTitle.ctaProjects") }}
@@ -69,6 +73,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
 
       <div class="grid gap-4 sm:grid-cols-2">
         <button
+          data-hero="contact"
           class="group flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
           @click="emailCopy()"
         >
@@ -77,13 +82,14 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
             class="size-6 text-primary"
           />
           <span
-            class="font-sora text-ellipsis max-w-[80%] text-sm sm:text-base sm:"
+            class="font-sora max-w-[80%] text-ellipsis text-sm sm:text-base"
           >
             {{ emailCopied ? "Copié !" : email }}
           </span>
         </button>
 
         <button
+          data-hero="contact"
           class="group flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
           @click="phoneCopy()"
         >
@@ -99,6 +105,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         <NuxtLink
           :to="github"
           target="_blank"
+          data-hero="contact"
           class="flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
         >
           <Icon icon="mdi:github" class="size-6 text-primary" />
@@ -108,6 +115,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         <NuxtLink
           :to="linkedin"
           target="_blank"
+          data-hero="contact"
           class="flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
         >
           <Icon icon="mdi:linkedin" class="size-6 text-primary" />

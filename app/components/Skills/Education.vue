@@ -49,9 +49,11 @@ const scrollDown = () => {
       class="flex flex-col gap-6 overflow-y-auto scroll-smooth pr-1 no-scrollbar"
     >
       <article
-        v-for="item in educationItems"
+        v-for="(item, index) in educationItems"
         :key="`${item.school}-${item.date}`"
+        data-card
         class="flex gap-4 rounded-2xl border border-border-default bg-bg-hovered/50 p-4"
+        :data-delay="index * 90"
       >
         <div class="flex pt-2">
           <div class="size-2 rounded-full bg-primary"></div>

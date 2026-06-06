@@ -48,9 +48,11 @@ const languageItems = computed(() => tm("language.items") as LanguageEntry[]);
 
       <div class="grid gap-4 lg:grid-cols-3">
         <article
-          v-for="language in languageItems"
+          v-for="(language, index) in languageItems"
           :key="language.name"
+          data-card
           class="group rounded-3xl border border-border-default bg-bg-hovered/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:bg-bg-hovered/70"
+          :data-delay="index * 110"
         >
           <div class="flex items-start justify-between gap-4">
             <div class="flex flex-col gap-1">

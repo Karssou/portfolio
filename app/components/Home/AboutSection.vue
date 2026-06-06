@@ -42,7 +42,9 @@ const highlights = computed(() => tm("about.highlights") as string[]);
       <article
         v-for="(card, index) in cards"
         :key="card.title"
+        data-card
         class="rounded-[1.75rem] border border-border-default bg-surface/70 p-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered sm:col-span-1"
+        :data-delay="index * 80"
       >
         <Icon :icon="card.icon" class="size-8 text-primary" />
         <h3
@@ -51,12 +53,14 @@ const highlights = computed(() => tm("about.highlights") as string[]);
           {{ card.title }}
         </h3>
         <p class="mt-3 font-sora text-sm leading-6 text-muted">
-          {{ aboutCards[index].description }}
+          {{ aboutCards[index]?.description ?? "" }}
         </p>
       </article>
 
       <article
+        data-card
         class="rounded-[1.75rem] border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-lg backdrop-blur-xl sm:col-span-2"
+        data-delay="420"
       >
         <div class="flex flex-col gap-4">
           <p

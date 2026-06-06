@@ -65,9 +65,11 @@ const skills: Skill[] = [
   <section class="w-full max-w-5xl mx-auto px-4">
     <div class="relative grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
       <div
-        v-for="skill in skills"
+        v-for="(skill, index) in skills"
         :key="skill.name"
+        data-card
         class="group relative border border-border-default rounded-xl p-4 bg-surface transition-all duration-300 shadow-lg hover:border-primary hover:-translate-y-1 hover:shadow-2xl"
+        :data-delay="index * 70"
       >
         <div class="mb-3">
           <Icon

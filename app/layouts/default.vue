@@ -45,7 +45,7 @@ const closeMobileMenu = () => {
 };
 
 const selectLocale = async (code: string) => {
-  await setLocale(code);
+  await setLocale(code as "en" | "fr");
   closeMobileMenu();
 };
 </script>
