@@ -13,9 +13,9 @@ const current = computed(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative z-50">
     <button
-      class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-border-default text-default transition-all duration-300 hover:bg-white/20"
+      class="flex items-center gap-2 rounded-full border border-border-default bg-surface/85 px-4 py-2 text-default backdrop-blur-xl transition-all duration-300 hover:bg-surface"
       @click="open = !open"
     >
       <span class="font-semibold">{{ current?.code.toUpperCase() }}</span>
@@ -30,12 +30,12 @@ const current = computed(() => {
     <Transition name="dropdown">
       <div
         v-if="open"
-        class="absolute mt-2 w-full flex flex-col gap-1 p-1 rounded-2xl bg-white/10 backdrop-blur-xl border border-border-default shadow-2xl overflow-hidden"
+        class="absolute left-0 top-full z-50 mt-2 flex min-w-44 flex-col gap-1 rounded-2xl border border-border-default bg-surface/95 p-1 text-default shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-xl"
       >
         <div
           v-for="lang in locales"
           :key="lang.code"
-          class="flex items-center justify-between px-3 py-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-bg-hovered"
+          class="flex cursor-pointer items-center justify-between rounded-full px-3 py-2 transition-all duration-300 hover:bg-bg-hovered"
           @click="
             setLocale(lang.code);
             open = false;

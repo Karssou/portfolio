@@ -1,23 +1,23 @@
 {
   "title": "A propos",
-  "lead": "Je construis des interfaces lisibles et des parcours fluides, en gardant une architecture simple à maintenir.",
+  "lead": "J'associe une intégration front-end soignée à des architectures back-end modulaires pour concevoir des applications viables, évolutives et agréables à utiliser.",
   "cards": [
     {
-      "description": "Je pense les composants comme des blocs réutilisables, avec une hiérarchie visuelle claire et des interactions discrètes."
+      "description": "Développement d'interfaces réactives et modulaires en TypeScript avec Vue 3 et Nuxt 4. Priorité au respect des maquettes, à la fluidité des transitions et à l'optimisation du bundle client."
     },
     {
-      "description": "J'aime relier le front à des services propres, pour que la page raconte quelque chose de concret au lieu de juste empiler des effets."
+      "description": "Conception d'API REST robustes et sécurisées avec AdonisJS. Gestion des bases de données relationnelles, modélisation des données et logique métier optimisée pour la performance."
     },
     {
-      "description": "Je travaille le détail UI pour que le portfolio reste vivant, lisible sur mobile et agréable à parcourir jusqu'en bas."
+      "description": "Conception de maquettes modernes axées sur l’expérience utilisateur. Intégration efficace et rigoureuse avec Tailwind CSS v4 en exploitant la puissance des variables CSS natives."
     },
     {
-      "description": "Je configure des environnements serveurs robustes et sécurisés, tout en optimisant le référencement pour que l'app soit aussi performante en coulisses qu'à l'écran."
+      "description": "Déploiement et administration de services sous Ubuntu Server. Automatisation des builds (CI/CD), conteneurisation avec Docker, gestion des proxys inversés Nginx et optimisation du SEO technique (SSR)."
     }
   ],
   "highlights": [
-    "Je cherche des interfaces qui donnent une impression de contrôle dès les premières secondes.",
-    "Architecture modulaire, composants explicites, et choix visuels assumés.",
-    "Rendu responsive, rapide à parcourir et facile à faire évoluer."
+    "Ma philosophie de développement",
+    "Un code propre, des requêtes légères et un rendu SSR pour garantir un affichage instantané.",
+    "Curieux de nature, j'aime explorer les dernières nouveautés des frameworks pour adopter les meilleures pratiques de l'industrie."
   ]
 }

@@ -1,6 +1,7 @@
 {
   "job": "Développeur Junior",
-  "tagline": "Je conçois des interfaces web nettes, rapides et cohérentes, avec Nuxt, Vue et TypeScript.",
+  "tagline": "Je développe des applications web robustes et hautement performantes, du design réactif à l’architecture serveur. Spécialisé en Nuxt 4, Vue.js et AdonisJS.",
   "ctaProjects": "Voir mes projets",
-  "ctaContact": "Me contacter"
+  "ctaContact": "Me contacter",
+  "ensemble": "Passionné par l'écosystème JavaScript et l'administration système, j'aime concevoir des outils fluides, optimisés pour le SEO et le déploiement continu. Mon objectif : allier la réactivité du front-end à la solidité d’un back-end bien architecturé."
 }

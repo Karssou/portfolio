@@ -4,6 +4,8 @@ useSeoMeta({
   description:
     "Portfolio personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
 });
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -30,9 +32,7 @@ useSeoMeta({
                 Vue d'ensemble
               </p>
               <p class="mt-3 font-sora text-base leading-7 text-default">
-                Je construis des interfaces rapides, lisibles et cohérentes,
-                avec des composants reliés entre eux pour que le portfolio reste
-                simple à parcourir du premier écran jusqu’au contact.
+                {{ t("mainTitle.ensemble") }}
               </p>
             </article>
           </div>
@@ -41,13 +41,15 @@ useSeoMeta({
             <article
               class="flex aspect-square items-center justify-center rounded-4xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
             >
-              <div class="flex h-full w-full items-center justify-center rounded-[1.75rem] border border-dashed border-border-default/70 bg-surface/40 px-6 text-center">
+              <div
+                class="flex h-full w-full items-center justify-center rounded-[1.75rem] border border-dashed border-border-default/70 bg-surface/40 px-6 text-center"
+              >
                 <div class="space-y-3">
                   <p class="text-sm uppercase tracking-[0.25em] text-muted">
                     Photo
                   </p>
                   <p class="font-sora text-base leading-7 text-default/80">
-                    Placeholder pour votre photo
+                    Placeholder pour la photo (plus tard)
                   </p>
                 </div>
               </div>
@@ -90,7 +92,7 @@ useSeoMeta({
         <HomeSectionHeading
           kicker="Skills"
           :title="$t('navbar.skills')"
-          description="Un socle technique orienté produit, avec les outils qui me permettent d’aller du prototype à une base propre et maintenable."
+          :description="$t('skill.description')"
         />
         <div class="mt-8">
           <Skills />

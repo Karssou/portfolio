@@ -1,30 +1,22 @@
 {
   "title": "Mes Projets",
-  "lead": "Une sélection d'études de cas éditables pour montrer la direction du portfolio et poser une base solide avant d'ajouter tes vrais projets.",
+  "lead": "Une vitrine de mes projets récents, illustrant ma capacité à concevoir des applications web complètes, de l'interface utilisateur à la gestion des données.",
   "items": [
     {
       "title": "Portfolio personnel",
-      "description": "Une page d'accueil immersive, pensée pour relier la hero, les compétences, l'éducation et le contact en une seule lecture.",
+      "description": "Mon portfolio professionnel moderne, conçu en SSR. Optimisé pour le SEO, les performances d'affichage et déployé de manière automatisée",
       "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
       "status": "En ligne",
       "href": "#contact",
-      "cta": "Discuter"
+      "cta": "Contactez moi"
     },
     {
-      "title": "Dashboard produit",
-      "description": "Un espace de suivi avec des cartes lisibles, une hiérarchie forte et des sections prêtes à accueillir des données métier.",
-      "stack": ["TypeScript", "UI", "Responsive"],
-      "status": "Prototype",
-      "href": "#about",
-      "cta": "Voir la logique"
-    },
-    {
-      "title": "Interface API",
-      "description": "Une interface de présentation pour connecter un front propre à des endpoints backend et à des parcours utilisateur simples.",
-      "stack": ["Vue", "API", "UX"],
-      "status": "Concept",
-      "href": "#skills",
-      "cta": "Explorer"
+      "title": "NohamDrive",
+      "description": "Un service de stockage cloud alternatif inspiré de OneDrive, entièrement pilotable via une interface en ligne de commande (CLI)",
+      "stack": ["NUXT", "API", "UX", "MINIO"],
+      "status": "En ligne",
+      "href": "https://nohamdrive.alexandre-larue.fr",
+      "cta": "Voir plus"
     }
   ]
 }

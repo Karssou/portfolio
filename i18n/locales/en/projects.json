@@ -1,6 +1,6 @@
 {
   "title": "Projects",
-  "lead": "A set of editable case studies that show the direction of the portfolio and create a solid base before adding your actual projects.",
+  "lead": "A showcase of my recent projects, demonstrating my ability to design complete web applications, from the user interface to data management.",
   "items": [
     {
       "title": "Personal portfolio",
@@ -8,23 +8,15 @@
       "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
       "status": "Live",
       "href": "#contact",
-      "cta": "Talk"
+      "cta": "Contact me"
     },
     {
-      "title": "Product dashboard",
-      "description": "A tracking space with readable cards, strong hierarchy and sections ready for real business data.",
-      "stack": ["TypeScript", "UI", "Responsive"],
-      "status": "Prototype",
-      "href": "#about",
-      "cta": "See logic"
-    },
-    {
-      "title": "API interface",
-      "description": "A presentation layer meant to connect a clean front-end to backend endpoints and simple user journeys.",
+      "title": "NohamDrive",
+      "description": "A cloud storage alternative inspired by OneDrive, fully managed through a powerful Command Line Interface (CLI).",
       "stack": ["Vue", "API", "UX"],
-      "status": "Concept",
-      "href": "#skills",
-      "cta": "Explore"
+      "status": "Online",
+      "href": "https://nohamdrive.alexandre-larue.fr",
+      "cta": "View product"
     }
   ]
 }

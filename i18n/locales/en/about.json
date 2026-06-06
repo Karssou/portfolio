@@ -1,23 +1,23 @@
 {
   "title": "About",
-  "lead": "I build readable interfaces and smooth user journeys, while keeping the architecture simple to maintain.",
+  "lead": "I combine meticulous front-end development with modular back-end architectures to build robust, scalable, and user-friendly applications.",
   "cards": [
     {
-      "description": "I design components as reusable blocks, with a clear visual hierarchy and subtle interactions."
+      "description": "Development of responsive and modular interfaces in TypeScript using Vue 3 and Nuxt 4. Priority is given to adhering to design mockups, ensuring smooth transitions, and optimizing the client-side bundle."
     },
     {
-      "description": "I like connecting the front-end to clean services, so the page delivers concrete value instead of just stacking visual effects."
+      "description": "Designing robust and secure REST APIs with AdonisJS. Managing relational databases, data modeling, and performance-optimized business logic."
     },
     {
-      "description": "I focus on UI details to ensure the portfolio stays alive, mobile-friendly, and pleasant to scroll through."
+      "description": "Design of modern mockups focused on the user experience. Efficient and rigorous integration with Tailwind CSS v4 by leveraging the power of native CSS variables."
     },
     {
-      "description": "I configure robust and secure server environments, while optimizing SEO to ensure the app performs as well behind the scenes as it does on screen."
+      "description": "Deployment and administration of services on Ubuntu Server. Build automation (CI/CD), containerization with Docker, management of Nginx reverse proxies, and technical SEO optimization (SSR)."
     }
   ],
   "highlights": [
-    "I aim for interfaces that feel controlled within the first few seconds.",
-    "Modular architecture, explicit components, and deliberate visual choices.",
-    "Responsive rendering, fast to browse, and easy to scale."
+    "My development philosophy",
+    "Clean code, lightweight queries, and server-side rendering to ensure instant loading",
+    "I'm naturally curious and enjoy exploring the latest developments in frameworks to adopt industry best practices."
   ]
 }
