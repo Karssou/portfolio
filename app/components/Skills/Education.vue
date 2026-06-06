@@ -35,6 +35,8 @@ const scrollDown = () => {
         {{ t("education.title") }}
       </h2>
       <button
+        type="button"
+        aria-label="Faire défiler la liste des formations"
         class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-default bg-surface/70 transition-colors duration-300 hover:bg-bg-hovered"
         @click="scrollDown"
       >
@@ -46,6 +48,8 @@ const scrollDown = () => {
     </div>
     <div
       ref="scrollContainer"
+      tabindex="0"
+      aria-label="Liste des formations"
       class="flex flex-col gap-6 overflow-y-auto scroll-smooth pr-1 no-scrollbar"
     >
       <article

@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-saira: "Saira", sans-serif;
-  --font-jakarta: "Plus Jakarta Sans", sans-serif;
-  --font-inter: "Inter", sans-serif;
   --font-sora: "Sora", sans-serif;
   --color-background: var(--background);
   --color-surface: var(--surface);

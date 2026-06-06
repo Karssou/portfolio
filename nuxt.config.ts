@@ -7,6 +7,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["./app/assets/css/main.css"],
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
+
   modules: [
     "@nuxt/a11y",
     "@nuxt/eslint",
@@ -35,20 +43,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Roboto: true,
-      Saira: true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100],
-      },
-      Inter: "200..700",
-      "Crimson Pro": {
-        wght: "200..900",
-        ital: "200..700",
-      },
       "Share Tech": true,
-      "Plus Jakarta Sans": true,
       Sora: true,
     },
   },

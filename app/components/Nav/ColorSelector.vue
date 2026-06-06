@@ -16,6 +16,9 @@ const isDark = computed({
 <template>
   <ClientOnly v-if="!colorMode?.forced">
     <button
+      type="button"
+      aria-label="Basculer le thème clair/sombre"
+      :aria-pressed="isDark"
       class="relative group flex items-center justify-center p-2.5 rounded-full bg-white/10 backdrop-blur-xl border border-border-default text-default transition-all duration-300 hover:bg-white/20"
       @click="isDark = !isDark"
     >

@@ -52,12 +52,16 @@ usePortfolioMotion(pageRoot);
                 class="relative aspect-4/5 overflow-hidden rounded-[1.65rem] border border-border-default/70 bg-surface/40"
               >
                 <NuxtImg
-                  src="/pictures/me.png"
+                  src="/pictures/me2.avif"
                   alt="Portrait d'Alexandre Larue"
                   class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
-                  sizes="(max-width: 768px) 100vw, 38vw"
+                  width="1358"
+                  height="1286"
+                  sizes="(max-width: 1024px) 100vw, 38vw"
                   loading="eager"
-                  format="webp"
+                  format="avif"
+                  quality="78"
+                  preload
                 />
 
                 <div
@@ -143,9 +147,9 @@ usePortfolioMotion(pageRoot);
       </div>
     </section>
   </main>
-  <div
+  <footer
     class="flex items-center justify-center text-gray-700/50 dark:text-white/50"
   >
     <p class="pb-4">&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
-  </div>
+  </footer>
 </template>

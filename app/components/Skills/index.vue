@@ -77,11 +77,11 @@ const skills: Skill[] = [
             class="w-8 h-8 text-default transition-transform duration-300 group-hover:scale-110"
           />
         </div>
-        <h3 class="text-base font-semibold text-default mb-1 font-jakarta">
+        <h3 class="mb-1 text-base font-semibold text-default font-sora">
           {{ skill.name }}
         </h3>
 
-        <div class="flex flex-wrap gap-1 font-inter">
+        <div class="flex flex-wrap gap-1 font-sora">
           <span
             v-for="tag in skill.tags"
             :key="tag"

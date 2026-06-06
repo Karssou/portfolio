@@ -1,9 +1,11 @@
 import { nextTick, onBeforeUnmount, onMounted, type Ref } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+type ReversibleContext = {
+  revert: () => void;
+};
 
 export const usePortfolioMotion = (root: Ref<HTMLElement | null>) => {
-  let ctx: gsap.Context | undefined;
+  let ctx: ReversibleContext | undefined;
 
   onMounted(async () => {
     if (!root.value) {
@@ -15,6 +17,12 @@ export const usePortfolioMotion = (root: Ref<HTMLElement | null>) => {
     }
 
     await nextTick();
+
+    const [{ gsap }, { ScrollTrigger }] = await Promise.all([
+      import("gsap"),
+      import("gsap/ScrollTrigger"),
+    ]);
+
     gsap.registerPlugin(ScrollTrigger);
 
     ctx = gsap.context(() => {
@@ -125,7 +133,7 @@ export const usePortfolioMotion = (root: Ref<HTMLElement | null>) => {
           },
         );
       });
-    }, root.value);
+    }, root.value) as ReversibleContext;
   });
 
   onBeforeUnmount(() => {
