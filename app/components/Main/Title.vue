@@ -71,9 +71,8 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         </div>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-2">
+      <div data-hero="contacts" class="grid gap-4 sm:grid-cols-2">
         <button
-          data-hero="contact"
           class="group flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
           @click="emailCopy()"
         >
@@ -89,7 +88,6 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         </button>
 
         <button
-          data-hero="contact"
           class="group flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
           @click="phoneCopy()"
         >
@@ -105,7 +103,6 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         <NuxtLink
           :to="github"
           target="_blank"
-          data-hero="contact"
           class="flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
         >
           <Icon icon="mdi:github" class="size-6 text-primary" />
@@ -115,7 +112,6 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
         <NuxtLink
           :to="linkedin"
           target="_blank"
-          data-hero="contact"
           class="flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
         >
           <Icon icon="mdi:linkedin" class="size-6 text-primary" />

@@ -57,12 +57,11 @@ export const usePortfolioMotion = (root: Ref<HTMLElement | null>) => {
           "-=0.3",
         )
         .from(
-          "[data-hero='contact']",
+          "[data-hero='contacts']",
           {
             opacity: 0,
             y: 16,
             duration: 0.4,
-            stagger: 0.08,
           },
           "-=0.2",
         );
