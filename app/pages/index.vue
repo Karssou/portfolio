@@ -46,20 +46,35 @@ usePortfolioMotion(pageRoot);
 
           <div class="grid gap-4">
             <article
-              class="flex aspect-square items-center justify-center rounded-4xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+              class="group overflow-hidden rounded-4xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
             >
-              <div
-                class="flex h-full w-full items-center justify-center rounded-[1.75rem] border border-dashed border-border-default/70 bg-surface/40 px-6 text-center"
+              <figure
+                class="relative aspect-4/5 overflow-hidden rounded-[1.65rem] border border-border-default/70 bg-surface/40"
               >
-                <div class="space-y-3">
-                  <p class="text-sm uppercase tracking-[0.25em] text-muted">
-                    Photo
-                  </p>
-                  <p class="font-sora text-base leading-7 text-default/80">
-                    Placeholder pour la photo (plus tard)
-                  </p>
-                </div>
-              </div>
+                <NuxtImg
+                  src="/pictures/me.png"
+                  alt="Portrait d'Alexandre Larue"
+                  class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                  sizes="(max-width: 768px) 100vw, 38vw"
+                  loading="eager"
+                  format="webp"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent"
+                />
+
+                <figcaption
+                  class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5"
+                >
+                  <span
+                    class="inline-flex max-w-[85%] items-center gap-2 rounded-full border border-white/15 bg-black/35 px-4 py-2 font-sora text-sm font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md"
+                  >
+                    <span class="size-2 rounded-full bg-primary" />
+                    Portrait d'Alexandre Larue
+                  </span>
+                </figcaption>
+              </figure>
             </article>
 
             <article
