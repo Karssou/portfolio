@@ -109,19 +109,19 @@ usePortfolioMotion(pageRoot);
 
     <section id="about" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
-        <HomeAboutSection />
+        <LazyHomeAboutSection />
       </div>
     </section>
 
     <section id="skills" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
-        <HomeSectionHeading
+        <LazyHomeSectionHeading
           kicker="Skills"
           :title="$t('navbar.skills')"
           :description="$t('skill.description')"
         />
         <div class="mt-8">
-          <Skills />
+          <LazySkills />
         </div>
       </div>
     </section>
@@ -129,21 +129,21 @@ usePortfolioMotion(pageRoot);
     <section id="education" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
         <div class="grid gap-8">
-          <SkillsEducation />
-          <SkillsLanguage />
+          <LazySkillsEducation />
+          <LazySkillsLanguage />
         </div>
       </div>
     </section>
 
     <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
-        <HomeProjectsSection />
+        <LazyHomeProjectsSection />
       </div>
     </section>
 
     <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
-        <HomeContactSection />
+        <LazyHomeContactSection />
       </div>
     </section>
   </main>

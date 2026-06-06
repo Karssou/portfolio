@@ -10,8 +10,24 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "fr",
       },
+      link: [
+        {
+          rel: "preload",
+          href: "/fonts/Share_Tech-normal-400-latin.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/Sora-normal-400-latin.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "anonymous",
+        },
+      ],
     },
   },
 
@@ -33,6 +49,10 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  nitro: {
+    compressPublicAssets: true,
+  },
+
   i18n: {
     defaultLocale: "fr",
     locales: [
@@ -42,6 +62,9 @@ export default defineNuxtConfig({
   },
 
   googleFonts: {
+    display: "swap",
+    preconnect: true,
+    download: true,
     families: {
       "Share Tech": true,
       Sora: true,
