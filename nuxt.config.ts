@@ -7,6 +7,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["./app/assets/css/main.css"],
 
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+    serverBundle: "remote",
+  },
+
   app: {
     head: {
       htmlAttrs: {
@@ -77,5 +84,10 @@ export default defineNuxtConfig({
       "Share Tech": true,
       Sora: true,
     },
+  },
+
+  sourcemap: {
+    server: false,
+    client: false,
   },
 });
