@@ -31,6 +31,21 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    prerender: {
+      // Déclenche le pré-rendu sur ces routes au moment du build
+      routes: ['/', '/en'], 
+      
+      // Optionnel mais recommandé : crawl automatiquement tous les liens <a> trouvés 
+      crawlLinks: true 
+    }
+  },
+
+  // Optionnel : si tu veux forcer un format d'image par défaut (ex: webp)
+  image: {
+    format: ['webp']
+  }
+
   modules: [
     "@nuxt/a11y",
     "@nuxt/eslint",
