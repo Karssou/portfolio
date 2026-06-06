@@ -32,10 +32,10 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    compressPublicAssets: true,
     prerender: {
-
       routes: ["/", "/en"],
-            crawlLinks: true,
+      crawlLinks: true,
     },
   },
 
@@ -59,10 +59,6 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
-  },
-
-  nitro: {
-    compressPublicAssets: true,
   },
 
   i18n: {
