@@ -45,7 +45,6 @@ jobs:
           port: 22
           source: "./.output/**"
           target: "~/Portfolio/.output"
-          strip_components: 2
 
       - name: Launch frontend on Raspberry Pi
         uses: appleboy/ssh-action@v1
