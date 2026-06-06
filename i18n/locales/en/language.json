@@ -1,0 +1,26 @@
+{
+  "kicker": "Languages",
+  "title": "Language Skills",
+  "description": "A solid base in French, professional English, and school-level Spanish for collaboration, documentation reading, and international communication.",
+  "progress": "Estimated level",
+  "items": [
+    {
+      "name": "French",
+      "level": "C2",
+      "description": "Native language, advanced writing and communication.",
+      "value": 100
+    },
+    {
+      "name": "English",
+      "level": "B2",
+      "description": "Technical reading, professional exchanges, and documentation.",
+      "value": 80
+    },
+    {
+      "name": "Spanish",
+      "level": "A2",
+      "description": "Basic understanding and simple conversation.",
+      "value": 40
+    }
+  ]
+}

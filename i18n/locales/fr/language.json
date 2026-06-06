@@ -1,0 +1,26 @@
+{
+  "kicker": "Langues",
+  "title": "Compétences linguistiques",
+  "description": "Une base solide en français, anglais professionnel et espagnol scolaire pour collaborer, lire de la documentation et échanger en contexte international.",
+  "progress": "Niveau estimé",
+  "items": [
+    {
+      "name": "Français",
+      "level": "C2",
+      "description": "Langue maternelle, rédaction et communication avancées.",
+      "value": 100
+    },
+    {
+      "name": "Anglais",
+      "level": "B2",
+      "description": "Lecture technique, échanges professionnels et documentation.",
+      "value": 80
+    },
+    {
+      "name": "Espagnol",
+      "level": "A2",
+      "description": "Compréhension des bases et échanges simples.",
+      "value": 40
+    }
+  ]
+}
