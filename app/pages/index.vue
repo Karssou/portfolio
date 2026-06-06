@@ -118,5 +118,9 @@ const { t } = useI18n();
       </div>
     </section>
   </main>
-  <p>&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
+  <div
+    class="flex items-center justify-center text-gray-700/50 dark:text-white/50"
+  >
+    <p class="pb-4">&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
+  </div>
 </template>
