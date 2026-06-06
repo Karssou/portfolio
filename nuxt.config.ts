@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   // Optionnel : si tu veux forcer un format d'image par défaut (ex: webp)
   image: {
     format: ['webp']
-  }
+  },
 
   modules: [
     "@nuxt/a11y",
