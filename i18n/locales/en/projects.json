@@ -1,0 +1,30 @@
+{
+  "title": "Projects",
+  "lead": "A set of editable case studies that show the direction of the portfolio and create a solid base before adding your actual projects.",
+  "items": [
+    {
+      "title": "Personal portfolio",
+      "description": "An immersive landing page that ties together the hero, skills, education and contact sections in one flow.",
+      "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
+      "status": "Live",
+      "href": "#contact",
+      "cta": "Talk"
+    },
+    {
+      "title": "Product dashboard",
+      "description": "A tracking space with readable cards, strong hierarchy and sections ready for real business data.",
+      "stack": ["TypeScript", "UI", "Responsive"],
+      "status": "Prototype",
+      "href": "#about",
+      "cta": "See logic"
+    },
+    {
+      "title": "API interface",
+      "description": "A presentation layer meant to connect a clean front-end to backend endpoints and simple user journeys.",
+      "stack": ["Vue", "API", "UX"],
+      "status": "Concept",
+      "href": "#skills",
+      "cta": "Explore"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "A propos",
+  "lead": "Je construis des interfaces lisibles et des parcours fluides, en gardant une architecture simple à maintenir.",
+  "cards": [
+    {
+      "description": "Je pense les composants comme des blocs réutilisables, avec une hiérarchie visuelle claire et des interactions discrètes."
+    },
+    {
+      "description": "J'aime relier le front à des services propres, pour que la page raconte quelque chose de concret au lieu de juste empiler des effets."
+    },
+    {
+      "description": "Je travaille le détail UI pour que le portfolio reste vivant, lisible sur mobile et agréable à parcourir jusqu'en bas."
+    },
+    {
+      "description": "Je configure des environnements serveurs robustes et sécurisés, tout en optimisant le référencement pour que l'app soit aussi performante en coulisses qu'à l'écran."
+    }
+  ],
+  "highlights": [
+    "Je cherche des interfaces qui donnent une impression de contrôle dès les premières secondes.",
+    "Architecture modulaire, composants explicites, et choix visuels assumés.",
+    "Rendu responsive, rapide à parcourir et facile à faire évoluer."
+  ]
+}

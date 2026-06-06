@@ -1,0 +1,24 @@
+{
+  "title": "Education & Qualifications",
+  "scroll": "See more",
+  "items": [
+    {
+      "school": "St-Félix La Salle High School",
+      "period": "2023 - 2026",
+      "degree": "General Baccalaureate",
+      "date": "2026"
+    },
+    {
+      "school": "Cambridge B2 Certification",
+      "period": "",
+      "degree": "",
+      "date": "March 2026"
+    },
+    {
+      "school": "St-Donatien Middle School",
+      "period": "2019 - 2023",
+      "degree": "Brevet with Honors",
+      "date": "2023"
+    }
+  ]
+}

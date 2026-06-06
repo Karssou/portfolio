@@ -1,0 +1,24 @@
+{
+  "title": "Éducation & Diplômes",
+  "scroll": "Voir plus",
+  "items": [
+    {
+      "school": "Lycée St-Félix La Salle",
+      "period": "2023 - 2026",
+      "degree": "Baccalauréat général",
+      "date": "2026"
+    },
+    {
+      "school": "Certification Cambridge B2",
+      "period": "",
+      "degree": "",
+      "date": "Mars 2026"
+    },
+    {
+      "school": "Collège St-Donatien",
+      "period": "2019 - 2023",
+      "degree": "Brevet mention Très Bien",
+      "date": "2023"
+    }
+  ]
+}

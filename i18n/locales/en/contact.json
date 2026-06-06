@@ -1,0 +1,14 @@
+{
+  "title": "Contact",
+  "lead": "If you want to build a site, a landing page or a solid front-end base, this is the direct entry point.",
+  "emailLabel": "Email",
+  "phoneLabel": "Phone",
+  "githubLabel": "GitHub",
+  "linkedinLabel": "LinkedIn",
+  "ctaTitle": "Shall we connect the ideas?",
+  "ctaCopy": [
+    "I can help turn a mockup, an idea or a concrete need into a clear, fast and well-structured interface.",
+    "The easiest path is to contact me by email or phone first, then we can scope the work together."
+  ],
+  "backToTop": "Back to top"
+}

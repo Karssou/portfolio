@@ -1,0 +1,23 @@
+{
+  "title": "About",
+  "lead": "I build readable interfaces and smooth user journeys, while keeping the architecture simple to maintain.",
+  "cards": [
+    {
+      "description": "I design components as reusable blocks, with a clear visual hierarchy and subtle interactions."
+    },
+    {
+      "description": "I like connecting the front-end to clean services, so the page delivers concrete value instead of just stacking visual effects."
+    },
+    {
+      "description": "I focus on UI details to ensure the portfolio stays alive, mobile-friendly, and pleasant to scroll through."
+    },
+    {
+      "description": "I configure robust and secure server environments, while optimizing SEO to ensure the app performs as well behind the scenes as it does on screen."
+    }
+  ],
+  "highlights": [
+    "I aim for interfaces that feel controlled within the first few seconds.",
+    "Modular architecture, explicit components, and deliberate visual choices.",
+    "Responsive rendering, fast to browse, and easy to scale."
+  ]
+}

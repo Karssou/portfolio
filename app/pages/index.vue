@@ -1,0 +1,119 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: "Alexandre Larue | Portfolio",
+  description:
+    "Portfolio personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
+});
+</script>
+
+<template>
+  <main class="relative overflow-x-hidden pb-36">
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div
+        class="absolute left-0 top-0 h-72 w-72 -translate-x-1/3 rounded-full bg-primary/10 blur-3xl"
+      />
+      <div
+        class="absolute bottom-24 right-0 h-80 w-80 translate-x-1/3 rounded-full bg-primary/10 blur-3xl"
+      />
+    </div>
+
+    <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <div class="grid gap-6">
+            <MainTitle />
+
+            <article
+              class="rounded-4xl border border-border-default bg-surface/70 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+            >
+              <p class="text-sm uppercase tracking-[0.25em] text-muted">
+                Vue d'ensemble
+              </p>
+              <p class="mt-3 font-sora text-base leading-7 text-default">
+                Je construis des interfaces rapides, lisibles et cohérentes,
+                avec des composants reliés entre eux pour que le portfolio reste
+                simple à parcourir du premier écran jusqu’au contact.
+              </p>
+            </article>
+          </div>
+
+          <div class="grid gap-4">
+            <article
+              class="flex aspect-square items-center justify-center rounded-4xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+            >
+              <div class="flex h-full w-full items-center justify-center rounded-[1.75rem] border border-dashed border-border-default/70 bg-surface/40 px-6 text-center">
+                <div class="space-y-3">
+                  <p class="text-sm uppercase tracking-[0.25em] text-muted">
+                    Photo
+                  </p>
+                  <p class="font-sora text-base leading-7 text-default/80">
+                    Placeholder pour votre photo
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="rounded-4xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl"
+            >
+              <p class="text-sm uppercase tracking-[0.25em] text-muted">
+                Navigation
+              </p>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                <NuxtLink
+                  to="#projects"
+                  class="rounded-2xl border border-border-default bg-surface/70 px-4 py-3 font-sora text-sm font-semibold transition-colors duration-300 hover:bg-bg-hovered"
+                >
+                  Aller aux projets
+                </NuxtLink>
+                <NuxtLink
+                  to="#contact"
+                  class="rounded-2xl border border-border-default bg-surface/70 px-4 py-3 font-sora text-sm font-semibold transition-colors duration-300 hover:bg-bg-hovered"
+                >
+                  Aller au contact
+                </NuxtLink>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <HomeAboutSection />
+      </div>
+    </section>
+
+    <section id="skills" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <HomeSectionHeading
+          kicker="Skills"
+          :title="$t('navbar.skills')"
+          description="Un socle technique orienté produit, avec les outils qui me permettent d’aller du prototype à une base propre et maintenable."
+        />
+        <div class="mt-8">
+          <Skills />
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <SkillsEducation />
+      </div>
+    </section>
+
+    <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <HomeProjectsSection />
+      </div>
+    </section>
+
+    <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <HomeContactSection />
+      </div>
+    </section>
+  </main>
+</template>

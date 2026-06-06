@@ -1,0 +1,30 @@
+{
+  "title": "Mes Projets",
+  "lead": "Une sélection d'études de cas éditables pour montrer la direction du portfolio et poser une base solide avant d'ajouter tes vrais projets.",
+  "items": [
+    {
+      "title": "Portfolio personnel",
+      "description": "Une page d'accueil immersive, pensée pour relier la hero, les compétences, l'éducation et le contact en une seule lecture.",
+      "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
+      "status": "En ligne",
+      "href": "#contact",
+      "cta": "Discuter"
+    },
+    {
+      "title": "Dashboard produit",
+      "description": "Un espace de suivi avec des cartes lisibles, une hiérarchie forte et des sections prêtes à accueillir des données métier.",
+      "stack": ["TypeScript", "UI", "Responsive"],
+      "status": "Prototype",
+      "href": "#about",
+      "cta": "Voir la logique"
+    },
+    {
+      "title": "Interface API",
+      "description": "Une interface de présentation pour connecter un front propre à des endpoints backend et à des parcours utilisateur simples.",
+      "stack": ["Vue", "API", "UX"],
+      "status": "Concept",
+      "href": "#skills",
+      "cta": "Explorer"
+    }
+  ]
+}
