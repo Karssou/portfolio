@@ -52,7 +52,7 @@ usePortfolioMotion(pageRoot);
                 class="relative aspect-4/5 overflow-hidden rounded-[1.65rem] border border-border-default/70 bg-surface/40"
               >
                 <NuxtImg
-                  src="/pictures/me2.avif"
+                  src="/pictures/alexandre-larue-developpeur-web-freelance-full-stack.avif"
                   alt="Portrait d'Alexandre Larue"
                   class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                   width="1358"
