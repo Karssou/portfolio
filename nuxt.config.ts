@@ -62,6 +62,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
+    "@nuxtjs/sitemap",
   ],
 
   vite: {
@@ -89,5 +90,10 @@ export default defineNuxtConfig({
   sourcemap: {
     server: false,
     client: false,
+  },
+
+  site: {
+    url: "https://alexandre-larue.fr",
+    name: "Portfolio d'Alexandre LARUE développeur Full-Stack",
   },
 });

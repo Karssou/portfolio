@@ -1,10 +1,36 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Alexandre Larue",
+        url: "https://alexandre-larue.fr",
+        image:
+          "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+        jobTitle: "Développeur Full Stack",
+      }),
+    },
+  ],
+});
 useSeoMeta({
   title: "Alexandre Larue | Portfolio",
   description:
     "Portfolio personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
+
+  ogTitle: "Alexandre Larue | Portfolio",
+  ogDescription:
+    "Portfolio personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
+  ogImage:
+    "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+
+  twitterCard: "summary_large_image",
+  twitterImage:
+    "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
 });
 
 const { t } = useI18n();
@@ -52,7 +78,7 @@ usePortfolioMotion(pageRoot);
                 class="relative aspect-4/5 overflow-hidden rounded-[1.65rem] border border-border-default/70 bg-surface/40"
               >
                 <NuxtImg
-                  src="/pictures/alexandre-larue-developpeur-web-freelance-full-stack.avif"
+                  src="/images/alexandre-larue-developpeur-web-freelance-full-stack.avif"
                   alt="Portrait d'Alexandre Larue"
                   class="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                   width="1358"
