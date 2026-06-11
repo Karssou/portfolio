@@ -15,7 +15,7 @@ const current = computed(() => {
 <template>
   <div class="relative z-50">
     <button
-      class="flex items-center gap-2 rounded-full border border-border-default bg-surface/85 px-4 py-2 text-default backdrop-blur-xl transition-all duration-300 hover:bg-surface"
+      class="flex items-center gap-2 rounded-full border border-border-default bg-surface/85 px-4 py-2 text-default backdrop-blur-xl transition-all duration-300 hover:bg-white/5"
       @click="open = !open"
     >
       <span class="font-semibold">{{ current?.code.toUpperCase() }}</span>
