@@ -1,19 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { personSchema } from "@/data/person.schema";
 
 useHead({
   script: [
     {
       type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Person",
-        name: "Alexandre Larue",
-        url: "https://alexandre-larue.fr",
-        image:
-          "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
-        jobTitle: "Développeur Full Stack",
-      }),
+      textContent: JSON.stringify(personSchema),
     },
   ],
 });
