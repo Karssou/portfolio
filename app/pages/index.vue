@@ -133,6 +133,12 @@ usePortfolioMotion(pageRoot);
       </div>
     </section>
 
+    <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl" data-section>
+        <LazyHomeProjectsSection />
+      </div>
+    </section>
+
     <section id="about" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
         <LazyHomeAboutSection />
@@ -158,12 +164,6 @@ usePortfolioMotion(pageRoot);
           <LazySkillsEducation />
           <LazySkillsLanguage />
         </div>
-      </div>
-    </section>
-
-    <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-7xl" data-section>
-        <LazyHomeProjectsSection />
       </div>
     </section>
 
