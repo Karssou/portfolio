@@ -94,6 +94,6 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://alexandre-larue.fr",
-    name: "Portfolio d'Alexandre LARUE développeur Full-Stack",
+    name: "Alexandre LARUE développeur Full-Stack",
   },
 });

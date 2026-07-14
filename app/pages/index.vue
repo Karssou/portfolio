@@ -10,7 +10,7 @@ useHead({
   ],
 });
 useSeoMeta({
-  title: "Alexandre Larue | Portfolio",
+  title: "Alexandre Larue | Développeur Full-Stack",
   description:
     "Portfolio personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
 
@@ -165,9 +165,7 @@ usePortfolioMotion(pageRoot);
       </div>
     </section>
   </main>
-  <footer
-    class="flex items-center justify-center text-gray-700/50 dark:text-white/50"
-  >
+  <footer class="flex items-center justify-center text-muted">
     <p class="pb-4">&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
   </footer>
 </template>
