@@ -17,6 +17,14 @@
       "status": "Online",
       "href": "https://nohamdrive.alexandre-larue.fr",
       "cta": "View product"
+    },
+    {
+      "title": "Autres applications",
+      "description": "Découvrez l'ensemble de mes réalisations du simple site web à une application desktop",
+      "stack": [],
+      "status": "Archives",
+      "href": "/projects",
+      "cta": "Voir tout mes projets"
     }
   ]
 }

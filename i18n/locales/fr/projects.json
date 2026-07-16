@@ -13,10 +13,18 @@
     {
       "title": "NohamDrive",
       "description": "Un service de stockage cloud alternatif inspiré de OneDrive, entièrement pilotable via une interface en ligne de commande (CLI)",
-      "stack": ["NUXT", "API", "UX", "MINIO"],
+      "stack": ["Nuxt", "API", "UX", "MinIO"],
       "status": "En ligne",
       "href": "https://nohamdrive.alexandre-larue.fr",
       "cta": "Voir plus"
+    },
+    {
+      "title": "Autres applications",
+      "description": "Découvrez l'ensemble de mes réalisations du simple site web à une application desktop",
+      "stack": [],
+      "status": "Archives",
+      "href": "/projects",
+      "cta": "Voir tout mes projets"
     }
   ]
 }

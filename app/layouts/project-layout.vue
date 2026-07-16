@@ -12,34 +12,6 @@ watch(isMobile, (mobile) => {
   }
 });
 
-const mobileNavItems = [
-  {
-    key: "navbar.home",
-    href: "#home",
-    icon: "material-symbols:home-outline-rounded",
-  },
-  {
-    key: "navbar.about",
-    href: "#about",
-    icon: "material-symbols:person-outline-rounded",
-  },
-  {
-    key: "navbar.skills",
-    href: "#skills",
-    icon: "material-symbols:flash-on-outline-rounded",
-  },
-  {
-    key: "navbar.projects",
-    href: "#projects",
-    icon: "material-symbols:code-rounded",
-  },
-  {
-    key: "navbar.contact",
-    href: "#contact",
-    icon: "material-symbols:mail-outline-rounded",
-  },
-];
-
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
 };
@@ -75,7 +47,7 @@ const selectLocale = async (code: string) => {
           class="flex w-full items-center justify-between rounded-full border border-border-default bg-surface/80 px-5 py-3 shadow-2xl backdrop-blur-xl"
         >
           <NuxtLink
-            to="#home"
+            to="/#home"
             class="group flex items-center gap-3 rounded-full border border-border-default bg-white/5 pl-3 pr-4 py-2 text-default transition-colors duration-300 hover:bg-white/10"
           >
             <span
@@ -124,21 +96,6 @@ const selectLocale = async (code: string) => {
           class="relative z-50 mx-auto mt-3 max-w-7xl overflow-visible rounded-[1.75rem] border border-border-default bg-surface/90 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl"
         >
           <div class="grid gap-4 p-4">
-            <nav
-              class="grid gap-2 rounded-3xl border border-border-default bg-white/5 p-2"
-            >
-              <NuxtLink
-                v-for="item in mobileNavItems"
-                :key="item.key"
-                :to="item.href"
-                class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-default transition-colors duration-300 hover:bg-bg-hovered"
-                @click="closeMobileMenu"
-              >
-                <Icon :icon="item.icon" class="size-5 text-primary" />
-                <span>{{ t(item.key) }}</span>
-              </NuxtLink>
-            </nav>
-
             <div class="grid gap-3">
               <div
                 class="grid gap-3 rounded-3xl border border-border-default bg-white/5 p-3"
@@ -177,13 +134,6 @@ const selectLocale = async (code: string) => {
         </div>
       </Transition>
     </header>
-
-    <footer
-      v-if="!isMobile"
-      class="fixed bottom-6 z-50 flex h-24 w-full items-center justify-center"
-    >
-      <NavMenuSelector class="grow" />
-    </footer>
 
     <NuxtPage />
   </div>
