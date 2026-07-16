@@ -3,8 +3,11 @@ import { Icon } from "@iconify/vue";
 
 const { t, locales, setLocale, locale } = useI18n();
 const { isMobile } = useResponsive();
+const route = useRoute();
+const localePath = useLocalePath();
 
 const mobileMenuOpen = ref(false);
+const isHome = computed(() => route.path === localePath("/"));
 
 watch(isMobile, (mobile) => {
   if (!mobile) {
@@ -60,7 +63,29 @@ const selectLocale = async (code: string) => {
         @click="closeMobileMenu"
       />
 
-      <div class="mx-auto flex max-w-7xl items-start justify-end">
+      <div class="mx-auto flex max-w-7xl items-start justify-between gap-4">
+        <Transition
+          enter-active-class="transition duration-300 ease-out"
+          enter-from-class="-translate-x-3 opacity-0"
+          enter-to-class="translate-x-0 opacity-100"
+          leave-active-class="absolute transition duration-200 ease-in"
+          leave-from-class="translate-x-0 opacity-100"
+          leave-to-class="-translate-x-3 opacity-0"
+          mode="out-in"
+        >
+          <NuxtLink
+            v-if="!isHome && !isMobile"
+            :to="localePath('/')"
+            class="group inline-flex items-center gap-2.5 rounded-full border border-border-default bg-surface/80 px-6 py-3.5 text-default shadow-md backdrop-blur-xl transition-all duration-300 hover:border-border-hover hover:bg-surface/50 hover:shadow-lg active:scale-95"
+          >
+            <Icon
+              icon="material-symbols:chevron-left-rounded"
+              class="size-5 shrink-0 transition-transform duration-300 group-hover:-translate-x-1"
+            />
+            <span class="font-semibold">{{ t("navbar.home") }}</span>
+          </NuxtLink>
+        </Transition>
+
         <div
           v-if="!isMobile"
           class="flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
@@ -74,24 +99,47 @@ const selectLocale = async (code: string) => {
           v-else
           class="flex w-full items-center justify-between rounded-full border border-border-default bg-surface/80 px-5 py-3 shadow-2xl backdrop-blur-xl"
         >
-          <NuxtLink
-            to="#home"
-            class="group flex items-center gap-3 rounded-full border border-border-default bg-white/5 pl-3 pr-4 py-2 text-default transition-colors duration-300 hover:bg-white/10"
+          <Transition
+            enter-active-class="transition duration-300 ease-out"
+            enter-from-class="-translate-x-3 opacity-0"
+            enter-to-class="translate-x-0 opacity-100"
+            leave-active-class="absolute transition duration-200 ease-in"
+            leave-from-class="translate-x-0 opacity-100"
+            leave-to-class="-translate-x-3 opacity-0"
+            mode="out-in"
           >
-            <span
-              class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-[0_10px_25px_rgba(255,157,0,0.35)]"
+            <NuxtLink
+              v-if="isHome"
+              to="#home"
+              class="group flex items-center gap-3 rounded-full border border-border-default bg-white/5 pl-3 pr-4 py-2 text-default transition-colors duration-300 hover:bg-white/10"
             >
-              A
-            </span>
-            <span class="flex flex-col leading-none">
-              <span class="font-sora text-sm font-semibold tracking-[0.08em]">
-                Alexandre
+              <span
+                class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-[0_10px_25px_rgba(255,157,0,0.35)]"
+              >
+                A
               </span>
-              <span class="text-[10px] uppercase tracking-[0.3em] text-muted">
-                Portfolio
+              <span class="flex flex-col leading-none">
+                <span class="font-sora text-sm font-semibold tracking-[0.08em]">
+                  Alexandre
+                </span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-muted">
+                  Portfolio
+                </span>
               </span>
-            </span>
-          </NuxtLink>
+            </NuxtLink>
+
+            <NuxtLink
+              v-else
+              :to="localePath('/')"
+              class="group inline-flex items-center gap-2 rounded-full border border-border-default bg-white/5 px-4 py-3 text-default transition-colors duration-300 hover:bg-white/10"
+            >
+              <Icon
+                icon="material-symbols:chevron-left-rounded"
+                class="size-5 transition-transform duration-300 group-hover:-translate-x-1"
+              />
+              <span class="text-sm font-semibold">{{ t("navbar.home") }}</span>
+            </NuxtLink>
+          </Transition>
 
           <button
             class="flex items-center justify-center rounded-full border border-border-default bg-white/10 p-3 text-default transition-colors duration-300 hover:bg-white/20"
@@ -178,12 +226,21 @@ const selectLocale = async (code: string) => {
       </Transition>
     </header>
 
-    <footer
-      v-if="!isMobile"
-      class="fixed bottom-6 z-50 flex h-24 w-full items-center justify-center"
+    <Transition
+      enter-active-class="transition duration-300 ease-out"
+      enter-from-class="translate-y-4 opacity-0"
+      enter-to-class="translate-y-0 opacity-100"
+      leave-active-class="transition duration-200 ease-in"
+      leave-from-class="translate-y-0 opacity-100"
+      leave-to-class="translate-y-4 opacity-0"
     >
-      <NavMenuSelector class="grow" />
-    </footer>
+      <footer
+        v-if="isHome && !isMobile"
+        class="fixed bottom-6 z-50 flex h-24 w-full items-center justify-center"
+      >
+        <NavMenuSelector class="grow" />
+      </footer>
+    </Transition>
 
     <NuxtPage />
   </div>

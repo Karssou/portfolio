@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({
-  layout: "project-layout",
-});
 useSeoMeta({
   title: "Alexandre Larue | Développeur Full-Stack",
   description:

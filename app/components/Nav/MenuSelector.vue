@@ -10,6 +10,11 @@ const items = [
     icon: "material-symbols:home-outline-rounded",
   },
   {
+    key: "navbar.projects",
+    href: "#projects",
+    icon: "material-symbols:code-rounded",
+  },
+  {
     key: "navbar.about",
     href: "#about",
     icon: "material-symbols:person-outline-rounded",
@@ -18,11 +23,6 @@ const items = [
     key: "navbar.skills",
     href: "#skills",
     icon: "material-symbols:flash-on-outline-rounded",
-  },
-  {
-    key: "navbar.projects",
-    href: "#projects",
-    icon: "material-symbols:code-rounded",
   },
 ];
 </script>
