@@ -52,11 +52,19 @@ const projects = computed(
           </div>
 
           <div>
-            <h3
-              class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight"
-            >
-              {{ project.title }}
-            </h3>
+            <div class="inline-flex items-center gap-2">
+              <Icon
+                v-if="index === 2"
+                icon="material-symbols:apps"
+                class="size-10"
+              />
+              <h3
+                class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight"
+              >
+                {{ project.title }}
+              </h3>
+            </div>
+
             <p class="mt-3 font-sora text-sm leading-7 text-muted">
               {{ project.description }}
             </p>

@@ -88,7 +88,7 @@ const selectLocale = async (code: string) => {
 
         <div
           v-if="!isMobile"
-          class="flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
+          class="ml-auto flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
         >
           <NavColorSelector />
           <NavLanguageSelect />
@@ -173,6 +173,7 @@ const selectLocale = async (code: string) => {
         >
           <div class="grid gap-4 p-4">
             <nav
+              v-if="isHome"
               class="grid gap-2 rounded-3xl border border-border-default bg-white/5 p-2"
             >
               <NuxtLink

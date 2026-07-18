@@ -1,6 +1,7 @@
 {
   "title": "Projects",
   "lead": "A showcase of my recent projects, demonstrating my ability to design complete web applications, from the user interface to data management.",
+
   "items": [
     {
       "title": "Personal portfolio",
@@ -19,12 +20,72 @@
       "cta": "View product"
     },
     {
-      "title": "Autres applications",
-      "description": "Découvrez l'ensemble de mes réalisations du simple site web à une application desktop",
+      "title": "Other apps",
+      "description": "Discover all my past projects from a simple website to a desktop application",
       "stack": [],
       "status": "Archives",
       "href": "/projects",
-      "cta": "Voir tout mes projets"
+      "cta": "View all projects"
     }
-  ]
+  ],
+  "ProjectPage": {
+    "title": "Projects",
+    "lead": "A showcase of my recent projects, demonstrating my ability to design complete web applications, from the user interface to data management.",
+    "page": {
+      "eyebrow": "Selected work · 2024—2026",
+      "featured": "01 / Featured",
+      "caseStudy": "Case study",
+      "more": "More to explore",
+      "moreTitle": "Other work",
+      "project": "Project",
+      "projects": "projects"
+    },
+    "items": [
+      {
+        "title": "Personal portfolio",
+        "description": "An immersive landing page that ties together the hero, skills, education and contact sections in one flow.",
+        "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
+        "status": "Live",
+        "href": "#contact",
+        "cta": "Contact me",
+        "github": "https://github.com/Karssou/portfolio"
+      },
+      {
+        "title": "NohamDrive",
+        "description": "A cloud storage alternative inspired by OneDrive, fully managed through a powerful Command Line Interface (CLI).",
+        "stack": ["Vue", "API", "UX"],
+        "status": "Online",
+        "href": "",
+        "cta": "See more",
+        "github": "https://github.com/NoArAlMa/NohamDrive"
+      },
+      {
+        "title": "DesktopConverter",
+        "description": "A desktop application allowing you to convert many files",
+        "stack": ["Tauri", "Nuxt", "Rust"],
+        "status": "Live",
+        "href": "/projects",
+        "cta": "See more",
+        "github": "https://github.com/Karssou/DeskTopConverter"
+      },
+      {
+        "title": "Arcane Site",
+        "description": "A fan handmade website in the universe of the show Arcane",
+        "stack": ["HTML", "SCSS", "Javascript", "GSAP"],
+        "href": "",
+        "status": "Archives",
+        "cta": "See more",
+        "github": "https://github.com/Karssou/Arcane_site"
+      },
+      {
+        "title": "As-Gram",
+        "description": "A little teenage school project that replicate very poorly the behavior of the most famous social media",
+        "status": "Archives",
+        "href": "",
+        "cta": "See more",
+        "github": "blablabla",
+        "stack": ["Nuxt", "AdonisJS", "DB"]
+      }
+    ]
+  }
 }

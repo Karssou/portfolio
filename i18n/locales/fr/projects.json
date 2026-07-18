@@ -26,5 +26,59 @@
       "href": "/projects",
       "cta": "Voir tout mes projets"
     }
-  ]
+  ],
+  "ProjectPage": {
+    "title": "Mes Projets",
+    "lead": "Une vitrine de mes projets récents, illustrant ma capacité à concevoir des applications web complètes, de l'interface utilisateur à la gestion des données.",
+    "page": {
+      "eyebrow": "Projets sélectionnés · 2024—2026"
+    },
+    "items": [
+      {
+        "title": "Portfolio personnel",
+        "description": "Mon portfolio professionnel moderne, conçu en SSR. Optimisé pour le SEO, les performances d'affichage et déployé de manière automatisée",
+        "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
+        "status": "En ligne",
+        "href": "#contact",
+        "cta": "Contactez moi",
+        "github": "https://github.com/Karssou/portfolio"
+      },
+      {
+        "title": "NohamDrive",
+        "description": "Un projet de service de stockage cloud alternatif fun inspiré de OneDrive, entièrement pilotable via une interface en ligne de commande (CLI)",
+        "stack": ["Nuxt", "API", "UX", "MinIO"],
+        "status": "En ligne",
+        "href": "https://nohamdrive.alexandre-larue.fr",
+        "cta": "Voir plus",
+        "github": "https://github.com/NoArAlMa/NohamDrive"
+      },
+      {
+        "title": "Desktop Converter",
+        "description": "Découvrez l'ensemble de mes réalisations du simple site web à une application desktop",
+        "stack": ["Tauri", "Nuxt", "Rust"],
+        "status": "En ligne",
+        "href": "/projects/#",
+        "cta": "Voir le projet",
+        "github": "https://github.com/Karssou/DeskTopConverter"
+      },
+      {
+        "title": "Site Arcane",
+        "description": "Un site créé par passion autour de l'univers de la série Arcane",
+        "stack": ["HTML", "SCSS", "JavaScript", "GSAP"],
+        "href": "https://github.com/Karssou/Arcane_site",
+        "status": "Archivé",
+        "cta": "Voir plus",
+        "github": "https://github.com/Karssou/Arcane_site"
+      },
+      {
+        "title": "As-Gram",
+        "description": "Un petit projet scolaire réalisé au lycée visant à reproduire les fonctionnalités principales d'un réseau social populaire",
+        "status": "Archivé",
+        "href": "",
+        "cta": "Voir plus",
+        "github": "blablabla",
+        "stack": ["Nuxt", "AdonisJS", "BDD"]
+      }
+    ]
+  }
 }
