@@ -11,7 +11,7 @@ status: En ligne
 
 # Mon premier projet
 
-**Bienvenue** dans mon projet de test.
+**Bienvenue** dans mon _projet_ de test.
 
 ## Le contexte
 

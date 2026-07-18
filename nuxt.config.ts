@@ -66,8 +66,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
-  content: {},
-
   vite: {
     plugins: [tailwindcss()],
   },
