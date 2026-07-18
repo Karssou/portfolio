@@ -4,9 +4,7 @@ import type { Project } from "~/types/Project";
 const { t, tm } = useI18n();
 const pageRoot = ref<HTMLElement | null>(null);
 const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
-const featuredProject = computed(() => projects.value[0]);
 const otherProjects = computed(() => projects.value);
-const isExternal = (href: string) => href.startsWith("http");
 
 usePortfolioMotion(pageRoot);
 </script>
