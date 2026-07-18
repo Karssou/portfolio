@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
     },
-    serverBundle: "remote",
+    serverBundle: "local",
   },
 
   app: {
@@ -63,6 +63,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
+    "@nuxt/content",
   ],
 
   vite: {
