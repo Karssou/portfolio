@@ -81,6 +81,7 @@ usePortfolioMotion(pageRoot);
                     format="avif"
                     quality="78"
                     preload
+                    placeholder
                   />
 
                   <div

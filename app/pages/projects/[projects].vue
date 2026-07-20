@@ -130,7 +130,7 @@ usePortfolioMotion(pageRoot);
           >
             <ContentRenderer
               :value="project"
-              class="project-content prose mt-6 max-w-none prose-headings:font-['Share Tech'] prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:border-t prose-h2:border-border-default prose-h2:pt-8 prose-h2:text-3xl prose-h2:sm:text-4xl prose-p:leading-8 prose-p:text-muted prose-strong:text-default prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-li:text-muted prose-li:marker:text-primary"
+              class="project-content prose mt-6 max-w-none prose-headings:font-['Share Tech'] prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:text-muted prose-strong:text-default prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-li:text-muted prose-li:marker:text-primary"
             />
           </div>
         </div>
