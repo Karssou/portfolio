@@ -1,16 +1,15 @@
 ---
-title: Fan site Arcane
-cover: arcane-overview.avif
-description: Un site créé par passion autour de l'univers de la série Arcane
-href: "/projects/arcane"
-github: "https://github.com/NoArAlMa/NohamDrive"
-cta: Voir l'histoire du projet
-date: 2025-02-10
+title: Desktop Converter
+cover: converter-overview.avif
+description: Une application desktop permettant de convertir des fichiers sous plusieurs format
+href: /projects/converter
+github: https://github.com/Karssou/DeskTopConverter
+cta: Voir les détails du projet
+date: 2026-06-10
 stack:
-  - HTML
-  - SCSS
-  - JavaScript
-  - GSAP
+  - Nuxt
+  - Tauri
+  - Rust
 status: En ligne
 ---
 

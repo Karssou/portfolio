@@ -2,7 +2,9 @@
 const route = useRoute();
 
 const { data: project } = await useAsyncData("projects", () =>
-  queryCollection("content").path(`/projects/${route.params.projects}`).first(),
+  queryCollection("projects")
+    .path(`/projects/${route.params.projects}/`)
+    .first(),
 );
 </script>
 

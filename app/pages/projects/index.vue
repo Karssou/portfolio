@@ -1,10 +1,12 @@
 <script lang="ts" setup>
-import type { Project } from "~/types/Project";
-
 const { t, tm } = useI18n();
 const pageRoot = ref<HTMLElement | null>(null);
-const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
+// const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
 const otherProjects = computed(() => projects.value);
+
+const { data: projects } = await useAsyncData("projects", () =>
+  queryCollection("projects").all(),
+);
 
 usePortfolioMotion(pageRoot);
 </script>
@@ -52,10 +54,7 @@ usePortfolioMotion(pageRoot);
         </p>
       </header>
 
-      <section
-        v-if="otherProjects.length"
-        class="border-t border-border-default pt-10"
-      >
+      <section v-if="projects" class="border-t border-border-default pt-10">
         <div class="grid gap-5 lg:grid-cols-2">
           <ProjectsCard
             v-for="(project, index) in otherProjects"
