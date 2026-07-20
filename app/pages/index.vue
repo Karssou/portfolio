@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { personSchema } from "@/data/person.schema";
+import { websiteSchema } from "~/data/website.schema";
 
 useHead({
   script: [
     {
       type: "application/ld+json",
-      textContent: JSON.stringify(personSchema),
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [personSchema, websiteSchema],
+      }),
     },
   ],
 });

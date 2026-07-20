@@ -1,5 +1,3 @@
-// utils/structured-data.ts
-
 export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",

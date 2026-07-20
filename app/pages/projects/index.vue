@@ -1,4 +1,18 @@
 <script lang="ts" setup>
+import { projectsCollectionPageSchema } from "~/data/projects.schema";
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [projectsCollectionPageSchema],
+      }),
+    },
+  ],
+});
+
 const { t } = useI18n();
 const pageRoot = ref<HTMLElement | null>(null);
 // const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
