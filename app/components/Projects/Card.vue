@@ -7,10 +7,12 @@ defineProps<{
     description: string;
     stack: string[];
     status: string;
-    href: string;
+    href: string | undefined;
     cta: string;
     github: string;
     cover: string;
+    ctaWebsite: string;
+    website: string;
   };
   index: number;
 }>();

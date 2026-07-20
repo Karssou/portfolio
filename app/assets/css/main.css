@@ -70,7 +70,9 @@
 .project-forward-leave-active,
 .project-back-enter-active,
 .project-back-leave-active {
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
 }
 
 /* Liste vers projet spécifique */
@@ -79,18 +81,8 @@
   opacity: 0;
 }
 
-.project-forward-leave-to {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
 /*  Inverse */
 .project-back-enter-from {
   transform: translateX(-100%);
-  opacity: 0;
-}
-
-.project-back-leave-to {
-  transform: translateX(100%);
   opacity: 0;
 }
