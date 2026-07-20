@@ -11,23 +11,31 @@ stack:
   - SCSS
   - JavaScript
   - GSAP
-status: En ligne
+status: Archives
 ---
 
-# Mon premier projet
+## Pourquoi ce projet ?
 
-**Bienvenue** dans mon _projet_ de test.
+...
 
-## Le contexte
+## Les objectifs
 
-J'ai créé ce projet pour tester le fonctionnement de **Nuxt Content**.
+...
 
-## Les technologies
+## Architecture
 
-- Nuxt 4
-- Vue 3
-- TailwindCSS
+...
 
-## Les difficultés
+## Les défis
 
-La gestion du contenu dynamique était la partie intéressante.
+...
+
+## Les fonctionnalités
+
+...
+
+## Ce que j'ai appris
+
+...
+
+## Et ensuite ?

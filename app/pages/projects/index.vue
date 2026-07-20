@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { t, tm } = useI18n();
+const { t } = useI18n();
 const pageRoot = ref<HTMLElement | null>(null);
 // const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
 const otherProjects = computed(() => projects.value);
@@ -31,17 +31,21 @@ usePortfolioMotion(pageRoot);
     </div>
 
     <div class="mx-auto max-w-7xl">
+      <NuxtLink
+        to="/"
+        class="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-muted transition-colors hover:text-primary"
+      >
+        <Icon
+          name="material-symbols:arrow-back-rounded"
+          class="size-5 transition-transform group-hover:-translate-x-1"
+        />
+        Accueil
+      </NuxtLink>
       <header
         data-section
         class="grid gap-8 border-b border-border-default pb-10 lg:grid-cols-[1fr_auto] lg:items-end"
       >
         <div>
-          <p
-            class="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.28em] text-primary"
-          >
-            <span class="h-px w-10 bg-primary" />
-            {{ t("projects.ProjectPage.page.eyebrow") }}
-          </p>
           <h1
             class="mt-5 max-w-3xl font-['Share Tech'] text-5xl font-bold tracking-tight uppercase leading-[0.88] sm:text-7xl lg:text-8xl"
           >

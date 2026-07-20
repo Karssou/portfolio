@@ -14,7 +14,7 @@ export default defineContentConfig({
 
         date: z.string(),
 
-        status: z.enum(["Online", "Archived", "In progress"]),
+        status: z.enum(["En ligne", "Archivé", "En cours"]),
 
         stack: z.array(z.string()),
 
@@ -27,6 +27,10 @@ export default defineContentConfig({
         cover: z.string().optional(),
 
         featured: z.boolean().default(false),
+
+        website: z.string().optional(),
+
+        ctaWebsite: z.string().optional(),
       }),
     }),
   },

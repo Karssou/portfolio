@@ -11,6 +11,8 @@ stack:
   - Tauri
   - Rust
 status: En ligne
+ctaWebsite: Visiter le site
+website: https://nohamdrive.alexandre-larue.fr
 ---
 
 # Mon premier projet

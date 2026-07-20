@@ -64,3 +64,33 @@
     overflow-x: hidden;
   }
 }
+
+/* Navigation entre la liste des projets et une fiche projet. */
+.project-forward-enter-active,
+.project-forward-leave-active,
+.project-back-enter-active,
+.project-back-leave-active {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Liste vers projet spécifique */
+.project-forward-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.project-forward-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/*  Inverse */
+.project-back-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.project-back-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}

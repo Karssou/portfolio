@@ -11,22 +11,37 @@ stack:
   - Tauri
   - Rust
 status: En ligne
+website: ""
+ctaWebsite: "Télécharger l'app (Windows)"
 ---
 
-# Mon premier projet
+## Pourquoi ce projet ?
 
-**Bienvenue** dans mon _projet_ de test.
+Durant beaucoup de projets, j'ai constamment eu besoins de convertisseurs pour des tas de projets différents avec des tas de formats différents (OBJ, FBX, AVIF, JPG, PNG, SVG, FAVICON, ect...). Mais à chaque fois les convertisseurs me décevaient : trop de pubs, trop lent, devoir envoyés des dizaines de Mb en ligne, ou alors un résultats qui laissaient à désirer. Et je me suis alors dit que je devais remédier à ce problèmes, et je ne savais malheureusement pas ce qui m'attendait....
 
-## Le contexte
+## Les objectifs
 
-J'ai créé ce projet pour tester le fonctionnement de **Nuxt Content**.
+Les objectifs au début étaient simples :
 
-## Les technologies
+- Créer une interface desktop intuitive et rapide
+- Convertir les fichiers dans le format désiré
+- Pouvoir les récupérer directement sans avoir à les téléchargés
+- Et que le tout reste en local
 
-- Nuxt 4
-- Vue 3
-- TailwindCSS
+## Architecture
 
-## Les difficultés
+Pour que l'architecture soit correcte, rapide et réponde à
 
-La gestion du contenu dynamique était la partie intéressante.
+## Les défis
+
+...
+
+## Les fonctionnalités
+
+...
+
+## Ce que j'ai appris
+
+...
+
+## Et ensuite ?

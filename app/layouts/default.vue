@@ -4,6 +4,7 @@ import { Icon } from "@iconify/vue";
 const { t, locales, setLocale, locale } = useI18n();
 const { isMobile } = useResponsive();
 const route = useRoute();
+
 const localePath = useLocalePath();
 
 const mobileMenuOpen = ref(false);
@@ -73,17 +74,6 @@ const selectLocale = async (code: string) => {
           leave-to-class="-translate-x-3 opacity-0"
           mode="out-in"
         >
-          <NuxtLink
-            v-if="!isHome && !isMobile"
-            :to="localePath('/')"
-            class="group inline-flex items-center gap-2.5 rounded-full border border-border-default bg-surface/80 px-6 py-3.5 text-default shadow-md backdrop-blur-xl transition-all duration-300 hover:border-border-hover hover:bg-surface/50 hover:shadow-lg active:scale-95"
-          >
-            <Icon
-              icon="material-symbols:chevron-left-rounded"
-              class="size-5 shrink-0 transition-transform duration-300 group-hover:-translate-x-1"
-            />
-            <span class="font-semibold">{{ t("navbar.home") }}</span>
-          </NuxtLink>
         </Transition>
 
         <div
@@ -126,18 +116,6 @@ const selectLocale = async (code: string) => {
                   Portfolio
                 </span>
               </span>
-            </NuxtLink>
-
-            <NuxtLink
-              v-else
-              :to="localePath('/')"
-              class="group inline-flex items-center gap-2 rounded-full border border-border-default bg-white/5 px-4 py-3 text-default transition-colors duration-300 hover:bg-white/10"
-            >
-              <Icon
-                icon="material-symbols:chevron-left-rounded"
-                class="size-5 transition-transform duration-300 group-hover:-translate-x-1"
-              />
-              <span class="text-sm font-semibold">{{ t("navbar.home") }}</span>
             </NuxtLink>
           </Transition>
 
