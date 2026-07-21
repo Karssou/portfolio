@@ -3,6 +3,7 @@
 
 @theme {
   --font-sora: "Sora", sans-serif;
+  --font-share-tech: "Share Tech", sans-serif;
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-default: var(--text-default);

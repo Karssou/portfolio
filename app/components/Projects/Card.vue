@@ -45,7 +45,7 @@ defineProps<{
 
     <div class="relative mt-1 flex flex-col gap-2">
       <h3
-        class="mb-3 font-['Share Tech'] text-3xl font-bold uppercase leading-none tracking-tight sm:text-4xl"
+        class="mb-3 text-3xl font-bold uppercase leading-none tracking-tight sm:text-4xl"
       >
         {{ project.title }}
       </h3>
@@ -56,7 +56,7 @@ defineProps<{
         :alt="project.title"
         class="aspect-video w-full object-cover rounded-xl border border-default/10"
       />
-      <p class="max-w-lg text-sm leading-7 text-muted sm:text-base">
+      <p class="max-w-lg text-sm leading-7 font-sora text-muted sm:text-base">
         {{ project.description }}
       </p>
     </div>
@@ -66,7 +66,7 @@ defineProps<{
         <span
           v-for="tech in project.stack"
           :key="tech"
-          class="rounded-full border border-border-default bg-background/60 px-3 py-1.5 text-xs font-medium text-muted"
+          class="rounded-full font-sora border border-border-default bg-background/60 px-3 py-1.5 text-xs font-medium text-muted"
         >
           {{ tech }}
         </span>

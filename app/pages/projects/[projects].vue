@@ -72,7 +72,7 @@ usePortfolioMotion(pageRoot);
           </h1>
           <p
             data-hero="tagline"
-            class="mt-7 max-w-2xl text-base leading-8 text-muted sm:text-lg"
+            class="mt-7 font-sora max-w-2xl text-base leading-8 text-muted sm:text-lg"
           >
             {{ project.description }}
           </p>
@@ -89,7 +89,7 @@ usePortfolioMotion(pageRoot);
             </dt>
             <dd class="mt-2 flex items-center gap-2 text-sm font-semibold">
               <span
-                class="size-2 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]"
+                class="size-2 font-sora rounded-full bg-primary shadow-[0_0_12px_var(--primary)]"
               />
               {{ project.status }}
             </dd>
@@ -100,7 +100,7 @@ usePortfolioMotion(pageRoot);
             >
               Année
             </dt>
-            <dd class="mt-2 text-sm font-semibold">
+            <dd class="mt-2 font-sora text-sm font-semibold">
               {{ new Date(project.date).getFullYear() }}
             </dd>
           </div>
@@ -130,7 +130,7 @@ usePortfolioMotion(pageRoot);
           >
             <ContentRenderer
               :value="project"
-              class="project-content prose mt-6 max-w-none prose-headings:font-['Share Tech'] prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
+              class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-['Share Tech'] prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
             />
           </div>
         </div>
@@ -150,7 +150,7 @@ usePortfolioMotion(pageRoot);
             >
               <li v-for="technology in project.stack" :key="technology">
                 <span
-                  class="inline-flex rounded-full border border-border-default bg-background px-3 py-1.5 text-xs font-medium text-default"
+                  class="font-sora inline-flex rounded-full border border-border-default bg-background px-3 py-1.5 text-xs font-medium text-default"
                 >
                   {{ technology }}
                 </span>
@@ -163,7 +163,7 @@ usePortfolioMotion(pageRoot);
               :to="project.github"
               target="_blank"
               rel="noreferrer"
-              class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-3.5 text-sm font-bold text-default transition-transform hover:-translate-y-0.5"
+              class="mt-8 font-sora inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-3.5 text-sm font-bold text-default transition-transform hover:-translate-y-0.5"
             >
               Voir le code
               <Icon icon="mdi:github" class="size-5" />
@@ -175,7 +175,7 @@ usePortfolioMotion(pageRoot);
               :to="project.website"
               target="_blank"
               rel="noreferrer"
-              class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-transparent border border-primary px-4 py-3.5 text-sm font-bold text-primary transition-transform hover:-translate-y-0.5"
+              class="mt-2 font-sora inline-flex w-full items-center justify-center gap-2 rounded-full bg-transparent border border-primary px-4 py-3.5 text-sm font-bold text-primary transition-transform hover:-translate-y-0.5"
             >
               {{ project.ctaWebsite }}
             </NuxtLink>

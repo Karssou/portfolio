@@ -67,7 +67,7 @@ usePortfolioMotion(pageRoot);
             }}<span class="text-primary">.</span>
           </h1>
         </div>
-        <p class="max-w-md text-sm leading-7 text-muted sm:text-base">
+        <p class="max-w-md text-sm leading-7 font-sora text-muted sm:text-base">
           {{ t("projects.ProjectPage.lead") }}
         </p>
       </header>
