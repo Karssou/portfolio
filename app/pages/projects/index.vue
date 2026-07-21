@@ -13,13 +13,13 @@ useHead({
   ],
 });
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const pageRoot = ref<HTMLElement | null>(null);
 // const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
 const otherProjects = computed(() => projects.value);
 
-const { data: projects } = await useAsyncData("projects", () =>
-  queryCollection("projects").all(),
+const { data: projects } = await useAsyncData(`projects-${locale.value}`, () =>
+  queryCollection("projects").where("path", "LIKE", `%/${locale.value}`).all(),
 );
 
 usePortfolioMotion(pageRoot);

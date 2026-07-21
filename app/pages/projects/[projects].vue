@@ -5,9 +5,14 @@ const route = useRoute();
 const pageRoot = ref<HTMLElement | null>(null);
 const slug = computed(() => String(route.params.projects));
 
+const { locale } = useI18n();
+
 const { data: project } = await useAsyncData(
   () => `project-${slug.value}`,
-  () => queryCollection("projects").path(`/projects/${slug.value}`).first(),
+  () =>
+    queryCollection("projects")
+      .path(`/projects/${slug.value}/${locale.value}`)
+      .first(),
   { watch: [slug] },
 );
 

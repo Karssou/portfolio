@@ -1,18 +1,18 @@
 ---
 title: Desktop Converter
 cover: converter-overview.avif
-description: Une application desktop permettant de convertir des fichiers sous plusieurs format
+description: A desktop application allowing you to convert many files.
 href: /projects/converter
 github: https://github.com/Karssou/DeskTopConverter
-cta: Voir les détails du projet
+cta: See details
 date: 2026-06-10
 stack:
   - Nuxt
   - Tauri
   - Rust
-status: En ligne
+status: Online
 website: https://github.com/Karssou/DeskTopConverter
-ctaWebsite: "Télécharger l'app (Windows)"
+ctaWebsite: "Download App (Windows)"
 ---
 
 ## Pourquoi ce projet ?
