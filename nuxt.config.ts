@@ -85,6 +85,7 @@ export default defineNuxtConfig({
     families: {
       "Share Tech": true,
       Sora: true,
+      "Fjalla One": true,
     },
   },
 
