@@ -1,29 +1,137 @@
 # Alexandre Larue
 
+> Alexandre Larue is a French Full Stack Developer specialized in backend development, cloud computing, DevOps practices and scalable software architecture.
+
 ## About
-Full Stack Developer specialized in Cloud Computing, DevOps and backend architectures.
+
+Alexandre Larue is a developer focused on building robust and maintainable technical solutions.
+
+His main interests include:
+- Backend engineering
+- Cloud infrastructure
+- DevOps automation
+- System design
+- Performance optimization
+- Open-source software
+
+He develops projects using modern technologies such as Python, TypeScript, Rust, Docker and Linux.
+
+Portfolio owner:
+https://alexandre-larue.fr
 
 ## Projects
 
-- NohamDrive:
-  Personal cloud storage platform built with Nuxt, FastAPI and MinIO.
+### NohamDrive
 
-- Converter:
-  Desktop file converter built with Rust and Tauri.
+A personal cloud storage platform designed as an alternative to traditional cloud solutions.
 
-## Links
+Main technologies:
+- Nuxt
+- Vue.js
+- FastAPI
+- PostgreSQL
+- MinIO
+- Docker
+- Redis
 
-Portfolio:
-https://alexandre-larue.fr
+Technical focus:
+- File storage architecture
+- Backend API design
+- Real-time synchronization
+- Cloud infrastructure
+
+Project page:
+https://alexandre-larue.fr/projects/nohamdrive
+
+
+### Desktop Converter
+
+A desktop application for converting files between multiple formats with a focus on performance and local processing.
+
+Main technologies:
+- Rust
+- Tauri
+- Vue.js
+
+Technical focus:
+- Native desktop applications
+- File processing
+- Performance optimization
+- Local-first software
+
+Project page:
+https://alexandre-larue.fr/projects/converter
+
+
+### Vesselify
+
+A monitoring and infrastructure management project.
+
+Main technologies:
+- Nuxt
+- AdonisJS
+- PostgreSQL
+- Docker
+
+Technical focus:
+- Monitoring systems
+- Backend architecture
+- Containerized applications
+
+Project page:
+https://alexandre-larue.fr/projects/vesselify
+
+## Technical Skills
+
+Programming languages:
+- Python
+- TypeScript
+- JavaScript
+- Rust
+- SQL
+- Lua
+
+Frameworks and technologies:
+- Nuxt
+- Vue.js
+- FastAPI
+- AdonisJS
+- TailwindCSS
+- Docker
+- PostgreSQL
+- MinIO
+- Redis
+- Linux
+
+Areas of expertise:
+- Full Stack Development
+- Backend Development
+- Cloud Computing
+- DevOps
+- Software Architecture
+
+## Articles
+
+Technical articles and developer notes are available on the portfolio.
+
+Articles:
+https://alexandre-larue.fr/blog
+
+## Professional Links
 
 GitHub:
 https://github.com/Karssou
 
+LinkedIn:
+https://linkedin.com/in/alexandre-larue44
+
 Malt:
 https://www.malt.fr/profile/alexandrelarue
 
-Fiverr:
-https://fr.fiverr.com/s/pd7zjqN
+## Contact
 
-Linkedin:
-https://www.linkedin.com/in/alexandre-larue44
+Portfolio:
+https://alexandre-larue.fr
+
+Contact page:
+https://alexandre-larue.fr/#contact
