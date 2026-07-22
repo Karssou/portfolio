@@ -16,6 +16,8 @@ defineProps<{
   };
   index: number;
 }>();
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -73,7 +75,7 @@ defineProps<{
       </div>
 
       <NuxtLink
-        :to="project.href"
+        :to="localePath(project.href)"
         class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-default transition-colors duration-300 hover:text-primary hover:cursor-pointer"
       >
         {{ project.cta }}

@@ -24,6 +24,8 @@ useHead({
 });
 
 const { t, locale } = useI18n();
+
+const localePath = useLocalePath();
 const pageRoot = ref<HTMLElement | null>(null);
 // const projects = computed(() => tm("projects.ProjectPage.items") as Project[]);
 const otherProjects = computed(() => projects.value);
@@ -56,7 +58,7 @@ usePortfolioMotion(pageRoot);
 
     <div class="mx-auto max-w-7xl">
       <NuxtLink
-        to="/"
+        :to="localePath('/')"
         class="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-muted transition-colors hover:text-primary"
       >
         <Icon

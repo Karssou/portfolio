@@ -56,11 +56,18 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    strategy: "prefix_except_default",
     defaultLocale: "fr",
     locales: [
       { code: "en", name: "English", file: "en/index.ts" },
       { code: "fr", name: "Français", file: "fr/index.ts" },
     ],
+
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
   },
 
   googleFonts: {

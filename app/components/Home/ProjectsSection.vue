@@ -4,6 +4,8 @@ import { Icon } from "@iconify/vue";
 
 const { t, tm } = useI18n();
 
+const localePath = useLocalePath();
+
 const projects = computed(
   () =>
     tm("projects.items") as Array<{
@@ -82,7 +84,7 @@ const projects = computed(
         </div>
 
         <NuxtLink
-          :to="project.href"
+          :to="localePath(project.href)"
           class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold transition-transform duration-300 hover:-translate-y-0.5"
           :class="
             index === 2

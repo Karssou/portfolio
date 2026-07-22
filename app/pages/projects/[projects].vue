@@ -24,6 +24,7 @@ useHead({
 
 const pageRoot = ref<HTMLElement | null>(null);
 
+const localePath = useLocalePath();
 const { locale } = useI18n();
 
 const { data: project } = await useAsyncData(
@@ -73,7 +74,7 @@ usePortfolioMotion(pageRoot);
 
     <div class="mx-auto max-w-7xl">
       <NuxtLink
-        to="/projects"
+        :to="localePath('/projects')"
         class="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-muted transition-colors hover:text-primary"
       >
         <Icon

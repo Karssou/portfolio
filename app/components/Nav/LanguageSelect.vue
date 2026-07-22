@@ -10,6 +10,11 @@ const { locales, setLocale, locale } = useI18n();
 const current = computed(() => {
   return locales.value.find((l) => l.code === locale.value);
 });
+
+const selectLocale = async (code: "fr" | "en") => {
+  await setLocale(code);
+  open.value = false;
+};
 </script>
 
 <template>
@@ -36,10 +41,7 @@ const current = computed(() => {
           v-for="lang in locales"
           :key="lang.code"
           class="flex cursor-pointer items-center justify-between rounded-full px-3 py-2 transition-all duration-300 hover:bg-bg-hovered"
-          @click="
-            setLocale(lang.code);
-            open = false;
-          "
+          @click="selectLocale(lang.code)"
         >
           <span class="flex items-center gap-2">
             {{ lang.name }}
