@@ -1,0 +1,29 @@
+# Alexandre Larue
+
+## About
+Full Stack Developer specialized in Cloud Computing, DevOps and backend architectures.
+
+## Projects
+
+- NohamDrive:
+  Personal cloud storage platform built with Nuxt, FastAPI and MinIO.
+
+- Converter:
+  Desktop file converter built with Rust and Tauri.
+
+## Links
+
+Portfolio:
+https://alexandre-larue.fr
+
+GitHub:
+https://github.com/Karssou
+
+Malt:
+https://www.malt.fr/profile/alexandrelarue
+
+Fiverr:
+https://fr.fiverr.com/s/pd7zjqN
+
+Linkedin:
+https://www.linkedin.com/in/alexandre-larue44

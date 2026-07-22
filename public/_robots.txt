@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Content-Signal: search=yes
+Content-Signal: ai-input=yes
+Content-Signal: ai-train=yes
+
+Sitemap: https://alexandre-larue.fr/sitemap.xml

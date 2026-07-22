@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  css: ["./app/assets/css/main.css"],
+  css: ["@/assets/css/main.css"],
 
   icon: {
     clientBundle: {
@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
     "@nuxt/content",
+    "@nuxtjs/robots",
   ],
 
   vite: {
@@ -81,5 +82,10 @@ export default defineNuxtConfig({
   site: {
     url: "https://alexandre-larue.fr",
     name: "Alexandre LARUE développeur Full-Stack",
+    indexable: true,
+  },
+
+  sitemap: {
+    autoLastmod: true,
   },
 });
