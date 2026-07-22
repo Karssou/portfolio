@@ -60,7 +60,7 @@ Technical focus:
 - Local-first software
 
 Project page:
-https://alexandre-larue.fr/projects/converter
+[Desktop Converter](https://alexandre-larue.fr/projects/converter)
 
 
 ### Vesselify
@@ -79,7 +79,7 @@ Technical focus:
 - Containerized applications
 
 Project page:
-https://alexandre-larue.fr/projects/vesselify
+[Vesselify](https://alexandre-larue.fr/projects/vesselify)
 
 ## Technical Skills
 
@@ -110,28 +110,21 @@ Areas of expertise:
 - DevOps
 - Software Architecture
 
-## Articles
-
-Technical articles and developer notes are available on the portfolio.
-
-Articles:
-https://alexandre-larue.fr/blog
-
 ## Professional Links
 
 GitHub:
-https://github.com/Karssou
+[Github](https://github.com/Karssou)
 
 LinkedIn:
-https://linkedin.com/in/alexandre-larue44
+[Linkedin](https://linkedin.com/in/alexandre-larue44)
 
 Malt:
-https://www.malt.fr/profile/alexandrelarue
+[Malt](https://www.malt.fr/profile/alexandrelarue)
 
 ## Contact
 
 Portfolio:
-https://alexandre-larue.fr
+[Portfolio](https://alexandre-larue.fr)
 
 Contact page:
-https://alexandre-larue.fr/#contact
+[Contact Page](https://alexandre-larue.fr/#contact)
