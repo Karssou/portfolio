@@ -30,14 +30,11 @@ useSeoMeta({
 });
 
 const { t } = useI18n();
-const pageRoot = ref<HTMLElement | null>(null);
-
-usePortfolioMotion(pageRoot);
 </script>
 
 <template>
   <div>
-    <main ref="pageRoot" class="relative overflow-x-hidden pb-36">
+    <main class="relative overflow-x-hidden pb-36">
       <div class="pointer-events-none absolute inset-0 -z-10">
         <div
           data-orb

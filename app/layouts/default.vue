@@ -55,8 +55,7 @@ const selectLocale = async (code: string) => {
 </script>
 
 <template>
-  <ClientOnly>
-    <div>
+  <div>
       <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
         <div
           v-if="isMobile && mobileMenuOpen"
@@ -227,6 +226,5 @@ const selectLocale = async (code: string) => {
       </Transition>
 
       <NuxtPage />
-    </div>
-  </ClientOnly>
+  </div>
 </template>
