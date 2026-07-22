@@ -1,5 +1,9 @@
 <script lang="ts" setup>
+import { personSchema } from "~/data/person.schema";
 import { projectsCollectionPageSchema } from "~/data/projects.schema";
+import { arcanePageSchema } from "~/data/projects/arcane/page.schema";
+import { converterPageSchema } from "~/data/projects/converter/page.schema";
+import { nohamdrivePageSchema } from "~/data/projects/nohamdrive/page.schema";
 
 useHead({
   script: [
@@ -7,7 +11,13 @@ useHead({
       type: "application/ld+json",
       textContent: JSON.stringify({
         "@context": "https://schema.org",
-        "@graph": [projectsCollectionPageSchema],
+        "@graph": [
+          projectsCollectionPageSchema,
+          nohamdrivePageSchema,
+          arcanePageSchema,
+          converterPageSchema,
+          personSchema,
+        ],
       }),
     },
   ],

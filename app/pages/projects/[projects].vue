@@ -1,9 +1,28 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+import { personSchema } from "~/data/person.schema";
+import { projectSchemas } from "~/data/schema";
+import { websiteSchema } from "~/data/website.schema";
 
 const route = useRoute();
-const pageRoot = ref<HTMLElement | null>(null);
+
 const slug = computed(() => String(route.params.projects));
+
+const schemas = projectSchemas[slug.value as keyof typeof projectSchemas];
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [personSchema, websiteSchema, schemas.page, schemas.software],
+      }),
+    },
+  ],
+});
+
+const pageRoot = ref<HTMLElement | null>(null);
 
 const { locale } = useI18n();
 
