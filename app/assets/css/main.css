@@ -1,7 +1,10 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --font-sora: "Sora", sans-serif;
+  --font-share-tech: "Share Tech", sans-serif;
+  --font-title: "Fjalla One";
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-default: var(--text-default);
@@ -50,8 +53,38 @@
   body {
     @apply bg-background text-default antialiased transition-colors duration-1000;
     background-image:
-      radial-gradient(circle at top left, rgba(255, 157, 0, 0.1), transparent 28%),
-      radial-gradient(circle at bottom right, rgba(255, 157, 0, 0.08), transparent 24%);
+      radial-gradient(
+        circle at top left,
+        rgba(255, 157, 0, 0.1),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        rgba(255, 157, 0, 0.08),
+        transparent 24%
+      );
     overflow-x: hidden;
   }
+}
+
+/* Navigation entre la liste des projets et une fiche projet. */
+.project-forward-enter-active,
+.project-forward-leave-active,
+.project-back-enter-active,
+.project-back-leave-active {
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.3s ease-out;
+}
+
+/* Liste vers projet spécifique */
+.project-forward-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/*  Inverse */
+.project-back-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
 }

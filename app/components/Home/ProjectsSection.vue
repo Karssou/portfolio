@@ -31,20 +31,40 @@ const projects = computed(
         :key="project.title"
         data-card
         class="group flex h-full flex-col justify-between rounded-[1.75rem] border border-border-default bg-surface/70 p-6 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        :class="
+          index === 2
+            ? ' border border-primary/30 shadow-xl shadow-primary/10'
+            : ''
+        "
         :data-delay="index * 120"
       >
         <div class="flex flex-col gap-4">
           <div class="flex items-center justify-between gap-3">
-            <span class="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            <span
+              class="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary"
+            >
               {{ project.status }}
             </span>
-            <Icon icon="material-symbols:code-rounded" class="size-6 text-primary transition-transform duration-300 group-hover:rotate-6" />
+            <Icon
+              icon="material-symbols:code-rounded"
+              class="size-6 text-primary transition-transform duration-300 group-hover:rotate-6"
+            />
           </div>
 
           <div>
-            <h3 class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight">
-              {{ project.title }}
-            </h3>
+            <div class="inline-flex items-center gap-2">
+              <Icon
+                v-if="index === 2"
+                icon="material-symbols:apps"
+                class="size-10"
+              />
+              <h3
+                class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight"
+              >
+                {{ project.title }}
+              </h3>
+            </div>
+
             <p class="mt-3 font-sora text-sm leading-7 text-muted">
               {{ project.description }}
             </p>
@@ -63,7 +83,12 @@ const projects = computed(
 
         <NuxtLink
           :to="project.href"
-          class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold transition-transform duration-300 hover:-translate-y-0.5"
+          :class="
+            index === 2
+              ? 'border bg-transparent border-primary text-primary'
+              : 'text-white'
+          "
         >
           {{ project.cta }}
           <Icon icon="material-symbols:arrow-forward-rounded" class="size-5" />

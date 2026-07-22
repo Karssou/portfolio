@@ -5,13 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  css: ["./app/assets/css/main.css"],
+  css: ["@/assets/css/main.css"],
 
   icon: {
     clientBundle: {
       scan: true,
     },
-    serverBundle: "remote",
+    serverBundle: "local",
   },
 
   app: {
@@ -19,22 +19,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "fr",
       },
-      link: [
-        {
-          rel: "preload",
-          href: "/fonts/Share_Tech-normal-400-latin.woff2",
-          as: "font",
-          type: "font/woff2",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "preload",
-          href: "/fonts/Sora-normal-400-latin.woff2",
-          as: "font",
-          type: "font/woff2",
-          crossorigin: "anonymous",
-        },
-      ],
     },
   },
 
@@ -63,6 +47,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
+    "@nuxt/content",
+    "@nuxtjs/robots",
   ],
 
   vite: {
@@ -84,6 +70,7 @@ export default defineNuxtConfig({
     families: {
       "Share Tech": true,
       Sora: true,
+      "Fjalla One": true,
     },
   },
 
@@ -95,5 +82,10 @@ export default defineNuxtConfig({
   site: {
     url: "https://alexandre-larue.fr",
     name: "Alexandre LARUE développeur Full-Stack",
+    indexable: true,
+  },
+
+  sitemap: {
+    autoLastmod: true,
   },
 });
