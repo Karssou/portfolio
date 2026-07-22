@@ -146,6 +146,8 @@ usePortfolioMotion(pageRoot);
               placeholder
               :src="`/projects/${project.cover}`"
               :alt="`Aperçu du projet ${project.title}`"
+              width="850"
+              height="478"
               sizes="100vw sm:90vw lg:850px"
               class="aspect-video w-full object-cover"
             />
