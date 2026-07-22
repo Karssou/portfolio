@@ -92,9 +92,11 @@ usePortfolioMotion(pageRoot);
             >
               Statut
             </dt>
-            <dd class="mt-2 flex items-center gap-2 text-sm font-semibold">
+            <dd
+              class="mt-2 font-sora flex items-center gap-2 text-sm font-semibold"
+            >
               <span
-                class="size-2 font-sora rounded-full bg-primary shadow-[0_0_12px_var(--primary)]"
+                class="size-2 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]"
               />
               {{ project.status }}
             </dd>
