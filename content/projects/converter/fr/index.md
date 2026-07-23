@@ -15,57 +15,57 @@ website: https://github.com/Karssou/DeskTopConverter
 ctaWebsite: "Télécharger l'app (Windows)"
 ---
 
-## Why this project?
+## Pourquoi ce projet ?
 
-Across many projects, I constantly needed converters for all kinds of work with all kinds of formats (**OBJ, FBX, AVIF, JPG, PNG, SVG, FAVICON**, etc.). But every single time, existing converters let me down: **too many ads**, **too slow**, **having to upload dozens of megabytes online**, or simply disappointing results.
+Durant beaucoup de projets, j'ai constamment eu besoins de convertisseurs pour des tas de projets différents avec des tas de formats différents (**OBJ, FBX, AVIF, JPG, PNG, SVG, FAVICON**, ect...). Mais à chaque fois les convertisseurs me décevaient : **trop de pubs**, **trop lent**, **devoir envoyés des dizaines de Mb en ligne**, ou alors un résultats qui laissaient à désirer.
 
-> So I told myself I needed to solve this problem—and unfortunately, I had no idea what I was getting into...
+> Et je me suis alors dit que je devais remédier à ce problèmes, et je ne savais malheureusement pas ce qui m'attendait....
 
-## Goals
+## Les objectifs
 
-The initial goals were simple:
+Les objectifs au début étaient simples :
 
-- Create an **intuitive** and **fast** desktop interface
-- Convert files into the desired format
-- Get the converted files directly without having to download them from the web
-- Keep everything **100% local**
+- Créer une interface desktop **intuitive** et **rapide**
+- Convertir les fichiers dans le format désiré
+- Pouvoir les récupérer directement sans avoir à les téléchargés
+- Que le tout reste **100 % local**
 
-As development progressed, new goals emerged:
+Au fur et à mesure du développement, de nouveaux objectifs sont apparus :
 
-- Build an **easily extensible** architecture to lay the groundwork for future features (_compression, background removal, and more_).
+- Créer une architecture **facilement extensible** pour préparer le terrain pour de futures fonctionnalités (_compressions, background remover et autres_).
 
 ## Architecture
 
-The app is built with **Tauri**, combining a **Nuxt** web interface with the native performance of **Rust**—the perfect fit for this use case.
+L'application est développée avec **Tauri**, ce qui permet de combiner une interface web avec **Nuxt** avec les performances natives de **Rust**, parfaite pour le cas d'utilisation.
 
-All the conversion logic is isolated inside an **independent engine** built on several abstractions:
+Toute la logique de conversion est isolée dans un **moteur indépendant** reposant sur plusieurs abstractions :
 
-- A **pipeline** that manages stacking different tools, such as decoding, converting, and encoding into the desired format.
-- Individual **tools (features)**, each with their own file and trait implementation.
-- The same approach for **encoders** and **decoders**.
+- Une **pipeline** qui s'occupe de gérer l'empilement des différents outils comme le décodage, la conversion et l'encodage dans le format souhaité.
+- Les **outils (fonctionnalités)** ont chacun leur fichiers avec leur trait.
+- La même chose pour les **encodeurs** et les **décodeurs**.
 
-This setup makes it possible to add new formats or features with **minimal impact** on the rest of the codebase.
+Cette organisation permet d'ajouter un nouveau format avec un **impact minimal** sur le reste du projet ainsi que de nouveaux outils / fonctionnalités.
 
-## Challenges
+## Les défis
 
-This project pushed me to face numerous technical challenges.
+Ce projet m'a confronté à de nombreux défis techniques.
 
-The primary hurdle was designing a **truly extensible architecture**. Instead of piling up conditions (_if_ or _match_ statements) everywhere like in the first version, I gradually transitioned to a **trait-oriented** structure that makes adding new converters straightforward.
+Le premier défi a été la conception d'une **architecture réellement extensible**. Au lieu d'accumuler des conditions (_if_ ou _match_) partout dans le code, comme le faisait la première version, j'ai progressivement mis en place une architecture orientée **traits** qui permet d'ajouter facilement de nouveaux convertisseurs.
 
-Integrating certain file formats also proved much trickier than anticipated. Formats like **AVIF** required specialized libraries and native dependencies, while others demanded careful handling of **metadata** and **compression parameters**.
+L'intégration de certains formats s'est également révélée plus complexe que prévu. Des formats comme **AVIF** nécessitent des bibliothèques spécialisées et des dépendances natives, tandis que d'autres demandent de gérer correctement leurs **métadonnées** ou leurs **paramètres de compression**.
 
-## Features
+## Les fonctionnalités
 
-Today, the app offers:
+Aujourd'hui, l'application propose notamment :
 
-- Local file conversion **without sending data over the internet**
-- **Compression quality** settings when supported by the format
-- A **modern** and **responsive** desktop interface
+- Conversion locale de fichiers **sans envoi sur Internet**
+- Gestion de la **qualité de compression** lorsque le format le permet
+- Interface desktop **moderne** et **réactive**
 
-The project keeps evolving with the gradual addition of new converters and features.
+Le projet continue d'évoluer avec l'ajout progressif de nouveaux convertisseurs et de nouvelles fonctionnalités.
 
-## What I learned
+## Ce que j'ai appris
 
-This is probably the project that made me grow the most in **Rust**.
+Ce projet est probablement celui qui m'a le plus fait progresser en **Rust**.
 
-Beyond the technical skills, it taught me that software appearing simple on the surface often hides a vast amount of **architectural decisions**, **optimizations**, and **trade-offs**.
+Au-delà de la technique, ce projet m'a surtout appris qu'un logiciel qui paraît simple en apparence cache souvent une quantité importante de **décisions d'architecture**, **d'optimisations** et de **compromis**.

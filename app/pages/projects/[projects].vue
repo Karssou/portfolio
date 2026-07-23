@@ -27,12 +27,15 @@ const pageRoot = ref<HTMLElement | null>(null);
 const localePath = useLocalePath();
 const { locale } = useI18n();
 
+const projectMarkdown = computed(
+  () => `/projects/${slug.value}/${locale.value}`,
+);
+
+console.info(projectMarkdown.value);
+
 const { data: project } = await useAsyncData(
-  () => `project-${slug.value}`,
-  () =>
-    queryCollection("projects")
-      .path(`/projects/${slug.value}/${locale.value}`)
-      .first(),
+  () => `project-${slug.value}-${locale.value}`,
+  () => queryCollection("projects").path(projectMarkdown.value).first(),
   { watch: [slug] },
 );
 
