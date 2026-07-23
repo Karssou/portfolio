@@ -4,7 +4,7 @@ import { Icon } from "@iconify/vue";
 import { useClipboard } from "@vueuse/core";
 const { t, tm } = useI18n();
 
-const email = ref("alexandrelarue67@gmail.com");
+const email = ref("contact@alexandre-larue.fr");
 const phoneNumber = ref("06 45 06 17 35");
 const github = "https://github.com/Karssou";
 const linkedin = "https://www.linkedin.com/in/alexandre-larue44";

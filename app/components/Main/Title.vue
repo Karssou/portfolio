@@ -5,7 +5,7 @@ import { useClipboard } from "@vueuse/core";
 
 const { t } = useI18n();
 
-const email = ref("alexandrelarue67@gmail.com");
+const email = ref("contact@alexandre-larue.fr");
 const phoneNumber = ref("06 45 06 17 35");
 const github = "https://github.com/Karssou";
 const linkedin = "https://www.linkedin.com/in/alexandre-larue44";
@@ -73,16 +73,15 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
 
       <div data-hero="contacts" class="grid gap-4 sm:grid-cols-2">
         <button
-          class="group flex items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
+          class="group flex w-full min-w-0 items-center gap-3 rounded-2xl border border-border-default bg-surface/60 px-4 py-3 text-left transition-all duration-300 hover:-translate-y-0.5 hover:bg-bg-hovered"
           @click="emailCopy()"
         >
           <Icon
             icon="material-symbols:mail-rounded"
-            class="size-6 text-primary"
+            class="size-6 shrink-0 text-primary"
           />
-          <span
-            class="font-sora max-w-[80%] text-ellipsis text-sm sm:text-base"
-          >
+
+          <span class="font-sora flex-1 truncate text-sm sm:text-base">
             {{ emailCopied ? "Copié !" : email }}
           </span>
         </button>
