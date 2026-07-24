@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     serverBundle: "local",
   },
 
+  routeRules: {
+    "/stats/script.js": { proxy: "https://cloud.umami.is/script.js" },
+    "/stats/api/send": { proxy: "https://cloud.umami.is/api/send" },
+  },
+
   app: {
     head: {
       htmlAttrs: {
@@ -21,9 +26,10 @@ export default defineNuxtConfig({
       },
       script: [
         {
-          src: "https://cloud.umami.is/script.js",
+          src: "/stats/script.js",
           defer: true,
           "data-website-id": "f6b80b6c-10ec-438b-a605-0dbb841a5c8b",
+          "data-host-url": "/stats",
         },
       ],
     },
