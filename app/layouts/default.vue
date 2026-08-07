@@ -222,8 +222,12 @@ const selectLocale = async (code: string) => {
     </Transition>
 
     <NuxtPage />
-    <footer class="flex items-center justify-between text-muted pb-4 px-6">
-      <p>&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
+    <footer
+      class="flex flex-col items-center justify-between text-muted pb-15 px-6 md:flex-row md:pb-4"
+    >
+      <p class="text-center">
+        &copy; 2026 Alexandre LARUE. Tous droits réservés.
+      </p>
       <a href="/legal-mention" class="hover:underline">Mentions légales</a>
     </footer>
   </div>
