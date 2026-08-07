@@ -7,7 +7,7 @@
       "description": "Mon portfolio professionnel moderne, conçu en SSR. Optimisé pour le SEO, les performances d'affichage et déployé de manière automatisée",
       "stack": ["Nuxt", "Vue", "Tailwind", "i18n"],
       "status": "En ligne",
-      "href": "#contact",
+      "href": "https//alexandre-larue.fr/#contact",
       "cta": "Contactez moi"
     },
     {
