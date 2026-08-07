@@ -24,14 +24,21 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "fr",
       },
-      script: [
-        {
-          src: "/stats/script.js",
-          defer: true,
-          "data-website-id": "f6b80b6c-10ec-438b-a605-0dbb841a5c8b",
-          "data-host-url": "/stats",
-        },
-      ],
+    },
+  },
+
+  $production: {
+    app: {
+      head: {
+        script: [
+          {
+            src: "/stats/script.js",
+            defer: true,
+            "data-website-id": "f6b80b6c-10ec-438b-a605-0dbb841a5c8b",
+            "data-host-url": "/stats",
+          },
+        ],
+      },
     },
   },
 

@@ -33,5 +33,10 @@ export default defineContentConfig({
         ctaWebsite: z.string().optional(),
       }),
     }),
+
+    root: defineCollection({
+      type : "page",
+      source: "**",
+    }),
   },
 });

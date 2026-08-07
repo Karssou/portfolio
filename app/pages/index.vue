@@ -168,8 +168,5 @@ const { t } = useI18n();
         </div>
       </section>
     </main>
-    <footer class="flex items-center justify-center text-muted">
-      <p class="pb-4">&copy; 2026 Alexandre LARUE. Tous droits réservés.</p>
-    </footer>
   </div>
 </template>
