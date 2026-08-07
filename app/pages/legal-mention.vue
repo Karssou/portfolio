@@ -5,6 +5,22 @@ const { data } = await useAsyncData("legal-mention", () =>
   queryCollection("root").path("/legal-mention").first(),
 );
 
+useSeoMeta({
+  title: "Alexandre Larue | Mentions Légales",
+  description:
+    "Page de mentions légale du site personnel de Alexandre LARUE et Alexandre LARUE EI.",
+
+  ogTitle: "Alexandre Larue | Portfolio",
+  ogDescription:
+    "Page de mentions légale du site personnel de Alexandre LARUE et Alexandre LARUE EI.",
+  ogImage:
+    "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+
+  twitterCard: "summary_large_image",
+  twitterImage:
+    "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+});
+
 const localePath = useLocalePath();
 </script>
 
