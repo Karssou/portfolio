@@ -43,7 +43,7 @@ const { copy: emailCopy, copied: emailCopied } = useClipboard({
 
         <h1
           data-hero="title"
-          class="max-w-4xl font-['Share Tech'] text-5xl font-bold uppercase tracking-tight sm:text-7xl lg:text-8xl"
+          class="max-w-4xl font-title text-5xl font-extrabold uppercase tracking-tight sm:text-7xl lg:text-8xl"
         >
           Alexandre <br />
           Larue

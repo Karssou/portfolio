@@ -30,7 +30,7 @@ const scrollDown = () => {
   >
     <div class="flex items-center justify-between gap-4">
       <h2
-        class="font-['Share Tech'] text-4xl font-bold uppercase tracking-tight"
+        class="font-title text-4xl font-bold uppercase tracking-tight"
       >
         {{ t("education.title") }}
       </h2>

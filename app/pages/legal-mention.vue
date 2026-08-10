@@ -51,7 +51,7 @@ const localePath = useLocalePath();
 
     <ContentRenderer
       :value="data!"
-      class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-headings:text-default prose-headings:text-5xl prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-['Share Tech'] prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
+      class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-headings:text-default prose-headings:text-5xl prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-title prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
     />
   </main>
 </template>

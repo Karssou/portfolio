@@ -12,7 +12,7 @@ defineProps<{
       <span class="size-2 rounded-full bg-primary" />
       {{ kicker }}
     </span>
-    <h2 class="font-['Share Tech'] text-4xl font-bold uppercase tracking-tight sm:text-5xl">
+    <h2 class="font-title text-4xl font-bold uppercase tracking-tight sm:text-5xl">
       {{ title }}
     </h2>
     <p v-if="description" class="max-w-2xl font-sora text-base leading-7 text-muted sm:text-lg">

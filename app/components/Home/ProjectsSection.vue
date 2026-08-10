@@ -61,7 +61,7 @@ const projects = computed(
                 class="size-10"
               />
               <h3
-                class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight"
+                class="font-title text-3xl font-bold uppercase tracking-tight"
               >
                 {{ project.title }}
               </h3>

@@ -33,7 +33,7 @@ const languageItems = computed(() => tm("language.items") as LanguageEntry[]);
             {{ t("language.kicker") }}
           </span>
           <h2
-            class="font-['Share Tech'] text-4xl font-bold uppercase tracking-tight sm:text-5xl"
+            class="font-title text-4xl font-bold uppercase tracking-tight sm:text-5xl"
           >
             {{ t("language.title") }}
           </h2>

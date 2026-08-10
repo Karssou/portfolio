@@ -48,7 +48,7 @@ const highlights = computed(() => tm("about.highlights") as string[]);
       >
         <Icon :icon="card.icon" class="size-8 text-primary" />
         <h3
-          class="mt-4 font-['Share Tech'] text-2xl font-bold uppercase tracking-tight"
+          class="mt-4 font-title text-2xl font-bold uppercase tracking-tight"
         >
           {{ card.title }}
         </h3>

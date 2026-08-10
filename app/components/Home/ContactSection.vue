@@ -116,7 +116,7 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
         >
           <div>
             <h3
-              class="font-['Share Tech'] text-3xl font-bold uppercase tracking-tight"
+              class="font-title text-3xl font-bold uppercase tracking-tight"
             >
               {{ t("contact.ctaTitle") }}
             </h3>

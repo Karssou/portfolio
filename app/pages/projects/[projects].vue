@@ -94,7 +94,7 @@ usePortfolioMotion(pageRoot);
         <div>
           <h1
             data-hero="title"
-            class="mt-5 max-w-4xl font-['Share Tech'] text-5xl font-bold uppercase leading-[0.88] tracking-tight lg:text-7xl"
+            class="mt-5 max-w-4xl font-title text-5xl font-bold uppercase leading-[0.88] tracking-tight lg:text-7xl"
           >
             {{ project.title }}
           </h1>
@@ -162,7 +162,7 @@ usePortfolioMotion(pageRoot);
           >
             <ContentRenderer
               :value="project"
-              class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-['Share Tech'] prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
+              class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-title prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary"
             />
           </div>
         </div>

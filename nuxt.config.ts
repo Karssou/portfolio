@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
@@ -95,9 +94,8 @@ export default defineNuxtConfig({
     preconnect: true,
     download: true,
     families: {
-      "Share Tech": true,
-      Sora: true,
-      "Fjalla One": true,
+      Sora: [400, 700],
+      "Stack Sans Headline": true,
     },
   },
 

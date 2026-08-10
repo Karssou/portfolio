@@ -73,7 +73,7 @@ usePortfolioMotion(pageRoot);
       >
         <div>
           <h1
-            class="mt-5 max-w-3xl font-['Share Tech'] text-5xl font-bold tracking-tight uppercase leading-[0.88] sm:text-7xl lg:text-8xl"
+            class="mt-5 max-w-3xl font-title text-5xl font-bold tracking-tight uppercase leading-[0.88] sm:text-7xl lg:text-8xl"
           >
             {{ t("projects.ProjectPage.title")
             }}<span class="text-primary">.</span>
