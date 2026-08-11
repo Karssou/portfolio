@@ -43,6 +43,8 @@ export default defineNuxtConfig({
 
   nitro: {
     compressPublicAssets: true,
+    inlineDynamicImports: true,
+    moduleSideEffects: [],
     prerender: {
       routes: ["/", "/en"],
       crawlLinks: true,
