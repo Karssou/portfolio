@@ -47,6 +47,11 @@ export default defineNuxtConfig({
       routes: ["/", "/en"],
       crawlLinks: true,
     },
+    output: {
+      dir: ".output",
+      serverDir: ".output/server",
+      publicDir: ".output/public",
+    },
   },
 
   image: {
