@@ -1,5 +1,47 @@
-```vue
 <script lang="ts" setup>
+import { linksPageSchema } from "~/data/link.schema";
+import { personSchema } from "~/data/person.schema";
+import { websiteSchema } from "~/data/website.schema";
+
+useSeoMeta({
+  title: "Alexandre Larue — Liens",
+  description:
+    "Retrouvez tous les liens d’Alexandre Larue : portfolio, projets, réseaux sociaux et services de développement web freelance.",
+
+  ogTitle: "Alexandre Larue — Tous mes liens",
+  ogDescription:
+    "Portfolio, projets, réseaux sociaux et services de développement web freelance.",
+  ogType: "website",
+  ogUrl: "https://alexandre-larue.fr/links",
+  ogSiteName: "Alexandre Larue",
+
+  twitterCard: "summary",
+  twitterTitle: "Alexandre Larue — Tous mes liens",
+  twitterDescription:
+    "Portfolio, projets, réseaux sociaux et services de développement web freelance.",
+
+  robots: "index, follow",
+});
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://alexandre-larue.fr/links",
+    },
+  ],
+
+  script: [
+    {
+      type: "application/ld+json",
+      textContent: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [personSchema, websiteSchema, linksPageSchema],
+      }),
+    },
+  ],
+});
+
 const links = [
   {
     label: "Mon portfolio",
@@ -120,4 +162,3 @@ const socials = [
     </section>
   </main>
 </template>
-```
