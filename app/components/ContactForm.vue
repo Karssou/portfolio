@@ -66,7 +66,7 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const contactForm = ref<ContactForm>({
-  firstname: "",
+  firstname: "T",
   lastname: "",
   phonenumber: "",
   mail: "",
@@ -96,11 +96,7 @@ const submitForm = async () => {
   isLoading.value = true;
 
   try {
-    await $fetch("/api/contact", {
-      method: "POST",
-      body: result.data,
-    });
-
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     isSuccess.value = true;
 
     contactForm.value = {
@@ -118,14 +114,29 @@ const submitForm = async () => {
     isLoading.value = false;
   }
 };
+
+const formatPhone = (value: string) => {
+  const digits = value.replace(/\D/g, "").slice(0, 10);
+
+  return digits.replace(/(\d{2})(?=\d)/g, "$1 ").trim();
+};
+
+const isFormCompleted = computed(() => {
+  return Boolean(
+    contactForm.value.firstname &&
+    contactForm.value.lastname &&
+    contactForm.value.mail &&
+    contactForm.value.reasons.length > 0,
+  );
+});
 </script>
 
 <template>
   <section
-    class="flex items-center justify-center rounded-3xl border border-border-default bg-linear-to-br from-surface/60 via-surface/70 to-surface/60 p-12 pb-5 shadow-lg backdrop-blur-xl"
+    class="flex items-center justify-center rounded-3xl font-sora border border-border-default bg-linear-to-br from-surface/60 via-surface/70 to-surface/60 p-12 pb-5 shadow-lg backdrop-blur-xl"
   >
     <form
-      class="w-full h-full flex flex-col gap-6 justify-between"
+      class="w-full h-full flex flex-col text-sm gap-6 justify-between"
       @submit.prevent="submitForm"
     >
       <section class="flex flex-col gap-6">
@@ -221,10 +232,17 @@ const submitForm = async () => {
                 v-model="contactForm.phonenumber"
                 class="w-full rounded-2xl border border-border-default bg-surface/50 py-2 pl-11 pr-4 text-sora outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 type="tel"
+                name="phone"
                 autocomplete="tel"
                 inputmode="tel"
-                name="phone"
                 placeholder="06 12 34 56 78"
+                pattern="(?:(?:\+|00)33[\s.-]?[1-9](?:[\s.-]?\d{2}){4}|0[1-9](?:[\s.-]?\d{2}){4})"
+                minlength="10"
+                maxlength="14"
+                aria-describedby="phone-hint"
+                @input="
+                  contactForm.phonenumber = formatPhone(contactForm.phonenumber)
+                "
               />
             </div>
           </div>
@@ -250,7 +268,7 @@ const submitForm = async () => {
               />
 
               <span
-                class="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface/50 px-4 py-2 text-sm transition hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10"
+                class="inline-flex items-center gap-2 rounded-full border border-border-default bg-surface px-4 py-2 text-sm transition hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/10"
               >
                 <Icon :icon="reasonIcons[reason!]!" class="size-4" />
 
@@ -287,19 +305,21 @@ const submitForm = async () => {
         <span class="ml-auto max-w-2/3">{{ errorMessage }}</span>
         <button
           type="submit"
-          :disabled="isLoading"
-          class="inline-flex min-w-42 items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-default transition duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+          :disabled="isLoading || !isFormCompleted"
+          class="inline-flex min-w-42 items-center justify-center gap-2 border border-primary rounded-full bg-primary px-5 py-3 text-sm font-semibold text-default transition duration-200 hover:bg-transparent hover:cursor-pointer disabled:cursor-not-allowed disabled:opacity-60"
         >
-          <span v-if="isLoading">Envoi...</span>
-          <span v-else>{{ t("contact.form.submit") }}</span>
+          <Icon
+            v-if="isLoading"
+            icon="material-symbols:progress-activity"
+            class="size-4 animate-spin"
+          />
+          <span>{{ t("contact.form.submit") }}</span>
 
           <Icon
             v-if="!isLoading"
             icon="material-symbols:arrow-outward-rounded"
             class="size-4"
           />
-
-          <Icon v-else icon="svg-spinners:ring-resize" class="size-4" />
         </button>
       </section>
     </form>
