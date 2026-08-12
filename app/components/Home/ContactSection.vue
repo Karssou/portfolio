@@ -27,17 +27,17 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
 </script>
 
 <template>
-  <section class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-    <HomeSectionHeading
-      kicker="Contact"
-      :title="t('contact.title')"
-      :description="t('contact.lead')"
-    />
-
+  <HomeSectionHeading
+    kicker="Contact"
+    :title="t('contact.title')"
+    :description="t('contact.lead')"
+  />
+  <section class="mt-5 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+    <ContactForm />
     <div class="grid gap-4 sm:grid-cols-2">
       <button
         data-card
-        class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        class="flex items-center gap-3 max-h-20 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
         data-delay="60"
         @click="emailCopy()"
       >
@@ -57,7 +57,7 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
 
       <button
         data-card
-        class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        class="flex items-center gap-3 max-h-20 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 text-left shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
         data-delay="130"
         @click="phoneCopy()"
       >
@@ -76,7 +76,7 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
         :to="github"
         target="_blank"
         data-card
-        class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        class="flex items-center gap-3 max-h-20 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
         data-delay="200"
       >
         <Icon icon="mdi:github" class="size-6 text-primary" />
@@ -94,7 +94,7 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
         :to="linkedin"
         target="_blank"
         data-card
-        class="flex items-center gap-3 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
+        class="flex items-center gap-3 max-h-20 rounded-3xl border border-border-default bg-surface/70 px-5 py-4 shadow-lg backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-bg-hovered"
         data-delay="270"
       >
         <Icon icon="mdi:linkedin" class="size-6 text-primary" />
@@ -108,16 +108,14 @@ const contactCtaCopy = computed(() => tm("contact.ctaCopy") as string[]);
 
       <div
         data-card
-        class="sm:col-span-2 rounded-[1.75rem] border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-lg backdrop-blur-xl"
+        class="sm:col-span-2 rounded-3xl border border-border-default bg-linear-to-br from-primary/15 via-surface/70 to-surface/60 p-6 shadow-lg backdrop-blur-xl"
         data-delay="340"
       >
         <div
           class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
         >
           <div>
-            <h3
-              class="font-title text-3xl font-bold uppercase tracking-tight"
-            >
+            <h3 class="font-title text-3xl font-bold uppercase tracking-tight">
               {{ t("contact.ctaTitle") }}
             </h3>
             <p class="mt-2 max-w-xl font-sora text-sm leading-7 text-muted">

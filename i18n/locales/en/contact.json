@@ -10,5 +10,25 @@
     "I can help turn a mockup, an idea or a concrete need into a clear, fast and well-structured interface.",
     "The easiest path is to contact me by email or phone first, then we can scope the work together."
   ],
-  "backToTop": "Back to top"
+  "backToTop": "Back to top",
+
+  "form": {
+    "optional": "optional",
+    "phone": "Phone number",
+    "mail": "Email",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "submit": "Submit my request",
+    "reasoncta": "How can I help you ?",
+    "reasons": {
+      "website": "Website",
+      "redesign": "Website redesign",
+      "webapp": "Web application",
+      "seo": "SEO & performance",
+      "maintenance": "Maintenance / improvements",
+      "other": "Other"
+    },
+    "morecta": "Tell me about your project",
+    "moreplaceholder": "Present my your project, your needs, your objectives...."
+  }
 }
