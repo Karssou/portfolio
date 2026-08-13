@@ -65,7 +65,7 @@ const contactSchema = z.object({
 
 type ContactForm = z.infer<typeof contactSchema>;
 
-const contactForm = ref<ContactForm>({
+const contactForm = ref<ContactType>({
   firstname: "",
   lastname: "",
   phonenumber: "",
@@ -83,7 +83,7 @@ const submitForm = async () => {
 
   if (!result.success) {
     for (const issue of result.error.issues) {
-      const field = issue.path[0] as keyof ContactForm;
+      const field = issue.path[0] as keyof ContactType;
 
       if (!errors.value[field]) {
         errors.value[field] = issue.message;
@@ -96,7 +96,11 @@ const submitForm = async () => {
   isLoading.value = true;
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await $fetch("/api/contact", {
+      method: "POST",
+      body: result.data,
+    });
+    
     isSuccess.value = true;
 
     contactForm.value = {

@@ -116,4 +116,8 @@ export default defineNuxtConfig({
     autoLastmod: true,
     autoI18n: true,
   },
+
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY,
+  },
 });

@@ -1,4 +1,4 @@
-export type ContactForm = {
+export type ContactType = {
   firstname: string;
   lastname: string;
   phonenumber: string;
