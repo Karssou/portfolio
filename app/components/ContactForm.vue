@@ -66,7 +66,7 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const contactForm = ref<ContactForm>({
-  firstname: "T",
+  firstname: "",
   lastname: "",
   phonenumber: "",
   mail: "",

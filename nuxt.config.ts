@@ -111,6 +111,8 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
+    zeroRuntime: true,
     autoLastmod: true,
+    autoI18n: true,
   },
 });
