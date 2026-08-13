@@ -239,7 +239,6 @@ const isFormCompleted = computed(() => {
                 pattern="(?:(?:\+|00)33[\s.-]?[1-9](?:[\s.-]?\d{2}){4}|0[1-9](?:[\s.-]?\d{2}){4})"
                 minlength="10"
                 maxlength="14"
-                aria-describedby="phone-hint"
                 @input="
                   contactForm.phonenumber = formatPhone(contactForm.phonenumber)
                 "

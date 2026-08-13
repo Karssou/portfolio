@@ -68,6 +68,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@nuxtjs/robots",
+    "nuxt-og-image",
   ],
 
   vite: {
