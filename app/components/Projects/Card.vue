@@ -40,6 +40,7 @@ const localePath = useLocalePath();
       <NuxtLink
         target="_blank"
         class="flex size-11 items-center justify-center rounded-2xl border border-border-default bg-background/60 text-primary transition-transform duration-500 hover:bg-background/50 hover:text-default hover:cursor-pointer"
+        aria-label="Link to github"
         :to="project.github"
       >
         <Icon icon="mdi:github" class="size-6 transition-colors duration-300" />
@@ -47,11 +48,11 @@ const localePath = useLocalePath();
     </div>
 
     <div class="relative mt-1 flex flex-col gap-2">
-      <h3
+      <h2
         class="mb-3 text-3xl font-bold uppercase leading-none tracking-tight sm:text-4xl"
       >
         {{ project.title }}
-      </h3>
+      </h2>
       <NuxtImg
         placeholder
         sizes="100vw xs:90vw sm:70vw md:600px"

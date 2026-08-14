@@ -118,10 +118,10 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://alexandre-larue.fr",
-    name: "Alexandre LARUE développeur Full-Stack",
+    name: "Alexandre LARUE | Développeur Full-Stack NuxtJS Python Typescript",
     indexable: true,
     description:
-      "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
+      "Développeur Full Stack Freelance à Nantes. Concepteur d'applications web modernes, rapides et ultra-performantes. Spécialisé sur l'écosystème Vue / Nuxt, FastAPI.",
     defaultLocale: "fr",
   },
 
@@ -144,9 +144,9 @@ export default defineNuxtConfig({
       },
       image:
         "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
-      jobTitle: "Développeur Full Stack orienté Cloud",
+      jobTitle: "Développeur Full Stack Freelance & Architecture cloud",
       description:
-        "Alexandre Larue est un développeur français spécialisé dans le développement Full Stack, les architectures backend, le Cloud Computing et les technologies DevOps.",
+        "Portfolio d'Alexandre Larue – Développeur Web Full Stack à Nantes.Expert Nuxt, Vue.js, FastAPI et Docker. Découvrez mes projets, mon stack technique et mes réalisations en développement d'applications web et cloud.",
       knowsAbout: [
         "Python",
         "FastAPI",
@@ -165,6 +165,7 @@ export default defineNuxtConfig({
         "https://linkedin.com/in/alexandre-larue44",
         "https://www.malt.fr/profile/alexandrelarue",
         "https://fr.fiverr.com/s/XLGgggZ",
+        "https://www.instagram.com/alexandre.larue.dev/",
       ],
       worksFor: {
         type: "Organization",

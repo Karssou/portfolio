@@ -15,8 +15,6 @@ const projectMarkdown = computed(
   () => `/projects/${slug.value}/${locale.value}`,
 );
 
-console.info(projectMarkdown.value);
-
 const { data: project } = await useAsyncData(
   () => `project-${slug.value}-${locale.value}`,
   () => queryCollection("projects").path(projectMarkdown.value).first(),

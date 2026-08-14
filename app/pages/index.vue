@@ -1,9 +1,5 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Alexandre Larue | Développeur Full-Stack",
-  description:
-    "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
-
   ogTitle: "Alexandre Larue | Portfolio",
   ogDescription:
     "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
@@ -68,7 +64,6 @@ const { t } = useI18n();
                     format="avif"
                     quality="78"
                     preload
-                    placeholder
                   />
 
                   <div
