@@ -69,6 +69,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/robots",
     "nuxt-og-image",
+    "nuxt-rate-limit",
   ],
 
   vite: {
@@ -119,5 +120,14 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY,
+  },
+
+  nuxtRateLimit: {
+    routes: {
+      "/api/contact": {
+        maxRequests: 2,
+        intervalSeconds: 60,
+      },
+    },
   },
 });

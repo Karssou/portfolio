@@ -100,7 +100,7 @@ const submitForm = async () => {
       method: "POST",
       body: result.data,
     });
-    
+
     isSuccess.value = true;
 
     contactForm.value = {
@@ -137,9 +137,15 @@ const isFormCompleted = computed(() => {
 
 <template>
   <section
-    class="flex items-center justify-center rounded-3xl font-sora border border-border-default bg-linear-to-br from-surface/60 via-surface/70 to-surface/60 p-12 pb-5 shadow-lg backdrop-blur-xl"
+    class="flex items-center justify-center rounded-3xl font-sora border border-border-default p-12 pb-5 shadow-lg backdrop-blur-xl transition-colors duration-200"
+    :class="
+      isSuccess
+        ? 'bg-linear-to-br from-emerald-500/30 via-emerald-600/20 to-teal-500/10 '
+        : 'bg-linear-to-br from-surface/60 via-surface/70 to-surface/60'
+    "
   >
     <form
+      v-if="!isSuccess"
       class="w-full h-full flex flex-col text-sm gap-6 justify-between"
       @submit.prevent="submitForm"
     >
@@ -222,7 +228,9 @@ const isFormCompleted = computed(() => {
           <div class="flex flex-col gap-2">
             <label for="phone" class="text-sm font-medium text-default">
               {{ t("contact.form.phone") }}
-              <span class="text-muted">{{ t("contact.form.optional") }}</span>
+              <span class="text-muted text-sm"
+                >({{ t("contact.form.optional") }})</span
+              >
             </label>
 
             <div class="relative">
@@ -240,7 +248,7 @@ const isFormCompleted = computed(() => {
                 autocomplete="tel"
                 inputmode="tel"
                 placeholder="06 12 34 56 78"
-                pattern="(?:(?:\+|00)33[\s.-]?[1-9](?:[\s.-]?\d{2}){4}|0[1-9](?:[\s.-]?\d{2}){4})"
+                pattern="0[1-9]([\s.\-]?\d{2}){4}"
                 minlength="10"
                 maxlength="14"
                 @input="
@@ -284,7 +292,9 @@ const isFormCompleted = computed(() => {
         <div class="flex flex-col gap-2">
           <label for="details" class="text-sm font-medium text-default">
             {{ t(`contact.form.morecta`) }}
-            <span class="text-muted">{{ t("contact.form.optional") }}</span>
+            <span class="text-muted text-sm"
+              >({{ t("contact.form.optional") }})</span
+            >
           </label>
 
           <div class="relative">
@@ -326,5 +336,47 @@ const isFormCompleted = computed(() => {
         </button>
       </section>
     </form>
+    <Transition
+      v-else
+      appear
+      enter-active-class="transition-all duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-3"
+      enter-to-class="opacity-100 translate-y-0"
+    >
+      <div
+        class="flex flex-col gap-4 w-full h-full animate-in fade-in duration-500"
+      >
+        <section class="inline-flex items-center gap-3.5">
+          <div
+            class="relative flex items-center justify-center shrink-0 rounded-full p-2 border border-border-default bg-surface/30 shadow-[0_0_20px_rgba(16,185,129,0.25)] animate-in zoom-in-50 duration-500 ease-out"
+          >
+            <Icon
+              icon="material-symbols:check-rounded"
+              class="size-6 text-emerald-400 shrink-0"
+            />
+          </div>
+
+          <h1
+            class="leading-snug font-title font-semibold text-2xl text-default animate-in slide-in-from-left-4 duration-500 delay-150 fill-mode-backwards"
+          >
+            Demande envoyée avec succès !
+          </h1>
+        </section>
+
+        <section class="grow flex py-6">
+          <div
+            class="space-y-2 animate-in slide-in-from-bottom-3 duration-500 delay-300 fill-mode-backwards"
+          >
+            <p class="text-base text-default/90 leading-relaxed">
+              Merci de m'avoir contacté.
+            </p>
+            <p class="text-sm text-muted/80 flex items-center gap-2">
+              Je vous répondrai sous
+              <span class="font-medium text-default">48 heures</span>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </Transition>
   </section>
 </template>

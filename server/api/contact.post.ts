@@ -1,4 +1,3 @@
-import { HTTPError } from "h3";
 import { Resend } from "resend";
 import type { ContactType } from "~~/shared/types/contact";
 export default defineEventHandler(async (event) => {
