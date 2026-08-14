@@ -111,9 +111,9 @@ const submitForm = async () => {
       reasons: [],
       details: "",
     };
-  } catch {
+  } catch (e) {
     errorMessage.value =
-      "Erreur. Veuillez réessayer ou me contacter par email.";
+      String(e) || "Erreur. Veuillez réessayer ou me contacter par email.";
   } finally {
     isLoading.value = false;
   }
@@ -314,8 +314,8 @@ const isFormCompleted = computed(() => {
           </div>
         </div>
       </section>
-      <section class="w-full h-15 flex justify-end items-center">
-        <span class="ml-auto max-w-2/3">{{ errorMessage }}</span>
+      <section class="w-full h-15 flex justify-between items-center">
+        <span class="max-w-2/3 truncate text-red-500">{{ errorMessage }}</span>
         <button
           type="submit"
           :disabled="isLoading || !isFormCompleted"
