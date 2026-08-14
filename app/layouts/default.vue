@@ -309,7 +309,13 @@ const selectLocale = async (code: string) => {
       <p class="text-center">
         &copy; 2026 Alexandre LARUE. Tous droits réservés.
       </p>
-      <a href="/legal-mention" class="hover:underline">Mentions légales</a>
+      <NuxtLink
+        :prefetch="false"
+        href="/legal-mention"
+        no
+        class="hover:underline"
+        >Mentions légales</NuxtLink
+      >
     </footer>
   </div>
 </template>

@@ -18,6 +18,12 @@ export default defineNuxtConfig({
     "/stats/api/send": { proxy: "https://cloud.umami.is/api/send" },
   },
 
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY,
+    contactEmailTo: process.env.CONTACT_EMAIL_TO,
+    contactEmailFrom: process.env.CONTACT_EMAIL_FROM,
+  },
+
   app: {
     head: {
       htmlAttrs: {
