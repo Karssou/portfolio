@@ -9,8 +9,8 @@ export default defineEventHandler(async (event) => {
     const resend = new Resend(config.resendApiKey);
 
     resend.emails.send({
-      from: config.contactEmailFrom,
-      to: config.contactEmailTo,
+      from: "contact@alexandre-larue.fr",
+      to: "contact@alexandre-larue.fr",
       replyTo: body.mail,
       subject: `Nouveau contact sur le site - ${body.firstname} ${body.lastname}`,
       html: `
