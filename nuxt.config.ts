@@ -120,6 +120,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY,
+    contactEmailFrom: process.env.CONTACT_EMAIL_FROM,
+    contactEmailTo: process.env.CONTACT_EMAIL_TO,
   },
 
   nuxtRateLimit: {
