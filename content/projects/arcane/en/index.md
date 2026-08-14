@@ -12,6 +12,23 @@ stack:
   - JavaScript
   - GSAP
 status: Archives
+schemaOrg:
+
+  - "@type": WebPage
+    name: "Desktop Converter"
+    description: "Presentation of the Arcane Fan site project."
+
+
+  - "@type": SoftwareApplication
+    name: "Arcane Fan Site" 
+    applicationCategory: "MultimediaApplication"
+    operatingSystem: "Windows"
+    description: "A fan site made with passion around the Arcane universe"
+    image: "https://alexandre-larue.fr/images/projects/arcane-overview.avif"
+    programmingLanguage:
+      - "Python"
+      - "TypeScript"
+      - "SQL"
 ---
 
 ## Why this project?

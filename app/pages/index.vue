@@ -1,24 +1,5 @@
 <script setup lang="ts">
-import { personSchema } from "@/data/person.schema";
-import { projectsCollectionPageSchema } from "~/data/projects.schema";
-import { websiteSchema } from "~/data/website.schema";
-
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@graph": [personSchema, websiteSchema, projectsCollectionPageSchema],
-      }),
-    },
-  ],
-});
 useSeoMeta({
-  title: "Alexandre Larue | Développeur Full-Stack",
-  description:
-    "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
-
   ogTitle: "Alexandre Larue | Portfolio",
   ogDescription:
     "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
@@ -83,7 +64,6 @@ const { t } = useI18n();
                     format="avif"
                     quality="78"
                     preload
-                    placeholder
                   />
 
                   <div

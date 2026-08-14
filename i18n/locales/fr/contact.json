@@ -10,5 +10,25 @@
     "Je peux t'aider à transformer une maquette, une idée ou un besoin concret en interface claire, rapide et bien structurée.",
     "Le plus simple est de me contacter directement par mail ou téléphone, puis on voit ensemble le périmètre."
   ],
-  "backToTop": "Retour en haut"
+  "backToTop": "Retour en haut",
+
+  "form": {
+    "optional": "optionnel",
+    "phone": "Téléphone",
+    "mail": "Email",
+    "firstname": "Prénom",
+    "lastname": "Nom de famille",
+    "submit": "Envoyer ma demande",
+    "reasoncta": "Comment puis-je vous aider ?",
+    "reasons": {
+      "website": "Site Web",
+      "redesign": "Refonte d'un site",
+      "webapp": "Application web",
+      "seo": "SEO & performances",
+      "maintenance": "Maintenance / évolution",
+      "other": "Autre"
+    },
+    "morecta": "Parlez-moi de votre projet",
+    "moreplaceholder": "Présentez moi votre projet, vos besoins, vos objectifs...."
+  }
 }

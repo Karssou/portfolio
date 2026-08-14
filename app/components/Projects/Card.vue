@@ -13,6 +13,7 @@ defineProps<{
     cover: string;
     ctaWebsite: string;
     website: string;
+    schema?: string;
   };
   index: number;
 }>();
@@ -39,6 +40,7 @@ const localePath = useLocalePath();
       <NuxtLink
         target="_blank"
         class="flex size-11 items-center justify-center rounded-2xl border border-border-default bg-background/60 text-primary transition-transform duration-500 hover:bg-background/50 hover:text-default hover:cursor-pointer"
+        aria-label="Link to github"
         :to="project.github"
       >
         <Icon icon="mdi:github" class="size-6 transition-colors duration-300" />
@@ -46,11 +48,11 @@ const localePath = useLocalePath();
     </div>
 
     <div class="relative mt-1 flex flex-col gap-2">
-      <h3
+      <h2
         class="mb-3 text-3xl font-bold uppercase leading-none tracking-tight sm:text-4xl"
       >
         {{ project.title }}
-      </h3>
+      </h2>
       <NuxtImg
         placeholder
         sizes="100vw xs:90vw sm:70vw md:600px"
@@ -75,7 +77,7 @@ const localePath = useLocalePath();
       </div>
 
       <NuxtLink
-        :to="localePath(project.href)"
+        :to="localePath(project.href!)"
         class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-default transition-colors duration-300 hover:text-primary hover:cursor-pointer"
       >
         {{ project.cta }}

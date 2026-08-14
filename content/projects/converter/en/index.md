@@ -13,6 +13,22 @@ stack:
 status: Online
 website: https://github.com/Karssou/DeskTopConverter
 ctaWebsite: "Download App (Windows)"
+
+schemaOrg:
+  - "@type": WebPage
+    name: "Desktop Converter"
+    description: "Presentation of the Desktop Converter project."
+
+  - "@type": SoftwareApplication
+    name: "Desktop Converter"
+    applicationCategory: "UtilitiesApplication"
+    operatingSystem: "Windows"
+    description: "A desktop application allowing you to convert many files."
+    image: "https://alexandre-larue.fr/images/projects/converter-overview.avif"
+    programmingLanguage:
+      - "Vue"
+      - "TypeScript"
+      - "Rust"
 ---
 
 ## Why this project?

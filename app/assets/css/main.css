@@ -13,6 +13,7 @@
   --color-primary: var(--primary);
   --color-bg-hovered: var(--bg-hovered);
   --color-text-hovered: var(--text-hovered);
+  --color-success: var(--success);
 }
 
 :root {
@@ -28,6 +29,8 @@
 
   --bg-hovered: rgba(0, 0, 0, 0.05);
   --text-hovered: #111111;
+
+  --success: #5cb85c;
 }
 
 .dark {
@@ -43,6 +46,8 @@
 
   --bg-hovered: rgba(255, 255, 255, 0.08);
   --text-hovered: #ffffff;
+
+  --success: #376e37;
 }
 
 @layer base {
