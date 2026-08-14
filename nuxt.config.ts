@@ -29,6 +29,13 @@ export default defineNuxtConfig({
   $production: {
     app: {
       head: {
+        meta: [
+          { name: "theme-color", content: "#ff9d00" },
+          {
+            name: "theme-color",
+            content: "#0a0a0a",
+          },
+        ],
         script: [
           {
             src: "/stats/script.js",
@@ -70,6 +77,7 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "nuxt-og-image",
     "nuxt-rate-limit",
+    "nuxt-seo-utils",
   ],
 
   vite: {
@@ -110,6 +118,9 @@ export default defineNuxtConfig({
     url: "https://alexandre-larue.fr",
     name: "Alexandre LARUE développeur Full-Stack",
     indexable: true,
+    description:
+      "Site personnel d'Alexandre Larue, développeur junior orienté Nuxt, Vue et interfaces modernes.",
+    defaultLocale: "fr",
   },
 
   sitemap: {
