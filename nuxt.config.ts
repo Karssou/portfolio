@@ -78,6 +78,7 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "nuxt-rate-limit",
     "nuxt-seo-utils",
+    "nuxt-schema-org",
   ],
 
   vite: {

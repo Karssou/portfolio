@@ -1,26 +1,10 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
-import { personSchema } from "~/data/person.schema";
-import { projectSchemas } from "~/data/schema";
-import { websiteSchema } from "~/data/website.schema";
 
 const route = useRoute();
 
 const slug = computed(() => String(route.params.projects));
 
-const schemas = projectSchemas[slug.value as keyof typeof projectSchemas];
-
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@graph": [personSchema, websiteSchema, schemas.page, schemas.software],
-      }),
-    },
-  ],
-});
 
 const pageRoot = ref<HTMLElement | null>(null);
 
@@ -39,18 +23,20 @@ const { data: project } = await useAsyncData(
   { watch: [slug] },
 );
 
+useSeoMeta(
+  project.value!.seo || {
+    title: () => `${project.value?.title ?? "Projet"} — Alexandre Larue`,
+    description: () => project.value?.description,
+    ogTitle: () => project.value?.title,
+    ogDescription: () => project.value?.description,
+    ogImage: () =>
+      project.value?.cover ? `/projects/${project.value.cover}` : undefined,
+  },
+);
+
 if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: "Projet introuvable" });
 }
-
-useSeoMeta({
-  title: () => `${project.value?.title ?? "Projet"} — Alexandre Larue`,
-  description: () => project.value?.description,
-  ogTitle: () => project.value?.title,
-  ogDescription: () => project.value?.description,
-  ogImage: () =>
-    project.value?.cover ? `/projects/${project.value.cover}` : undefined,
-});
 
 usePortfolioMotion(pageRoot);
 </script>

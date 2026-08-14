@@ -1,27 +1,32 @@
 <script lang="ts" setup>
-import { personSchema } from "~/data/person.schema";
-import { projectsCollectionPageSchema } from "~/data/projects.schema";
-import { arcanePageSchema } from "~/data/projects/arcane/page.schema";
-import { converterPageSchema } from "~/data/projects/converter/page.schema";
-import { nohamdrivePageSchema } from "~/data/projects/nohamdrive/page.schema";
 
-useHead({
-  script: [
-    {
-      type: "application/ld+json",
-      textContent: JSON.stringify({
-        "@context": "https://schema.org",
-        "@graph": [
-          projectsCollectionPageSchema,
-          nohamdrivePageSchema,
-          arcanePageSchema,
-          converterPageSchema,
-          personSchema,
-        ],
-      }),
+
+useSchemaOrg([
+  defineWebPage({
+    "@type": "CollectionPage",
+
+    "@id": "https://alexandre-larue.fr/projects/#collection-page",
+
+    url: "https://alexandre-larue.fr/projects",
+
+    name: "Projects",
+
+    description:
+      "Collection of software projects developed by Alexandre Larue.",
+
+    isPartOf: {
+      "@id": "https://alexandre-larue.fr/#website",
     },
-  ],
-});
+
+    about: {
+      "@id": "https://alexandre-larue.fr/#person",
+    },
+
+    publisher: {
+      "@id": "https://alexandre-larue.fr/#person",
+    },
+  }),
+]);
 
 const { t, locale } = useI18n();
 

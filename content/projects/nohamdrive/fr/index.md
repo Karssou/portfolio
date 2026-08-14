@@ -13,6 +13,22 @@ stack:
 status: En ligne
 ctaWebsite: Visiter le site
 website: https://nohamdrive.alexandre-larue.fr
+
+schemaOrg:
+  - "@type": WebPage
+    name: "NohamDrive"
+    description: "Presentation of the NohamDrive project."
+
+  - "@type": SoftwareApplication
+    name: "NohamDrive"
+    applicationCategory: "UtilitiesApplication"
+    operatingSystem: "Linux"
+    description: "Personal cloud storage platform built with Nuxt, FastAPI, PostgreSQL, MinIO and Docker."
+    image: "https://alexandre-larue.fr/images/projects/nohamdrive-overview.avif"
+    programmingLanguage:
+      - "Python"
+      - "TypeScript"
+      - "SQL"
 ---
 
 ## Pourquoi ce projet ?

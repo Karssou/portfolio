@@ -1,6 +1,81 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
 
+useSchemaOrg([
+  definePerson({
+    name: "Alexandre Larue",
+    url: "https://alexandre-larue.fr",
+    image:
+      "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+    jobTitle: "Développeur Full Stack orienté Cloud",
+    description:
+      "Alexandre Larue est un développeur français spécialisé dans le développement Full Stack, les architectures backend, le Cloud Computing et les technologies DevOps.",
+    knowsAbout: [
+      "Python",
+      "FastAPI",
+      "TypeScript",
+      "Nuxt",
+      "Vue.js",
+      "Docker",
+      "Linux",
+      "PostgreSQL",
+      "MinIO",
+      "Cloud Computing",
+      "DevOps",
+    ],
+    sameAs: [
+      "https://github.com/Karssou",
+      "https://linkedin.com/in/alexandre-larue44",
+      "https://www.malt.fr/profile/alexandrelarue",
+      "https://fr.fiverr.com/s/XLGgggZ",
+    ],
+    worksFor: {
+      name: "Alexandre Larue",
+      url: "https://alexandre-larue.fr",
+    },
+    alumniOf: [
+      {
+        name: "Saint-Félix",
+      },
+    ],
+    hasOccupation: {
+      name: "Full Stack Developer",
+      occupationalCategory: "Software Developer",
+      description:
+        "Développeur spécialisé dans les applications web modernes, les architectures backend et les technologies Cloud.",
+    },
+    knowsLanguage: ["French", "English", "Spanish"],
+    contactPoint: {
+      contactType: "professional inquiries",
+      url: "https://alexandre-larue.fr/#contact",
+    },
+  }),
+  defineWebSite({
+    name: "Alexandre Larue",
+    description:
+      "Official portfolio of Alexandre Larue, Full Stack Developer specialized in Web Development, Cloud Computing, DevOps and backend architectures.",
+    inLanguage: ["fr", "en"],
+    url: "https://alexandre-larue.fr",
+
+    copyrightHolder: {
+      "@id": "https://alexandre-larue.fr/#person",
+    },
+
+    creator: {
+      "@id": "https://alexandre-larue.fr/#person",
+    },
+
+    image: {
+      "@type": "ImageObject",
+      url: "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
+    },
+
+    publisher: {
+      "@id": "https://alexandre-larue.fr/#person",
+    },
+  }),
+]);
+
 const { t, locales, setLocale, locale } = useI18n();
 const { isMobile } = useResponsive();
 const route = useRoute();

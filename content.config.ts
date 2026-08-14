@@ -1,4 +1,5 @@
 import { defineContentConfig, defineCollection, z } from "@nuxt/content";
+import { defineSchemaOrgSchema } from "nuxt-schema-org/content";
 
 export default defineContentConfig({
   collections: {
@@ -31,11 +32,15 @@ export default defineContentConfig({
         website: z.string().optional(),
 
         ctaWebsite: z.string().optional(),
+
+        schema: z.object({
+          schemaOrg: defineSchemaOrgSchema(),
+        }),
       }),
     }),
 
     root: defineCollection({
-      type : "page",
+      type: "page",
       source: "**",
     }),
   },

@@ -53,8 +53,8 @@ export default defineEventHandler(async (event) => {
               </td>
             </tr>
             ${
-              body.reasons
-                ? `
+  body.reasons
+    ? `
                   <tr>
                     <td style="padding: 8px 0; font-size: 14px; color: #94a3b8; vertical-align: top;">Besoin(s)</td>
                     <td style="padding: 8px 0; font-size: 14px; color: #38bdf8; font-weight: 500; vertical-align: top;">
@@ -62,8 +62,8 @@ export default defineEventHandler(async (event) => {
                     </td>
                   </tr>
                 `
-                : ""
-            }
+    : ""
+}
           </table>
 
           <!-- Séparateur -->

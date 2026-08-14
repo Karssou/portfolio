@@ -46,6 +46,7 @@
     "nitropack": "^2.13.4",
     "nuxt": "^4.5.0",
     "nuxt-og-image": "^6.7.8",
+    "nuxt-schema-org": "^6.2.9",
     "nuxt-seo-utils": "^8.4.2",
     "nuxtseo-layer-devtools": "^5.3.6",
     "ofetch": "^1.5.1",
