@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 useSeoMeta({
   title: "Alexandre Larue | Développeur Full-Stack",
   description:
