@@ -90,13 +90,7 @@ watch(isMobile, (mobile) => {
     mobileMenuOpen.value = false;
   }
 });
-
-const mobileNavItems = [
-  {
-    key: "navbar.home",
-    href: "#home",
-    icon: "material-symbols:home-outline-rounded",
-  },
+const NavItems = [
   {
     key: "navbar.about",
     href: "#about",
@@ -154,11 +148,44 @@ const selectLocale = async (code: string) => {
 
           <div
             v-if="!isMobile"
-            class="ml-auto flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
+            class="flex gap-4 items-center rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
+          >
+            <NuxtLink class="px-1" :to="localePath('/')">
+              <NuxtImg
+                src="/images/logo-squared.png"
+                height="40"
+                width="40"
+                alt="Logo"
+              />
+            </NuxtLink>
+            <div>
+              <ul
+                class="flex items-center justify-between gap-x-2 text-default whitespace-nowrap"
+              >
+                <li
+                  v-for="item in NavItems"
+                  :key="item.key"
+                  class="flex items-center rounded-full px-4 py-2 transition-all duration-200 ease-out hover:bg-bg-hovered hover:shadow-md"
+                >
+                  <NuxtLink :to="item.href" class="flex items-center">
+                    <span
+                      class="select-none transition-all duration-300 ease-out"
+                    >
+                      {{ t(item.key) }}
+                    </span>
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            v-if="!isMobile"
+            class="flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
           >
             <NavColorSelector />
             <NavLanguageSelect />
-            <NavCVDownload />
+            <NavAuditCTA />
           </div>
 
           <div
@@ -174,29 +201,7 @@ const selectLocale = async (code: string) => {
               leave-to-class="-translate-x-3 opacity-0"
               mode="out-in"
             >
-              <NuxtLink
-                v-if="isHome"
-                to="#home"
-                class="group flex items-center gap-3 rounded-full border border-border-default bg-white/5 pl-3 pr-4 py-2 text-default transition-colors duration-300 hover:bg-white/10"
-              >
-                <span
-                  class="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-[0_10px_25px_rgba(255,157,0,0.35)]"
-                >
-                  A
-                </span>
-                <span class="flex flex-col leading-none">
-                  <span
-                    class="font-sora text-sm font-semibold tracking-[0.08em]"
-                  >
-                    Alexandre
-                  </span>
-                  <span
-                    class="text-[10px] uppercase tracking-[0.3em] text-muted"
-                  >
-                    Portfolio
-                  </span>
-                </span>
-              </NuxtLink>
+              <NavAuditCTA />
             </Transition>
 
             <button
@@ -235,7 +240,7 @@ const selectLocale = async (code: string) => {
                 class="grid gap-2 rounded-3xl border border-border-default bg-white/5 p-2"
               >
                 <NuxtLink
-                  v-for="item in mobileNavItems"
+                  v-for="item in NavItems"
                   :key="item.key"
                   :to="item.href"
                   class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-default transition-colors duration-300 hover:bg-bg-hovered"
@@ -277,7 +282,6 @@ const selectLocale = async (code: string) => {
                   </div>
 
                   <NavColorSelector />
-                  <NavCVDownload />
                 </div>
               </div>
             </div>
@@ -285,22 +289,6 @@ const selectLocale = async (code: string) => {
         </Transition>
       </ClientOnly>
     </header>
-
-    <Transition
-      enter-active-class="transition duration-300 ease-out"
-      enter-from-class="translate-y-4 opacity-0"
-      enter-to-class="translate-y-0 opacity-100"
-      leave-active-class="transition duration-200 ease-in"
-      leave-from-class="translate-y-0 opacity-100"
-      leave-to-class="translate-y-4 opacity-0"
-    >
-      <section
-        v-if="isHome && !isMobile"
-        class="fixed bottom-6 z-50 flex h-24 w-full items-center justify-center"
-      >
-        <LazyNavMenuSelector class="grow" />
-      </section>
-    </Transition>
 
     <NuxtPage />
     <footer
