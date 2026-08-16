@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
+import { motion } from "motion-v";
 
 useSchemaOrg([
   definePerson({
@@ -125,156 +126,212 @@ const selectLocale = async (code: string) => {
 
 <template>
   <div>
+    <div
+      class="fixed top-0 right-0 w-1/2 min-h-200 h-screen opacity-10 pointer-events-none mix-blend-screen"
+    >
+      <svg
+        class="w-full h-full text-primary"
+        preserveAspectRatio="none"
+        viewBox="0 0 100 100"
+      >
+        <line
+          class="animate-[dash_10s_linear_infinite]"
+          stroke="currentColor"
+          stroke-width="0.5"
+          x1="0"
+          x2="100"
+          y1="100"
+          y2="0"
+        ></line>
+        <line
+          class="animate-[dash_15s_linear_infinite_reverse]"
+          stroke="currentColor"
+          stroke-width="0.2"
+          x1="0"
+          x2="100"
+          y1="80"
+          y2="-20"
+        ></line>
+        <line
+          class="animate-[dash_12s_linear_infinite]"
+          stroke="currentColor"
+          stroke-width="0.3"
+          x1="20"
+          x2="120"
+          y1="100"
+          y2="0"
+        ></line>
+      </svg>
+    </div>
     <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <ClientOnly>
-        <!-- Background -->
-        <div
-          v-if="isMobile && mobileMenuOpen"
-          class="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]"
-          aria-hidden="true"
-          @click="closeMobileMenu"
-        />
+      <!-- Background -->
+      <div
+        v-if="isMobile && mobileMenuOpen"
+        class="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]"
+        aria-hidden="true"
+        @click="closeMobileMenu"
+      />
 
-        <!-- Menu Desktop -->
+      <!-- Menu Desktop -->
 
-        <section>
-          <div
-            v-if="!isMobile"
-            class="mx-auto flex max-w-7xl items-start justify-between gap-4"
-          >
-            <div
-              class="flex min-w-0 shrink items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
-            >
-              <NuxtLink class="px-1" :to="localePath('/')">
-                <NuxtImg
-                  src="/images/logo-squared.png"
-                  height="40"
-                  width="40"
-                  alt="Logo"
-                />
-              </NuxtLink>
-              <nav>
-                <ul
-                  class="flex items-center gap-x-1 xl:gap-x-2 text-default whitespace-nowrap"
-                >
-                  <li
-                    v-for="item in NavItems"
-                    :key="item.key"
-                    class="flex items-center rounded-full px-2.5 py-2 transition-all duration-200 ease-out xl:px-4 hover:bg-bg-hovered"
-                  >
-                    <NuxtLink :to="item.href" class="flex items-center">
-                      <span
-                        class="select-none transition-all duration-300 ease-out"
-                      >
-                        {{ t(item.key) }}
-                      </span>
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-            <div
-              class="flex shrink-0 items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
-            >
-              <NavColorSelector />
-              <NavLanguageSelect />
-              <NavAuditCTA />
-            </div>
-          </div>
-
-          <!-- Menu burger -->
-          <div
-            v-else
-            class="flex w-full items-center justify-between rounded-full border border-border-default bg-surface/80 px-5 py-3 shadow-2xl backdrop-blur-xl"
-          >
-            <NavAuditCTA />
-
-            <button
-              class="flex items-center justify-center rounded-full border border-border-default bg-white/10 p-3 text-default transition-colors duration-300 hover:bg-white/20"
-              :aria-expanded="mobileMenuOpen"
-              aria-label="Ouvrir le menu"
-              @click="mobileMenuOpen = !mobileMenuOpen"
-            >
-              <Icon
-                :icon="
-                  mobileMenuOpen
-                    ? 'material-symbols:close-rounded'
-                    : 'material-symbols:menu-rounded'
-                "
-                class="size-6"
-              />
-            </button>
-          </div>
-        </section>
-
-        <!-- Menu Mobile -->
-        <Transition
-          enter-active-class="transition duration-200 ease-out"
-          enter-from-class="opacity-0 -translate-y-2 scale-[0.98]"
-          enter-to-class="opacity-100 translate-y-0 scale-100"
-          leave-active-class="transition duration-150 ease-in"
-          leave-from-class="opacity-100 translate-y-0 scale-100"
-          leave-to-class="opacity-0 -translate-y-2 scale-[0.98]"
+      <section>
+        <motion.div
+          v-if="!isMobile"
+          :initial="{ y: '-100%', opacity: 0 }"
+          :animate="{ y: '0%', opacity: 1 }"
+          :transition="{
+            duration: 0.7,
+            ease: [0.16, 1, 0.3, 1],
+            delay: 1.2,
+          }"
+          class="mx-auto flex max-w-7xl items-start justify-between gap-4"
         >
-          <div
-            v-if="isMobile && mobileMenuOpen"
-            class="relative z-50 mx-auto mt-3 max-w-7xl overflow-visible rounded-[1.75rem] border border-border-default bg-surface/90 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+          <motion.div
+            :initial="{ scale: 0 }"
+            :animate="{ scale: 1 }"
+            :transition="{
+              duration: 1,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 1,
+            }"
+            class="flex min-w-0 shrink items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
           >
-            <div class="grid gap-4 p-4">
-              <nav
-                v-if="isHome"
-                class="grid gap-2 rounded-3xl border border-border-default bg-white/5 p-2"
+            <NuxtLink class="px-1" :to="localePath('/')">
+              <NuxtImg
+                src="/images/logo-squared.png"
+                height="40"
+                width="40"
+                alt="Logo"
+              />
+            </NuxtLink>
+            <nav>
+              <ul
+                class="flex items-center gap-x-1 xl:gap-x-2 text-default whitespace-nowrap"
               >
-                <NuxtLink
+                <li
                   v-for="item in NavItems"
                   :key="item.key"
-                  :to="item.href"
-                  class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-default transition-colors duration-300 hover:bg-bg-hovered"
-                  @click="closeMobileMenu"
+                  class="flex items-center rounded-full px-2.5 py-2 transition-all duration-200 ease-out xl:px-4 hover:bg-bg-hovered"
                 >
-                  <Icon :icon="item.icon" class="size-5 text-primary" />
-                  <span>{{ t(item.key) }}</span>
-                </NuxtLink>
-              </nav>
-
-              <div class="grid gap-3">
-                <div
-                  class="grid gap-3 rounded-3xl border border-border-default bg-white/5 p-3"
-                >
-                  <div class="grid gap-2">
-                    <span class="text-xs uppercase tracking-[0.2em] text-muted">
-                      Langue
+                  <NuxtLink :to="item.href" class="flex items-center">
+                    <span
+                      class="select-none transition-all duration-300 ease-out"
+                    >
+                      {{ t(item.key) }}
                     </span>
-                    <div class="grid grid-cols-2 gap-2">
-                      <button
-                        v-for="lang in locales"
-                        :key="lang.code"
-                        class="rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-all duration-300"
-                        :class="
-                          lang.code === locale
-                            ? 'border-primary bg-primary text-white shadow-[0_12px_30px_rgba(255,157,0,0.28)]'
-                            : 'border-border-default bg-white/10 text-default hover:bg-white/20'
-                        "
-                        @click="selectLocale(lang.code)"
-                      >
-                        <span
-                          class="block text-xs uppercase tracking-[0.24em] opacity-70"
-                        >
-                          {{ lang.code }}
-                        </span>
-                        <span class="block mt-1">{{ lang.name }}</span>
-                      </button>
-                    </div>
-                  </div>
+                  </NuxtLink>
+                </li>
+              </ul>
+            </nav>
+          </motion.div>
 
-                  <NavColorSelector />
+          <motion.div
+            :initial="{ scale: 0 }"
+            :animate="{ scale: 1 }"
+            :transition="{
+              duration: 1,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 1,
+            }"
+            class="flex shrink-0 items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
+          >
+            <NavColorSelector />
+            <NavLanguageSelect />
+            <NavAuditCTA />
+          </motion.div>
+        </motion.div>
+
+        <!-- Menu burger -->
+        <div
+          v-else
+          class="flex w-full items-center justify-between rounded-full border border-border-default bg-surface/80 px-5 py-3 shadow-2xl backdrop-blur-xl"
+        >
+          <NavAuditCTA />
+
+          <button
+            class="flex items-center justify-center rounded-full border border-border-default bg-white/10 p-3 text-default transition-colors duration-300 hover:bg-white/20"
+            :aria-expanded="mobileMenuOpen"
+            aria-label="Ouvrir le menu"
+            @click="mobileMenuOpen = !mobileMenuOpen"
+          >
+            <Icon
+              :icon="
+                mobileMenuOpen
+                  ? 'material-symbols:close-rounded'
+                  : 'material-symbols:menu-rounded'
+              "
+              class="size-6"
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- Menu Mobile -->
+      <Transition
+        enter-active-class="transition duration-200 ease-out"
+        enter-from-class="opacity-0 -translate-y-2 scale-[0.98]"
+        enter-to-class="opacity-100 translate-y-0 scale-100"
+        leave-active-class="transition duration-150 ease-in"
+        leave-from-class="opacity-100 translate-y-0 scale-100"
+        leave-to-class="opacity-0 -translate-y-2 scale-[0.98]"
+      >
+        <div
+          v-if="isMobile && mobileMenuOpen"
+          class="relative z-50 mx-auto mt-3 max-w-7xl overflow-visible rounded-[1.75rem] border border-border-default bg-surface/90 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+        >
+          <div class="grid gap-4 p-4">
+            <nav
+              v-if="isHome"
+              class="grid gap-2 rounded-3xl border border-border-default bg-white/5 p-2"
+            >
+              <NuxtLink
+                v-for="item in NavItems"
+                :key="item.key"
+                :to="item.href"
+                class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-default transition-colors duration-300 hover:bg-bg-hovered"
+                @click="closeMobileMenu"
+              >
+                <Icon :icon="item.icon" class="size-5 text-primary" />
+                <span>{{ t(item.key) }}</span>
+              </NuxtLink>
+            </nav>
+
+            <div class="grid gap-3">
+              <div
+                class="grid gap-3 rounded-3xl border border-border-default bg-white/5 p-3"
+              >
+                <div class="grid gap-2">
+                  <span class="text-xs uppercase tracking-[0.2em] text-muted">
+                    Langue
+                  </span>
+                  <div class="grid grid-cols-2 gap-2">
+                    <button
+                      v-for="lang in locales"
+                      :key="lang.code"
+                      class="rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-all duration-300"
+                      :class="
+                        lang.code === locale
+                          ? 'border-primary bg-primary text-white shadow-[0_12px_30px_rgba(255,157,0,0.28)]'
+                          : 'border-border-default bg-white/10 text-default hover:bg-white/20'
+                      "
+                      @click="selectLocale(lang.code)"
+                    >
+                      <span
+                        class="block text-xs uppercase tracking-[0.24em] opacity-70"
+                      >
+                        {{ lang.code }}
+                      </span>
+                      <span class="block mt-1">{{ lang.name }}</span>
+                    </button>
+                  </div>
                 </div>
+
+                <NavColorSelector />
               </div>
             </div>
           </div>
-        </Transition>
-      </ClientOnly>
+        </div>
+      </Transition>
     </header>
 
     <NuxtPage />

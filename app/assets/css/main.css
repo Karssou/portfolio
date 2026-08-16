@@ -2,7 +2,7 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sora: "Inter", sans-serif;
+  --font-sora: "Sora", sans-serif;
   --font-share-tech: "Share Tech", sans-serif;
   --font-title: "Stack Sans Headline";
   --color-background: var(--background);

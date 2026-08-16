@@ -71,7 +71,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
     >
       <div>
         <NuxtLink
-          class="group inline-flex items-center gap-2 leading-none font-semibold w-fit px-4 py-3 border border-primary bg-transparent rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-shadow duration-300 hover:cursor-pointer"
+          class="group inline-flex items-center gap-2 text-sm font-sora leading-none font-semibold w-fit px-4 py-3 border border-primary bg-transparent rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-shadow duration-300 hover:cursor-pointer"
           :to="CTARedirect"
         >
           Découvrir mon univers
@@ -84,7 +84,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
 
       <div>
         <NuxtLink
-          class="group inline-flex items-center gap-2 leading-none font-semibold w-fit px-4 py-3 bg-primary/80 hover:bg-primary text-black rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-all duration-300 hover:cursor-pointer"
+          class="group inline-flex items-center gap-2 tex-sm font-sora leading-none font-semibold w-fit px-4 py-3 bg-primary/80 hover:bg-primary text-default rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-all duration-300 hover:cursor-pointer"
           :to="CTARedirectProject"
         >
           Démarrer un projet
