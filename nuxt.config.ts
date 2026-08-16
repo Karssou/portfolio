@@ -88,6 +88,7 @@ export default defineNuxtConfig({
     "nuxt-seo-utils",
     "nuxt-schema-org",
     "nuxt-link-checker",
+    "motion-v/nuxt",
   ],
 
   vite: {
