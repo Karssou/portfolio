@@ -127,6 +127,7 @@ const selectLocale = async (code: string) => {
   <div>
     <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
       <ClientOnly>
+        <!-- Background -->
         <div
           v-if="isMobile && mobileMenuOpen"
           class="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]"
@@ -134,75 +135,60 @@ const selectLocale = async (code: string) => {
           @click="closeMobileMenu"
         />
 
-        <div class="mx-auto flex max-w-7xl items-start justify-between gap-4">
-          <Transition
-            enter-active-class="transition duration-300 ease-out"
-            enter-from-class="-translate-x-3 opacity-0"
-            enter-to-class="translate-x-0 opacity-100"
-            leave-active-class="absolute transition duration-200 ease-in"
-            leave-from-class="translate-x-0 opacity-100"
-            leave-to-class="-translate-x-3 opacity-0"
-            mode="out-in"
-          >
-          </Transition>
+        <!-- Menu Desktop -->
 
+        <section>
           <div
             v-if="!isMobile"
-            class="flex gap-4 items-center rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
+            class="mx-auto flex max-w-7xl items-start justify-between gap-4"
           >
-            <NuxtLink class="px-1" :to="localePath('/')">
-              <NuxtImg
-                src="/images/logo-squared.png"
-                height="40"
-                width="40"
-                alt="Logo"
-              />
-            </NuxtLink>
-            <div>
-              <ul
-                class="flex items-center justify-between gap-x-2 text-default whitespace-nowrap"
-              >
-                <li
-                  v-for="item in NavItems"
-                  :key="item.key"
-                  class="flex items-center rounded-full px-4 py-2 transition-all duration-200 ease-out hover:bg-bg-hovered hover:shadow-md"
+            <div
+              class="flex min-w-0 shrink items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
+            >
+              <NuxtLink class="px-1" :to="localePath('/')">
+                <NuxtImg
+                  src="/images/logo-squared.png"
+                  height="40"
+                  width="40"
+                  alt="Logo"
+                />
+              </NuxtLink>
+              <nav>
+                <ul
+                  class="flex items-center gap-x-1 xl:gap-x-2 text-default whitespace-nowrap"
                 >
-                  <NuxtLink :to="item.href" class="flex items-center">
-                    <span
-                      class="select-none transition-all duration-300 ease-out"
-                    >
-                      {{ t(item.key) }}
-                    </span>
-                  </NuxtLink>
-                </li>
-              </ul>
+                  <li
+                    v-for="item in NavItems"
+                    :key="item.key"
+                    class="flex items-center rounded-full px-2.5 py-2 transition-all duration-200 ease-out xl:px-4 hover:bg-bg-hovered"
+                  >
+                    <NuxtLink :to="item.href" class="flex items-center">
+                      <span
+                        class="select-none transition-all duration-300 ease-out"
+                      >
+                        {{ t(item.key) }}
+                      </span>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div
+              class="flex shrink-0 items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
+            >
+              <NavColorSelector />
+              <NavLanguageSelect />
+              <NavAuditCTA />
             </div>
           </div>
 
-          <div
-            v-if="!isMobile"
-            class="flex items-center gap-4 rounded-full border border-border-default bg-surface/30 px-4 py-3 shadow-2xl backdrop-blur-xl"
-          >
-            <NavColorSelector />
-            <NavLanguageSelect />
-            <NavAuditCTA />
-          </div>
-
+          <!-- Menu burger -->
           <div
             v-else
             class="flex w-full items-center justify-between rounded-full border border-border-default bg-surface/80 px-5 py-3 shadow-2xl backdrop-blur-xl"
           >
-            <Transition
-              enter-active-class="transition duration-300 ease-out"
-              enter-from-class="-translate-x-3 opacity-0"
-              enter-to-class="translate-x-0 opacity-100"
-              leave-active-class="absolute transition duration-200 ease-in"
-              leave-from-class="translate-x-0 opacity-100"
-              leave-to-class="-translate-x-3 opacity-0"
-              mode="out-in"
-            >
-              <NavAuditCTA />
-            </Transition>
+            <NavAuditCTA />
 
             <button
               class="flex items-center justify-center rounded-full border border-border-default bg-white/10 p-3 text-default transition-colors duration-300 hover:bg-white/20"
@@ -220,8 +206,9 @@ const selectLocale = async (code: string) => {
               />
             </button>
           </div>
-        </div>
+        </section>
 
+        <!-- Menu Mobile -->
         <Transition
           enter-active-class="transition duration-200 ease-out"
           enter-from-class="opacity-0 -translate-y-2 scale-[0.98]"
