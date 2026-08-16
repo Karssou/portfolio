@@ -1,6 +1,22 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
 import { motion } from "motion-v";
+import Lenis from "lenis";
+
+onMounted(() => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+  });
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+});
 
 useSchemaOrg([
   definePerson({
