@@ -28,10 +28,9 @@ const { t } = useI18n();
         />
       </div>
 
-      <section
-        id="home"
-        class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12"
-      ></section>
+      <section id="home" class="scroll-mt-12 px-6 pt-12 sm:px-8 lg:px-12">
+        <LandingPage />
+      </section>
 
       <!-- HERO -->
       <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
