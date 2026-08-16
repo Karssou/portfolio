@@ -34,6 +34,10 @@ const { t } = useI18n();
 
       <HomeCarrousel />
 
+      <section id="projects" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
+        <HomeProjects />
+      </section>
+
       <!-- HERO -->
       <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl">
@@ -113,14 +117,6 @@ const { t } = useI18n();
               </article>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-
-      <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-        <div class="mx-auto max-w-7xl" data-section>
-          <LazyHomeProjectsSection />
         </div>
       </section>
 

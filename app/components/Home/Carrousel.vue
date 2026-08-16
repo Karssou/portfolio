@@ -22,20 +22,18 @@ const words = [
     class="overflow-hidden bg-primary/40 py-4 font-title font-light backdrop-blur-2xl -rotate-1 relative z-0 origin-left"
   >
     <div
-      class="relative flex w-full overflow-hidden py-4 mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+      class="relative flex w-full overflow-hidden py-4 mask-[linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] dark:mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
     >
       <div
         class="flex min-w-full shrink-0 items-center justify-around gap-12 animate-marquee"
       >
         <template v-for="(word, index) in words" :key="`orig-${index}`">
           <span
-            class="text-xl font-bold uppercase tracking-wider text-neutral-300 whitespace-nowrap"
+            class="text-xl font-bold uppercase tracking-wider text-default whitespace-nowrap"
           >
             {{ word }}
           </span>
-          <span class="text-xl font-bold text-neutral-300/50 select-none"
-            >/</span
-          >
+          <span class="text-xl font-bold text-default select-none">/</span>
         </template>
       </div>
 
@@ -46,13 +44,11 @@ const words = [
       >
         <template v-for="(word, index) in words" :key="`dup-${index}`">
           <span
-            class="text-xl font-bold uppercase tracking-wider text-neutral-300 whitespace-nowrap"
+            class="text-xl font-bold uppercase tracking-wider text-default whitespace-nowrap"
           >
             {{ word }}
           </span>
-          <span class="text-xl font-bold text-neutral-300/50 select-none"
-            >/</span
-          >
+          <span class="text-xl font-bold text-default select-none">/</span>
         </template>
       </div>
     </div>

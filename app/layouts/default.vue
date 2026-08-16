@@ -127,15 +127,14 @@ const selectLocale = async (code: string) => {
 <template>
   <div>
     <div
-      class="fixed top-0 right-0 w-1/2 min-h-200 h-screen opacity-10 pointer-events-none mix-blend-screen"
+      class="fixed top-0 right-0 w-1/2 min-h-200 h-screen opacity-40 pointer-events-none z-0"
     >
       <svg
-        class="w-full h-full text-primary"
+        class="w-full h-full text-primary transition-colors duration-300"
         preserveAspectRatio="none"
         viewBox="0 0 100 100"
       >
         <line
-          class="animate-[dash_10s_linear_infinite]"
           stroke="currentColor"
           stroke-width="0.5"
           x1="0"
@@ -144,7 +143,6 @@ const selectLocale = async (code: string) => {
           y2="0"
         ></line>
         <line
-          class="animate-[dash_15s_linear_infinite_reverse]"
           stroke="currentColor"
           stroke-width="0.2"
           x1="0"
@@ -153,7 +151,6 @@ const selectLocale = async (code: string) => {
           y2="-20"
         ></line>
         <line
-          class="animate-[dash_12s_linear_infinite]"
           stroke="currentColor"
           stroke-width="0.3"
           x1="20"

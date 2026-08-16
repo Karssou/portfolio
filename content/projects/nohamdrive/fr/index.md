@@ -8,8 +8,9 @@ cta: Voir les détails du projet
 date: 2025-12-10
 stack:
   - Nuxt
-  - Tauri
-  - Rust
+  - FastAPI
+  - Minio
+  - PostgreSQL
 status: En ligne
 ctaWebsite: Visiter le site
 website: https://nohamdrive.alexandre-larue.fr
