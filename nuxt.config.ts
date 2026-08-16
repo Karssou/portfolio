@@ -116,6 +116,7 @@ export default defineNuxtConfig({
     families: {
       Sora: [400, 700],
       "Stack Sans Headline": true,
+      Inter: true,
     },
   },
 

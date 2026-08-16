@@ -28,6 +28,12 @@ const { t } = useI18n();
         />
       </div>
 
+      <section
+        id="home"
+        class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12"
+      ></section>
+
+      <!-- HERO -->
       <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl">
           <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
@@ -109,11 +115,15 @@ const { t } = useI18n();
         </div>
       </section>
 
+      <!-- PROJECTS -->
+
       <section id="projects" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl" data-section>
           <LazyHomeProjectsSection />
         </div>
       </section>
+
+      <!-- ABOUT SECTION -->
 
       <section id="about" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl" data-section>
@@ -121,27 +131,11 @@ const { t } = useI18n();
         </div>
       </section>
 
-      <section id="skills" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-        <div class="mx-auto max-w-7xl" data-section>
-          <LazyHomeSectionHeading
-            kicker="Skills"
-            :title="$t('navbar.skills')"
-            :description="$t('skill.description')"
-          />
-          <div class="mt-8">
-            <LazySkills />
-          </div>
-        </div>
-      </section>
+      <!-- SKILLS -->
 
-      <section id="education" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
-        <div class="mx-auto max-w-7xl" data-section>
-          <div class="grid gap-8">
-            <LazySkillsEducation />
-            <LazySkillsLanguage />
-          </div>
-        </div>
-      </section>
+      <!-- SERVICES -->
+
+      <!-- CONTACT SECTION -->
 
       <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl" data-section>
