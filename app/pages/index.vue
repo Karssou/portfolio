@@ -32,6 +32,8 @@ const { t } = useI18n();
         <LandingPage />
       </section>
 
+      <HomeCarrousel />
+
       <!-- HERO -->
       <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl">
