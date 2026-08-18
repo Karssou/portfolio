@@ -38,6 +38,10 @@ const { t } = useI18n();
         <HomeProjects />
       </section>
 
+      <section id="expertises" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
+        <ExpertiseSection />
+      </section>
+
       <section id="services" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
         <ServicesSection />
       </section>
