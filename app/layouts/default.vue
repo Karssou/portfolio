@@ -200,6 +200,7 @@ const selectLocale = async (code: string) => {
           class="mx-auto flex max-w-7xl items-start justify-between gap-4"
         >
           <motion.div
+            v-if="isHome"
             :initial="{ scale: 0 }"
             :animate="{ scale: 1 }"
             :transition="{
@@ -246,7 +247,7 @@ const selectLocale = async (code: string) => {
               ease: [0.16, 1, 0.3, 1],
               delay: 1,
             }"
-            class="flex shrink-0 items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
+            class="flex shrink-0 ml-auto items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
           >
             <NavColorSelector />
             <NavLanguageSelect />

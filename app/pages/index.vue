@@ -38,6 +38,10 @@ const { t } = useI18n();
         <HomeProjects />
       </section>
 
+      <section id="services" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
+        <ServicesSection />
+      </section>
+
       <!-- HERO -->
       <section id="home" class="scroll-mt-28 px-6 pt-28 sm:px-8 lg:px-12">
         <div class="mx-auto max-w-7xl">

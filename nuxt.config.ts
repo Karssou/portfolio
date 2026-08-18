@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
     },
-    mode: "css",
+    mode: "svg",
     serverBundle: "local",
     provider: "server",
   },
