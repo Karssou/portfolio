@@ -39,7 +39,7 @@ useSeoMeta({
     </section>
 
     <section id="projects" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
-      <HomeProjects />
+      <LazyHomeProjects hydrate-on-visible />
     </section>
 
     <section id="expertises" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
@@ -52,7 +52,7 @@ useSeoMeta({
 
     <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
       <div class="mx-auto max-w-7xl" data-section>
-        <LazyHomeContactSection />
+        <LazyHomeContactSection hydrate-on-visible />
       </div>
     </section>
   </main>
