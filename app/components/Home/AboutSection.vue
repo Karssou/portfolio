@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { t, tm } = useI18n();
+</script>
 
 <template>
   <section id="about" class="mx-auto max-w-7xl px-4 py-16">
@@ -17,7 +19,7 @@
           class="absolute flex gap-2 -bottom-4 -right-4 rounded-xl border border-border-default bg-surface/90 px-4 py-2 font-sora text-xs font-semibold shadow-xl backdrop-blur-md"
         >
           <div class="w-4 h-4 rounded-full bg-green-500"></div>
-          Disponible pour de nouveaux projets
+          {{ t("about.cta") }}
         </div>
       </div>
 
@@ -25,35 +27,36 @@
         <span
           class="text-xs font-semibold uppercase tracking-wider text-primary"
         >
-          À propos
+          {{ t("about.lead") }}
         </span>
         <h2 class="font-title text-3xl font-bold sm:text-4xl">
-          Concevoir des produits web avec rigueur et passion.
+          {{ t("about.title") }}
         </h2>
         <p class="text-sm leading-relaxed text-muted">
-          Développeur web indépendant, je conçois des applications web modernes,
-          rapides et évolutives. Mon objectif est de transformer des besoins
-          complexes en interfaces fluides et intuitives.
+          {{ t("about.paragraph1") }}
         </p>
         <p class="text-sm leading-relaxed text-muted">
-          Alliant une solide maîtrise de l'écosystème Vue / Nuxt et des
-          architectures backend, j'accorde une importance capitale à la qualité
-          du code, aux performances (SEO, temps de chargement) et à l'expérience
-          utilisateur.
+          {{ t("about.paragraph2") }}
         </p>
 
         <div
           class="mt-4 grid grid-cols-2 gap-4 border-t border-border-default/60 pt-6"
         >
           <div>
-            <span class="font-title text-2xl font-bold text-default">100%</span>
-            <p class="text-xs text-muted">Code sur-mesure & optimisé</p>
+            <span class="font-title text-2xl font-bold text-default">
+              {{ (tm("about.hint") as any[])?.[0]?.title }}
+            </span>
+            <p class="text-xs text-muted">
+              {{ (tm("about.hint") as any[])?.[0]?.sub }}
+            </p>
           </div>
           <div>
-            <span class="font-title text-2xl font-bold text-default"
-              >Réactivité</span
-            >
-            <p class="text-xs text-muted">Communication fluide et continue</p>
+            <span class="font-title text-2xl font-bold text-default">{{
+              (tm("about.hint") as any[])?.[1]?.title
+            }}</span>
+            <p class="text-xs text-muted">
+              {{ (tm("about.hint") as any[])?.[1]?.sub }}
+            </p>
           </div>
         </div>
       </div>

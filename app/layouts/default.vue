@@ -114,19 +114,19 @@ const NavItems = [
     icon: "material-symbols:person-outline-rounded",
   },
   {
-    key: "navbar.skills",
-    href: "#skills",
-    icon: "material-symbols:flash-on-outline-rounded",
-  },
-  {
     key: "navbar.projects",
     href: "#projects",
     icon: "material-symbols:code-rounded",
   },
   {
-    key: "navbar.contact",
-    href: "#contact",
-    icon: "material-symbols:mail-outline-rounded",
+    key: "navbar.skills",
+    href: "#skills",
+    icon: "material-symbols:psychology-outline-rounded",
+  },
+  {
+    key: "navbar.services",
+    href: "#services",
+    icon: "material-symbols:home-repair-service-outline-rounded",
   },
 ];
 

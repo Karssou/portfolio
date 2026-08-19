@@ -10,8 +10,11 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
 };
-const wordsLine1 = ["TRANSFORMER", "VOS", "IDÉES", "EN"];
-const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
+
+const { t } = useI18n();
+
+const wordsLine1 = computed(() => t("mainTitle.titleLine1").split(" "));
+const wordsLine2 = computed(() => t("mainTitle.titleLine2").split(" "));
 </script>
 
 <template>
@@ -19,9 +22,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
     <h1
       class="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase overflow-hidden leading-tight tracking-tight"
     >
-      <span class="sr-only"
-        >TRANSFORMER VOS IDÉES EN EXPÉRIENCES SUR-MESURE</span
-      >
+      <span class="sr-only">{{ t("mainTitle.landing") }}</span>
 
       <div aria-hidden="true" class="flex flex-col">
         <div class="flex flex-wrap gap-x-2 sm:gap-x-4 overflow-hidden">
@@ -66,8 +67,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
       :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.7 }"
       class="font-sora text-sm sm:text-base text-neutral-400 w-full lg:w-4/5 mb-4 sm:mb-6"
     >
-      Ingénierie web moderne. Je crée des interfaces fluides et des
-      architectures robustes, pensées pour la performance et le sur-mesure.
+      {{ t("mainTitle.sub") }}
     </motion.p>
 
     <motion.div
@@ -81,7 +81,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
           class="group inline-flex items-center justify-center gap-2 text-sm font-sora font-semibold w-full sm:w-fit px-5 py-3.5 border border-primary bg-transparent rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-shadow duration-300 hover:cursor-pointer"
           :to="CTARedirect"
         >
-          Découvrir mon univers
+          {{ t("mainTitle.discoverCTA") }}
           <Icon
             icon="material-symbols:arrow-forward-rounded"
             class="size-5 group-hover:translate-x-1 transition-transform duration-200"
@@ -94,7 +94,7 @@ const wordsLine2 = ["EXPÉRIENCES", "SUR-MESURE"];
           class="group inline-flex items-center justify-center gap-2 text-sm font-sora font-semibold w-full sm:w-fit px-5 py-3.5 bg-primary hover:bg-primary/90 text-black rounded-full shadow-primary/20 shadow-[0px_0px_15px_0px] hover:shadow-primary/40 transition-all duration-300 hover:cursor-pointer"
           :to="CTARedirectProject"
         >
-          Démarrer un projet
+          {{ t("mainTitle.contactCTA") }}
           <Icon
             icon="material-symbols:arrow-outward-rounded"
             class="size-5 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-200"

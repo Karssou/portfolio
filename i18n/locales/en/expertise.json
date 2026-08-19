@@ -1,0 +1,54 @@
+{
+  "title": "MY EXPERTISE",
+  "description": "From concept to deployment, I build high-performance, scalable web applications focused on user experience.",
+  "items": [
+    {
+      "count": 1,
+      "title": "Frontend Engineering",
+      "description": "Building fast, responsive user interfaces. I turn your design mockups into intuitive, high-performance web products.",
+      "tags": ["Nuxt.js", "Vue.js", "Tailwind CSS"],
+      "icon": "material-symbols:devices",
+      "checks": [
+        "Responsive web apps & SSR rendering",
+        "Custom & pixel-perfect design systems",
+        "Smooth animations and polished user interactions"
+      ]
+    },
+    {
+      "count": 2,
+      "title": "Backend & Architecture",
+      "description": "Developing robust, secure, and scalable backend infrastructures with reliable data management.",
+      "tags": ["FastAPI", "AdonisJS", "PostgreSQL"],
+      "icon": "material-symbols:dns-outline-rounded",
+      "checks": [
+        "High-performance RESTful API design",
+        "Relational database modeling and optimization",
+        "Application security & authentication (OAuth, JWT)"
+      ]
+    },
+    {
+      "count": 3,
+      "title": "DevOps & Deployment",
+      "description": "Setting up and automating cloud infrastructure to ensure maximum uptime and seamless updates.",
+      "tags": ["Docker", "CI/CD", "Cloud Hosting"],
+      "icon": "material-symbols:cloud-sync-outline-rounded",
+      "checks": [
+        "Application containerization with Docker",
+        "Continuous Integration & Continuous Deployment (CI/CD)",
+        "Proactive monitoring & high-availability setup"
+      ]
+    },
+    {
+      "count": 4,
+      "title": "SEO & Web Performance",
+      "description": "In-depth code and speed optimization to boost your search engine rankings and user conversion rates.",
+      "tags": ["Core Web Vitals", "Technical SEO", "Analytics"],
+      "icon": "material-symbols:speed-outline-rounded",
+      "checks": [
+        "Core Web Vitals audit and optimization (Lighthouse)",
+        "Technical SEO strategy and structured data setup",
+        "Advanced analytics tracking and performance dashboards"
+      ]
+    }
+  ]
+}

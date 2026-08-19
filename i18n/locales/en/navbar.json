@@ -2,8 +2,8 @@
   "home": "Home",
   "projects": "My Projects",
   "about": "About me",
-  "skills": "Skills",
-  "education": "Education",
+  "skills": "Expertise",
   "contact": "Contact",
-  "audit" : "Free audit"
+  "services" : "Services",
+  "audit": "Free audit"
 }

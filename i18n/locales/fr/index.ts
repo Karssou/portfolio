@@ -1,19 +1,19 @@
 import navbar from "./navbar.json";
 import mainTitle from "./mainTitle.json";
-import education from "./education.json";
 import about from "./about.json";
 import projects from "./projects.json";
 import contact from "./contact.json";
 import skill from "./skill.json";
-import language from "./language.json";
+import expertise from "./expertise.json";
+import service from "./services.json";
 
 export default {
   about,
   contact,
-  education,
+  expertise,
   navbar,
   mainTitle,
-  language,
   projects,
+  service,
   skill,
 };

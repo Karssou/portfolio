@@ -1,60 +1,13 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
 import SectionHeading from "../Home/SectionHeading.vue";
+import type { Services } from "~/types/Services.ts";
 
-const services = [
-  {
-    id: "creation",
-    popular: true,
-    badge: "Le plus demandé",
-    title: "Création Sur-Mesure",
-    subtitle: "Applications Web & Sites Vitrines",
-    description:
-      "Conception complète de votre solution web, de la première ligne de code au déploiement. Un produit fluide, ultra-rapide et taillé pour votre croissance.",
-    deliverables: [
-      "Architecture Nuxt.js / Vue.js haute performance",
-      "Design System responsive & expérience utilisateur (UI/UX)",
-      "Back-office & API REST/GraphQL sécurisés",
-      "Optimisation SEO natif et temps de chargement éclair",
-    ],
-    ctaText: "Lancer mon projet",
-    icon: "material-symbols:rocket-launch-outline-rounded",
-  },
-  {
-    id: "refonte",
-    popular: false,
-    badge: null,
-    title: "Refonte & Modernisation",
-    subtitle: "Migration & Refonte d'interfaces",
-    description:
-      "Transformez votre site ou application existante vers des technologies modernes. Améliorez le design, la vitesse et l'engagement de vos utilisateurs.",
-    deliverables: [
-      "Migration vers une stack moderne et pérenne",
-      "Modernisation complète de l'interface graphique",
-      "Correction des dettes techniques & nettoyage de code",
-      "Conservation et amélioration du référencement (SEO)",
-    ],
-    ctaText: "Moderniser mon site",
-    icon: "material-symbols:auto-fix-outline",
-  },
-  {
-    id: "audit-perf",
-    popular: false,
-    badge: null,
-    title: "Audit, SEO & Performance",
-    subtitle: "Optimisation de sites existants",
-    description:
-      "Un diagnostic chirurgical pour identifier les freins à votre croissance : lenteurs, mauvaise structure SEO, failles de sécurité ou mauvaise UX.",
-    deliverables: [
-      "Audit Core Web Vitals & performances (Lighthouse)",
-      "Optimisation du code, des images et du temps de réponse",
-      "Correction des erreurs SEO techniques & balisage",
-      "Rapport complet et recommandations d'optimisation",
-    ],
-    ctaText: "Booster mes performances",
-    icon: "material-symbols:speed-outline-rounded",
-  },
-];
+const { t, tm } = useI18n();
+
+
+const services = computed(() => (tm("service.items") as Services[]) || []);
+
 </script>
 
 <template>
@@ -62,8 +15,8 @@ const services = [
     class="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-4 py-16"
   >
     <SectionHeading
-      title="Mes prestations & offres"
-      description="Des solutions techniques adaptées à l'avancement de votre projet. Que vous partiez d'une feuille blanche ou d'une plateforme existante à optimiser."
+      :title="t('service.title')"
+      :description="t('service.description')"
       class="max-w-7xl w-full mx-auto mb-12 px-4"
     />
 
@@ -78,7 +31,6 @@ const services = [
             : 'border-border-default hover:border-primary/40',
         ]"
       >
-        <!-- Badge "Populaire / Le plus demandé" -->
         <div
           v-if="service.popular"
           class="absolute top-4 right-4 rounded-full bg-primary/10 border border-primary/30 px-3 py-1 font-sora text-xs font-semibold text-primary"
@@ -87,7 +39,6 @@ const services = [
         </div>
 
         <div>
-          <!-- En-tête : Icône & Subtitle -->
           <div class="mb-6 flex items-center justify-between">
             <div
               class="flex size-14 items-center justify-center rounded-2xl border border-border-default bg-bg-hovered/80 text-primary transition-colors duration-300 group-hover:border-primary/30 group-hover:bg-primary/10"
@@ -96,7 +47,6 @@ const services = [
             </div>
           </div>
 
-          <!-- Titre & Description -->
           <div class="mb-6">
             <span
               class="font-sora text-xs font-medium uppercase tracking-wider text-muted"
@@ -111,15 +61,13 @@ const services = [
             </p>
           </div>
 
-          <!-- Séparateur -->
           <div class="my-6 h-px w-full bg-border-default/60" />
 
-          <!-- Liste des livrables inclus -->
           <div class="space-y-3">
             <p
               class="font-sora text-xs font-semibold uppercase tracking-wider text-default/80"
             >
-              Inclus dans la prestation :
+              {{ t("services.includedTitle") }}
             </p>
             <ul class="space-y-2.5 font-sora text-sm text-muted">
               <li
@@ -129,7 +77,7 @@ const services = [
               >
                 <Icon
                   icon="material-symbols:check-circle-outline-rounded"
-                  class="mt-0.5 size-5 shrink-0 text-primary"
+                  class="mt-0.5 size-5 shrink-0 grow text-primary"
                 />
                 <span>{{ deliverable }}</span>
               </li>
@@ -137,7 +85,6 @@ const services = [
           </div>
         </div>
 
-        <!-- Action / CTA de la carte -->
         <div class="mt-8 pt-4">
           <NuxtLink
             to="/#contact"

@@ -1,0 +1,54 @@
+{
+  "title": "MON EXPERTISE",
+  "description": "De la conception au déploiement, je développe des applications web performantes, évolutives et axées sur l'expérience utilisateur.",
+  "items": [
+    {
+      "count": 1,
+      "title": "Frontend Engineering",
+      "description": "Création d'interfaces utilisateurs ultra-réactives et fluides. Je transformes vos maquettes en expériences interactives mémorables, orientées conversion.",
+      "icon": "material-symbols:devices",
+      "tags": ["Nuxt.js", "Vue.js", "Tailwind CSS"],
+      "checks": [
+        "Applications Web Progressives (PWA) & SSR",
+        "Design System sur-mesure et pixel-perfect",
+        "Animations fluides et interactions poussées"
+      ]
+    },
+    {
+      "count": 2,
+      "title": "Backend & Architecture",
+      "description": "Développement d'infrastructures robustes, sécurisées et scalables. Je construis le moteur invisible mais puissant de votre application.",
+      "icon": "material-symbols:dns-outline-rounded",
+      "tags": ["FastAPI", "AdonisJS", "PostgreSQL"],
+      "checks": [
+        "Conception d'APIs RESTful hautes performances",
+        "Modélisation et optimisation de bases de données relationnelles",
+        "Sécurité applicative et gestion des accès (OAuth, JWT)"
+      ]
+    },
+    {
+      "count": 3,
+      "title": "DevOps & Déploiement",
+      "description": "Automatisation et gestion d'infrastructures cloud. Assure une disponibilité maximale et des mises à jour sans interruption de service.",
+      "icon": "material-symbols:cloud-sync-outline-rounded",
+      "tags": ["Docker", "CI/CD", "Cloud Hosting"],
+      "checks": [
+        "Conteneurisation d'applications avec Docker",
+        "Pipelines d'intégration et de déploiement continus (CI/CD)",
+        "Monitoring proactif et architecture haute disponibilité (99.9%)"
+      ]
+    },
+    {
+      "count": 4,
+      "title": "SEO & Performance Web",
+      "description": "Optimisation chirurgicale pour les moteurs de recherche et l'expérience utilisateur. Un site rapide est un site qui convertit.",
+      "icon": "material-symbols:speed-outline-rounded",
+      "tags": ["Core Web Vitals", "Technical SEO", "Analytics"],
+      "checks": [
+        "Audit et optimisation des Core Web Vitals (Lighthouse)",
+        "Stratégie de référencement technique et sémantique structurée",
+        "Mise en place de tracking avancé et tableaux de bord ROI"
+      ]
+    }
+  ]
+}

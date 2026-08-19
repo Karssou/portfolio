@@ -1,23 +1,14 @@
 {
-  "title": "A propos",
-  "lead": "J'associe une intégration front-end soignée à des architectures back-end modulaires pour concevoir des applications viables, évolutives et agréables à utiliser.",
-  "cards": [
+  "lead": "À propos",
+  "title": "Je transforme vos idées en applications web performantes.",
+  "paragraph1": "Développeur indépendant, j'accompagne les entreprises dans la création de leurs projets web. Je privilégie un code sur-mesure, sans surcouche inutile, pour garantir une excellente expérience utilisateur et un SEO irréprochable.",
+  "paragraph2": "Spécialisé sur la stack Vue / Nuxt et les architectures backend, je gère le développement de A à Z avec une communication claire à chaque étape.",
+  "cta": "Disponible pour de nouveaux projets",
+  "hint": [
     {
-      "description": "Développement d'interfaces réactives et modulaires en TypeScript avec Vue 3 et Nuxt 4. Priorité au respect des maquettes, à la fluidité des transitions et à l'optimisation du bundle client."
+      "title": "100%",
+      "sub": "Code sur-mesure & optimisé"
     },
-    {
-      "description": "Conception d'API REST robustes et sécurisées avec AdonisJS. Gestion des bases de données relationnelles, modélisation des données et logique métier optimisée pour la performance."
-    },
-    {
-      "description": "Conception de maquettes modernes axées sur l’expérience utilisateur. Intégration efficace et rigoureuse avec Tailwind CSS v4 en exploitant la puissance des variables CSS natives."
-    },
-    {
-      "description": "Déploiement et administration de services sous Ubuntu Server. Automatisation des builds (CI/CD), conteneurisation avec Docker, gestion des proxys inversés Nginx et optimisation du SEO technique (SSR)."
-    }
-  ],
-  "highlights": [
-    "Ma philosophie de développement",
-    "Un code propre, des requêtes légères et un rendu SSR pour garantir un affichage instantané.",
-    "Curieux de nature, j'aime explorer les dernières nouveautés des frameworks pour adopter les meilleures pratiques de l'industrie."
+    { "title": "Réactivité", "sub": "Communication fluide et continue" }
   ]
 }
