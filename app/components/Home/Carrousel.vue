@@ -40,7 +40,7 @@ const words = [
       <!-- Copie dupliquée -->
       <div
         aria-hidden="true"
-        class="flex min-w-full shrink-0 items-center justify-around gap-12 animate-marquee"
+        class="ml-12 flex min-w-full shrink-0 items-center justify-around gap-12 animate-marquee"
       >
         <template v-for="(word, index) in words" :key="`dup-${index}`">
           <span
