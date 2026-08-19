@@ -120,7 +120,7 @@ const NavItems = [
   },
   {
     key: "navbar.skills",
-    href: "#skills",
+    href: "#expertises",
     icon: "material-symbols:psychology-outline-rounded",
   },
   {

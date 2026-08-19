@@ -5,9 +5,7 @@ import type { Services } from "~/types/Services.ts";
 
 const { t, tm } = useI18n();
 
-
 const services = computed(() => (tm("service.items") as Services[]) || []);
-
 </script>
 
 <template>
@@ -67,7 +65,7 @@ const services = computed(() => (tm("service.items") as Services[]) || []);
             <p
               class="font-sora text-xs font-semibold uppercase tracking-wider text-default/80"
             >
-              {{ t("services.includedTitle") }}
+              {{ t("service.includedTitle") }}
             </p>
             <ul class="space-y-2.5 font-sora text-sm text-muted">
               <li
