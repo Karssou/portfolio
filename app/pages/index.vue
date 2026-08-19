@@ -35,7 +35,7 @@ useSeoMeta({
     <HomeCarrousel />
 
     <section id="about" class="mx-auto max-w-7xl px-4 py-16">
-      <HomeAboutSection />
+      <LazyHomeAboutSection />
     </section>
 
     <section id="projects" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
@@ -47,7 +47,11 @@ useSeoMeta({
     </section>
 
     <section id="services" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
-      <ServicesSection />
+      <LazyServicesSection />
+    </section>
+
+    <section id="social" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
+      <LazyHomeSocial />
     </section>
 
     <section id="contact" class="scroll-mt-28 px-6 pt-24 sm:px-8 lg:px-12">
