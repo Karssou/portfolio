@@ -13,7 +13,7 @@ useSeoMeta({
 
 defineOgImage("ImageOg.takumi", {
   title: "Alexandre Larue",
-  description: "Créer vos sites web",
+  description: "Create experience with passion",
 });
 </script>
 

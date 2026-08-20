@@ -20,7 +20,7 @@ const {
       class="absolute -bottom-55 -left-45 h-125 w-125 rounded-full bg-primary/10"
     />
 
-    <div class="relative flex h-full w-full flex-col justify-between p-17"
+    <div class="relative flex h-full w-full flex-col justify-between p-17">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-4">
           <div class="flex flex-col">
@@ -66,7 +66,6 @@ const {
         </p>
       </div>
 
-      <!-- Footer -->
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="h-2 w-2 rounded-full bg-primary" />
