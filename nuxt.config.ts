@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
 
+  features: {
+    inlineStyles: true,
+  },
+
   icon: {
     clientBundle: {
       scan: true,
