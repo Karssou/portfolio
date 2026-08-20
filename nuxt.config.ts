@@ -80,7 +80,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@artmizu/nuxt-prometheus",
-    "@nuxtjs/google-fonts",
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
@@ -114,15 +113,14 @@ export default defineNuxtConfig({
     },
   },
 
-  googleFonts: {
-    display: "swap",
-    preconnect: true,
-    preload: true,
-    download: true,
-    families: {
-      Sora: [400, 700],
-      "Stack Sans Headline": true,
-      Inter: true,
+  fonts: {
+    families: [
+      { name: "Sora", weights: [400, 600, 700], subsets: ["latin", "latin-ext"] },
+      { name: "Stack Sans Headline", weights: [400, 700], subsets: ["latin", "latin-ext"] },
+      { name: "Inter", weights: [400, 500, 600, 700], subsets: ["latin", "latin-ext"] },
+    ],
+    defaults: {
+      subsets: ["latin", "latin-ext"],
     },
   },
 
