@@ -12,13 +12,11 @@ const { t, tm } = useI18n();
           <NuxtImg
             src="/images/alexandre-larue-developpeur-full-stack-person.avif"
             alt="Alexandre Larue - Développeur Web Freelance"
-            width="800"
-            height="800"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
-            format="webp"
-            preload
-            fetchpriority="high"
-            loading="eager"
+            width="448"
+            height="448"
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 448px"
+            format="avif"
+            loading="lazy"
             decoding="async"
             class="h-full w-full rounded-xl object-cover"
           />
