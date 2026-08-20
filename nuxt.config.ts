@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     clientBundle: {
       scan: true,
     },
-    mode: "css",
+    mode: "svg",
     serverBundle: "local",
     provider: "server",
   },
@@ -88,6 +88,7 @@ export default defineNuxtConfig({
     "nuxt-seo-utils",
     "nuxt-schema-org",
     "nuxt-link-checker",
+    "motion-v/nuxt",
   ],
 
   vite: {
@@ -116,6 +117,7 @@ export default defineNuxtConfig({
     families: {
       Sora: [400, 700],
       "Stack Sans Headline": true,
+      Inter: true,
     },
   },
 

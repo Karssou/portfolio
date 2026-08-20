@@ -1,0 +1,55 @@
+{
+  "title": "MES PRESTATIONS & OFFRES",
+  "description": "Des solutions techniques adaptées à l'avancement de votre projet. Que vous partiez d'une feuille blanche ou d'une plateforme existante à optimiser.",
+  "includedTitle": "INCLUS DANS LA PRESTATION :",
+  "items": [
+    {
+      "id": "creation",
+      "popular": true,
+      "badge": "Le plus demandé",
+      "title": "Création Sur-Mesure",
+      "subtitle": "Applications Web & Sites Vitrines",
+      "icon": "material-symbols:rocket-launch-outline-rounded",
+      "description": "Conception complète de votre solution web, de la première ligne de code au déploiement. Un produit fluide, ultra-rapide et taillé pour votre croissance.",
+      "deliverables": [
+        "Architecture Nuxt.js / Vue.js haute performance",
+        "Design System responsive & expérience utilisateur (UI/UX)",
+        "Back-office & API REST/GraphQL sécurisés",
+        "Optimisation SEO natif et temps de chargement éclair"
+      ],
+      "ctaText": "Lancer mon projet"
+    },
+    {
+      "id": "refonte",
+      "popular": false,
+      "badge": null,
+      "title": "Refonte & Modernisation",
+      "subtitle": "Migration & Refonte d'interfaces",
+      "icon": "material-symbols:auto-fix-outline",
+      "description": "Transformez votre site ou application existante vers des technologies modernes. Améliorez le design, la vitesse et l'engagement de vos utilisateurs.",
+      "deliverables": [
+        "Migration vers une stack moderne et pérenne",
+        "Modernisation complète de l'interface graphique",
+        "Correction des dettes techniques & nettoyage de code",
+        "Conservation et amélioration du référencement (SEO)"
+      ],
+      "ctaText": "Moderniser mon site"
+    },
+    {
+      "id": "audit-perf",
+      "popular": false,
+      "badge": null,
+      "title": "Audit, SEO & Performance",
+      "icon": "material-symbols:speed-outline-rounded",
+      "subtitle": "Optimisation de sites existants",
+      "description": "Un diagnostic chirurgical pour identifier les freins à votre croissance : lenteurs, mauvaise structure SEO, failles de sécurité ou mauvaise UX.",
+      "deliverables": [
+        "Audit Core Web Vitals & performances (Lighthouse)",
+        "Optimisation du code, des images et du temps de réponse",
+        "Correction des erreurs SEO techniques & balisage",
+        "Rapport complet et recommandations d'optimisation"
+      ],
+      "ctaText": "Booster mes performances"
+    }
+  ]
+}

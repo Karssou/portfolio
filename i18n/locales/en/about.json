@@ -1,23 +1,14 @@
 {
-  "title": "About",
-  "lead": "I combine meticulous front-end development with modular back-end architectures to build robust, scalable, and user-friendly applications.",
-  "cards": [
+  "lead": "About",
+  "title": "I turn your ideas into high-performance web applications.",
+  "paragraph1": "As an independent developer, I help companies bring their web projects to life. I prioritize custom-built code, free of unnecessary overhead, to ensure an excellent user experience and top-notch SEO.",
+  "paragraph2": "Specializing in the Vue/Nuxt stack and backend architectures, I manage the development process from start to finish, maintaining clear communication at every stage.",
+  "cta": "Available for new projects",
+  "hint": [
     {
-      "description": "Development of responsive and modular interfaces in TypeScript using Vue 3 and Nuxt 4. Priority is given to adhering to design mockups, ensuring smooth transitions, and optimizing the client-side bundle."
+      "title": "100%",
+      "sub": "Customized & optimized code"
     },
-    {
-      "description": "Designing robust and secure REST APIs with AdonisJS. Managing relational databases, data modeling, and performance-optimized business logic."
-    },
-    {
-      "description": "Design of modern mockups focused on the user experience. Efficient and rigorous integration with Tailwind CSS v4 by leveraging the power of native CSS variables."
-    },
-    {
-      "description": "Deployment and administration of services on Ubuntu Server. Build automation (CI/CD), containerization with Docker, management of Nginx reverse proxies, and technical SEO optimization (SSR)."
-    }
-  ],
-  "highlights": [
-    "My development philosophy",
-    "Clean code, lightweight queries, and server-side rendering to ensure instant loading",
-    "I'm naturally curious and enjoy exploring the latest developments in frameworks to adopt industry best practices."
+    { "title": "Reactivity", "sub": "Fluent & constant communication" }
   ]
 }

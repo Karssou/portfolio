@@ -6,4 +6,5 @@ export type Project = {
   href: string;
   cta: string;
   github: string;
+  schema?: string;
 };

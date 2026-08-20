@@ -1,9 +1,9 @@
 {
   "home": "Accueil",
-  "projects": "Mes Projets",
+  "projects": "Projets",
   "about": "A propos",
-  "skills": "Compétences",
-  "education": "Éducation",
+  "skills": "Expertise",
   "contact": "Contact",
+  "services": "Services",
   "audit": "Audit gratuit"
 }

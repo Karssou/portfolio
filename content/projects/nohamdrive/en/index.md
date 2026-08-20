@@ -8,22 +8,21 @@ cta: See details
 date: 2025-12-10
 stack:
   - Nuxt
-  - Tauri
-  - Rust
+  - FastAPI
+  - Minio
+  - PostgreSQL
 status: Online
 ctaWebsite: Visit the website
 website: https://nohamdrive.alexandre-larue.fr
 
 schemaOrg:
-
   - "@type": WebPage
     name: "NohamDrive"
     description: "Presentation of the NohamDrive project."
 
-
   - "@type": SoftwareApplication
     name: "NohamDrive"
-    applicationCategory: "UtilitiesApplication" 
+    applicationCategory: "UtilitiesApplication"
     operatingSystem: "Linux"
     description: "Personal cloud storage platform built with Nuxt, FastAPI, PostgreSQL, MinIO and Docker."
     image: "https://alexandre-larue.fr/images/projects/nohamdrive-overview.avif"

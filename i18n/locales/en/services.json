@@ -1,0 +1,55 @@
+{
+  "title": "SERVICES & OFFERS",
+  "description": "Technical solutions tailored to your project's stage. Whether you are starting from scratch or optimizing an existing platform.",
+  "includedTitle": "INCLUDED IN THE SERVICE:",
+  "items": [
+    {
+      "id": "creation",
+      "popular": true,
+      "badge": "Most popular",
+      "icon": "material-symbols:rocket-launch-outline-rounded",
+      "title": "Custom Web Development",
+      "subtitle": "Web Applications & Corporate Websites",
+      "description": "End-to-end development of your web solution, from the first line of code to deployment. Fast, responsive, and built for scaling.",
+      "deliverables": [
+        "High-performance Nuxt.js / Vue.js architecture",
+        "Responsive Design System & User Experience (UI/UX)",
+        "Secure back-office & REST/GraphQL API",
+        "Native SEO optimization & lightning-fast load times"
+      ],
+      "ctaText": "Start my project"
+    },
+    {
+      "id": "refonte",
+      "popular": false,
+      "badge": null,
+      "title": "Redesign & Modernization",
+      "subtitle": "Migration & Interface Redesign",
+      "icon": "material-symbols:auto-fix-outline",
+      "description": "Upgrade your existing website or application with modern tech stacks. Enhance design, performance, and user engagement.",
+      "deliverables": [
+        "Migration to a modern, long-term tech stack",
+        "Complete UI/UX design overhaul",
+        "Technical debt reduction & code cleanup",
+        "SEO preservation and rankings boost"
+      ],
+      "ctaText": "Modernize my site"
+    },
+    {
+      "id": "audit-perf",
+      "popular": false,
+      "badge": null,
+      "icon": "material-symbols:speed-outline-rounded",
+      "title": "Audit, SEO & Performance",
+      "subtitle": "Existing Website Optimization",
+      "description": "In-depth diagnostics to pinpoint performance bottlenecks: slow speeds, weak SEO structures, security risks, or poor UX.",
+      "deliverables": [
+        "Core Web Vitals & speed audit (Lighthouse)",
+        "Code, image, and server response time optimization",
+        "Technical SEO fixes & metadata structuring",
+        "Comprehensive report & actionable recommendations"
+      ],
+      "ctaText": "Boost my performance"
+    }
+  ]
+}

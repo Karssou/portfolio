@@ -4,9 +4,8 @@ export function useResponsive() {
   const breakpoints = useBreakpoints(breakpointsTailwind);
 
   // Renvoie true si l'écran est strictement inférieur à 'md' (768px)
-  const isMobile = breakpoints.smaller("md");
+  const isMobile = breakpoints.smaller("lg");
 
-  // Tu peux aussi ajouter d'autres alias utiles si besoin
   const isTablet = breakpoints.between("md", "lg");
   const isDesktop = breakpoints.greaterOrEqual("lg");
 

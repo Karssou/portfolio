@@ -1,7 +1,8 @@
 {
-  "job": "Junior Developer",
-  "tagline": "I develop robust, high-performance web applications, from responsive design to server-side architecture. I specialize in Nuxt 4, Vue.js, and AdonisJS.",
-  "ctaProjects": "See my work",
-  "ctaContact": "Contact me",
-  "ensemble": "I’m passionate about the JavaScript ecosystem and system administration, and I enjoy designing seamless tools optimized for SEO and continuous deployment. My goal is to combine the responsiveness of the front end with the robustness of a well-architected back end."
+  "landing": "TURN YOUR IDEAS INTO CUSTOMIZED EXPERIENCES",
+  "titleLine1": "TURN YOUR IDEAS INTO",
+  "titleLine2": "CUSTOMIZED EXPERIENCES",
+  "sub": "Modern web engineering. I create seamless interfaces and robust architectures, designed for performance and customization.",
+  "contactCTA": "Start a project",
+  "discoverCTA": "Discover my Universe"
 }
