@@ -64,7 +64,7 @@ const wordsLine2 = computed(() => t("mainTitle.titleLine2").split(" "));
     <motion.p
       :initial="fadeUp.initial"
       :animate="fadeUp.animate"
-      :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.7 }"
+      :transition="{ duration: 0.6, ease: 'easeOut', delay: 0.5 }"
       class="font-sora text-sm sm:text-base text-neutral-400 w-full lg:w-4/5 mb-4 sm:mb-6"
     >
       {{ t("mainTitle.sub") }}
