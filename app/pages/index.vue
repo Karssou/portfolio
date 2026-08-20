@@ -14,9 +14,6 @@ useSeoMeta({
 
 <template>
   <main class="relative overflow-x-hidden pb-36">
-    <h1 class="sr-only">
-      Alexandre Larue - Développeur Web Freelance & Ingénieur Frontend
-    </h1>
     <div class="pointer-events-none absolute inset-0 -z-10">
       <div
         data-orb

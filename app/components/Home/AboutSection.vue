@@ -3,7 +3,7 @@ const { t, tm } = useI18n();
 </script>
 
 <template>
-  <section id="about" class="mx-auto max-w-7xl px-4 py-16">
+  <section class="mx-auto max-w-7xl px-4 py-16">
     <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
       <div class="relative mx-auto w-full max-w-md">
         <div

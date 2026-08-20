@@ -24,8 +24,8 @@ const wordsLine2 = computed(() => t("mainTitle.titleLine2").split(" "));
     >
       <span class="sr-only">{{ t("mainTitle.landing") }}</span>
 
-      <div aria-hidden="true" class="flex flex-col">
-        <div class="flex flex-wrap gap-x-2 sm:gap-x-4 overflow-hidden">
+      <span aria-hidden="true" class="flex flex-col">
+        <span class="flex flex-wrap gap-x-2 sm:gap-x-4 overflow-hidden">
           <motion.span
             v-for="(word, index) in wordsLine1"
             :key="index"
@@ -40,9 +40,9 @@ const wordsLine2 = computed(() => t("mainTitle.titleLine2").split(" "));
           >
             {{ word }}
           </motion.span>
-        </div>
+        </span>
 
-        <div class="flex flex-wrap gap-x-2 sm:gap-x-4 overflow-hidden">
+        <span class="flex flex-wrap gap-x-2 sm:gap-x-4 overflow-hidden">
           <motion.span
             v-for="(word, index) in wordsLine2"
             :key="index"
@@ -57,8 +57,8 @@ const wordsLine2 = computed(() => t("mainTitle.titleLine2").split(" "));
           >
             {{ word }}
           </motion.span>
-        </div>
-      </div>
+        </span>
+      </span>
     </h1>
 
     <motion.p
