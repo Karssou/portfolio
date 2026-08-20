@@ -10,6 +10,11 @@ useSeoMeta({
   twitterImage:
     "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
 });
+
+defineOgImage("ImageOg.takumi", {
+  title: "Alexandre Larue",
+  description: "Créer vos sites web",
+});
 </script>
 
 <template>
