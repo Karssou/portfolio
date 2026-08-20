@@ -213,9 +213,14 @@ const selectLocale = async (code: string) => {
             <NuxtLink class="px-1" :to="localePath('/')">
               <NuxtImg
                 src="/images/logo-squared.png"
-                height="40"
+                alt="Alexandre Larue - Logo"
                 width="40"
-                alt="Logo"
+                height="40"
+                format="webp"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                class="size-10 object-contain"
               />
             </NuxtLink>
             <nav>

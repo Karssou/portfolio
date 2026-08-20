@@ -113,6 +113,7 @@ export default defineNuxtConfig({
   googleFonts: {
     display: "swap",
     preconnect: true,
+    preload: true,
     download: true,
     families: {
       Sora: [400, 700],

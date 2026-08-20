@@ -9,9 +9,17 @@ const { t, tm } = useI18n();
         <div
           class="aspect-square overflow-hidden rounded-2xl border border-border-default bg-surface/60 p-2 backdrop-blur-xl"
         >
-          <img
+          <NuxtImg
             src="/images/alexandre-larue-developpeur-full-stack-person.avif"
             alt="Alexandre Larue - Développeur Web Freelance"
+            width="800"
+            height="800"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+            format="webp"
+            preload
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
             class="h-full w-full rounded-xl object-cover"
           />
         </div>

@@ -98,7 +98,12 @@ const socials = [
         >
           <NuxtImg
             src="/images/alexandre-larue-developpeur-web-freelance-full-stack.avif"
-            alt="Alexandre Larue"
+            alt="Alexandre Larue - Développeur Web Freelance"
+            width="600"
+            height="600"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+            loading="lazy"
+            decoding="async"
             class="size-full object-cover"
           />
         </div>

@@ -117,7 +117,13 @@ const getCardStyle = (index: number) => {
             <NuxtImg
               :src="`/projects/${project.cover}`"
               :alt="project.title"
-              class="w-full h-full object-cover"
+              width="800"
+              height="500"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              format="webp"
+              loading="lazy"
+              decoding="async"
+              class="h-full w-full object-cover"
             />
             <span
               class="absolute top-3 left-3 bg-surface/80 backdrop-blur-md text-default border border-primary/30 text-xs px-3 py-1 rounded-full font-medium"
