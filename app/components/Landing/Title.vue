@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue";
 
-const CTARedirect = "/";
-const CTARedirectProject = "/";
+const CTARedirect = "/#projects";
+const CTARedirectProject = "/#contact";
 
 const { t } = useI18n();
 
