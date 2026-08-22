@@ -250,7 +250,7 @@ const selectLocale = async (code: string) => {
             :transition="{
               duration: 1,
               ease: [0.16, 1, 0.3, 1],
-              delay: 0.5,
+              delay: 0,
             }"
             class="flex shrink-0 ml-auto items-center gap-3 xl:gap-4 rounded-full border border-border-default bg-surface/30 px-3 xl:px-4 py-3 shadow-2xl backdrop-blur-xl"
           >
