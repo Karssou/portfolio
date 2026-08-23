@@ -1,4 +1,22 @@
 {
   "title": "Projets & Réalisations",
-  "lead": "Une sélection de réalisations récentes, de l'intégration UI à l'architecture backend. Des projets concrets axés sur la vitesse, l'ergonomie et la fiabilité."
+  "lead": "Une sélection de réalisations récentes, de l'intégration UI à l'architecture backend. Des projets concrets axés sur la vitesse, l'ergonomie et la fiabilité.",
+  "ProjectPage": {
+    "title": "Mes Projets",
+    "lead": "Une vitrine de mes projets récents, illustrant ma capacité à concevoir des applications web complètes, de l'interface utilisateur à la gestion des données.",
+    "page": {
+      "eyebrow": "Projets sélectionnés · 2024—2026"
+    },
+    "items": [
+      {
+        "title": "As-Gram",
+        "description": "Un petit projet scolaire réalisé au lycée visant à reproduire les fonctionnalités principales d'un réseau social populaire",
+        "status": "Archivé",
+        "href": "",
+        "cta": "Voir plus",
+        "github": "blablabla",
+        "stack": ["Nuxt", "AdonisJS", "BDD"]
+      }
+    ]
+  }
 }

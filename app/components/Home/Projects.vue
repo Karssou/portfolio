@@ -4,6 +4,7 @@ import { Icon } from "@iconify/vue";
 import SectionHeading from "./SectionHeading.vue";
 
 const { t, locale } = useI18n();
+const localePath = useLocalePath();
 
 const { data } = await useAsyncData(`projects-${locale.value}`, () =>
   queryCollection("projects").where("path", "LIKE", `%/${locale.value}`).all(),
@@ -158,38 +159,58 @@ const getCardStyle = (index: number) => {
       </div>
     </div>
 
-    <div class="flex items-center gap-6 mt-8 z-40">
-      <button
-        aria-label="Projet précédent"
-        class="p-3 rounded-full text-default transition-colors hover:text-default/50 hover:cursor-pointer"
-        @click="prevCard"
-      >
-        <Icon icon="material-symbols:arrow-back-ios-rounded" class="size-6" />
-      </button>
+    <div
+      class="w-full grid grid-cols-1 sm:grid-cols-3 items-center gap-8 mt-8 z-40 sm:px-16"
+    >
+      <div class="hidden sm:block"></div>
 
-      <div class="flex gap-2">
+      <section class="flex items-center justify-center gap-6">
         <button
-          v-for="(_, index) in data"
-          :key="index"
-          class="h-2 rounded-full transition-all duration-300"
-          :class="
-            currentIndex === index ? 'w-8 bg-primary' : 'w-2 bg-bg-hovered'
-          "
-          :aria-label="`Aller au projet ${index}`"
-          @click="currentIndex = index"
-        />
-      </div>
+          aria-label="Projet précédent"
+          class="p-3 rounded-full text-default transition-colors hover:text-default/50 hover:cursor-pointer"
+          @click="prevCard"
+        >
+          <Icon icon="material-symbols:arrow-back-ios-rounded" class="size-6" />
+        </button>
 
-      <button
-        aria-label="Projet suivant"
-        class="p-3 rounded-full text-default transition-colors hover:text-default/50 hover:cursor-pointer"
-        @click="nextCard"
-      >
-        <Icon
-          icon="material-symbols:arrow-forward-ios-rounded"
-          class="size-6"
-        />
-      </button>
+        <div class="flex gap-2">
+          <button
+            v-for="(_, index) in data"
+            :key="index"
+            class="h-2 rounded-full transition-all duration-300"
+            :class="
+              currentIndex === index ? 'w-8 bg-primary' : 'w-2 bg-bg-hovered'
+            "
+            :aria-label="`Aller au projet ${index}`"
+            @click="currentIndex = index"
+          />
+        </div>
+
+        <button
+          aria-label="Projet suivant"
+          class="p-3 rounded-full text-default transition-colors hover:text-default/50 hover:cursor-pointer"
+          @click="nextCard"
+        >
+          <Icon
+            icon="material-symbols:arrow-forward-ios-rounded"
+            class="size-6"
+          />
+        </button>
+      </section>
+
+      <section class="justify-self-center sm:justify-self-end">
+        <NuxtLink
+          :to="localePath('/projects')"
+          class="flex flex-row items-center gap-2 text-sora hover:text-primary transition-colors duration-300"
+        >
+          Voir tous les projets
+          <Icon
+            icon="material-symbols:line-end-arrow-notch-rounded"
+            class="size-4"
+            aria-hidden="true"
+          />
+        </NuxtLink>
+      </section>
     </div>
   </div>
 </template>

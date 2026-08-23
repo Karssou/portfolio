@@ -1,4 +1,16 @@
 {
   "title": "Selected Projects",
-  "lead": "A selection of recent work, from UI integration to backend architecture. Concrete projects focused on speed, usability, and reliability."
+  "lead": "A selection of recent work, from UI integration to backend architecture. Concrete projects focused on speed, usability, and reliability.",
+  "ProjectPage": {
+    "title": "Projects",
+    "lead": "A showcase of my recent projects, demonstrating my ability to design complete web applications, from the user interface to data management.",
+    "page": {
+      "eyebrow": "Selected work · 2024—2026",
+      "caseStudy": "Case study",
+      "more": "More to explore",
+      "moreTitle": "Other work",
+      "project": "Project",
+      "projects": "projects"
+    }
+  }
 }
