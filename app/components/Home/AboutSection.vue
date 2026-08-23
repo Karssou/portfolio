@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const { t, tm } = useI18n();
+import { Icon } from "@iconify/vue";
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -46,24 +48,16 @@ const { t, tm } = useI18n();
         </p>
 
         <div
-          class="mt-4 grid grid-cols-2 gap-4 border-t border-border-default/60 pt-6"
+          class="mt-4 flex items-center gap-4 border-t border-border-default/60 pt-6"
         >
-          <div>
-            <span class="font-title text-2xl font-bold text-default">
-              {{ (tm("about.hint") as any[])?.[0]?.title }}
-            </span>
-            <p class="text-xs text-muted">
-              {{ (tm("about.hint") as any[])?.[0]?.sub }}
-            </p>
-          </div>
-          <div>
-            <span class="font-title text-2xl font-bold text-default">{{
-              (tm("about.hint") as any[])?.[1]?.title
-            }}</span>
-            <p class="text-xs text-muted">
-              {{ (tm("about.hint") as any[])?.[1]?.sub }}
-            </p>
-          </div>
+          <a
+            target="_blank"
+            class="px-4 py-2 flex items-center flex-row rounded-xl bg-transparent border border-primary hover:bg-primary transition-colors duration-300"
+            href="/documents/CV Alexandre LARUE.pdf"
+          >
+            <Icon icon="material-symbols:download" class="size-5" />
+            {{ t("about.cv") }}
+          </a>
         </div>
       </div>
     </div>
