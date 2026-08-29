@@ -52,7 +52,7 @@ const { t } = useI18n();
         >
           <a
             target="_blank"
-            class="px-4 py-2 flex items-center flex-row rounded-xl bg-transparent border border-primary hover:bg-primary transition-colors duration-300"
+            class="px-4 py-2 flex items-center flex-row rounded-xl bg-transparent border-2 border-primary hover:bg-primary transition-colors duration-300"
             href="/documents/CV Alexandre LARUE.pdf"
           >
             <Icon icon="material-symbols:download" class="size-5" />

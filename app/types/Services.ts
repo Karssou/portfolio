@@ -8,4 +8,5 @@ export type Services = {
   deliverables: string[];
   ctaText: string;
   icon: string;
+  price: string;
 };

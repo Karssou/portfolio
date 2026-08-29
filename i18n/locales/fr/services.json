@@ -17,6 +17,7 @@
         "Back-office & API REST/GraphQL sécurisés",
         "Optimisation SEO natif et temps de chargement éclair"
       ],
+      "price": "À partir de 300 €",
       "ctaText": "Lancer mon projet"
     },
     {
@@ -33,6 +34,7 @@
         "Correction des dettes techniques & nettoyage de code",
         "Conservation et amélioration du référencement (SEO)"
       ],
+      "price": "À partir de 300 €",
       "ctaText": "Moderniser mon site"
     },
     {
@@ -49,6 +51,7 @@
         "Correction des erreurs SEO techniques & balisage",
         "Rapport complet et recommandations d'optimisation"
       ],
+      "price": "À partir de 79 €",
       "ctaText": "Booster mes performances"
     }
   ]
