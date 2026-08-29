@@ -21,10 +21,11 @@ onMounted(() => {
 useSchemaOrg([
   definePerson({
     name: "Alexandre Larue",
+    identifier: "#person",
     url: "https://alexandre-larue.fr",
     image:
       "https://alexandre-larue.fr/images/alexandre-larue-developpeur-web-freelance-full-stack.avif",
-    jobTitle: "Développeur Full Stack orienté Cloud",
+    jobTitle: "Développeur Full Stack & IA",
     description:
       "Alexandre Larue est un développeur français spécialisé dans le développement Full Stack, les architectures backend, le Cloud Computing et les technologies DevOps.",
     knowsAbout: [
@@ -39,22 +40,20 @@ useSchemaOrg([
       "MinIO",
       "Cloud Computing",
       "DevOps",
+      "Intelligence Artificielle",
     ],
     sameAs: [
       "https://github.com/Karssou",
       "https://linkedin.com/in/alexandre-larue44",
       "https://www.malt.fr/profile/alexandrelarue",
       "https://fr.fiverr.com/s/XLGgggZ",
+      "https://www.pagesjaunes.fr/pros/65321190",
     ],
     worksFor: {
+      "@type": "Organization",
       name: "Alexandre Larue",
       url: "https://alexandre-larue.fr",
     },
-    alumniOf: [
-      {
-        name: "Saint-Félix",
-      },
-    ],
     hasOccupation: {
       name: "Full Stack Developer",
       occupationalCategory: "Software Developer",
