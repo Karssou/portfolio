@@ -17,6 +17,7 @@
         "Secure back-office & REST/GraphQL API",
         "Native SEO optimization & lightning-fast load times"
       ],
+      "price": "Starting at 300 €",
       "ctaText": "Start my project"
     },
     {
@@ -33,6 +34,7 @@
         "Technical debt reduction & code cleanup",
         "SEO preservation and rankings boost"
       ],
+      "price": "Starting at 300 €",
       "ctaText": "Modernize my site"
     },
     {
@@ -49,6 +51,7 @@
         "Technical SEO fixes & metadata structuring",
         "Comprehensive report & actionable recommendations"
       ],
+      "price": "Starting at 79 €",
       "ctaText": "Boost my performance"
     }
   ]

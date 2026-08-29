@@ -75,7 +75,7 @@ const services = computed(() => (tm("service.items") as Services[]) || []);
               >
                 <Icon
                   icon="material-symbols:check-circle-outline-rounded"
-                  class="mt-0.5 size-5 shrink-0 grow text-primary"
+                  class="mt-0.5 size-5 shrink-0 text-primary"
                 />
                 <span>{{ deliverable }}</span>
               </li>
@@ -83,7 +83,13 @@ const services = computed(() => (tm("service.items") as Services[]) || []);
           </div>
         </div>
 
-        <div class="mt-8 pt-4">
+        <div class="mt-8 pt-4 space-y-4">
+          <div>
+            <span class="font-title text-2xl font-bold text-foreground">{{
+              service.price
+            }}</span>
+          </div>
+
           <NuxtLink
             to="/#contact"
             class="flex w-full items-center justify-center gap-2 rounded-xl border px-5 py-3 font-sora text-sm font-semibold transition-all duration-200"
