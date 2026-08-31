@@ -1,8 +1,8 @@
 ---
 title: PyPaquets
-cover: pypaquets-overview.avif
+cover: pypaquets-overview.png
 description: A CLI allowing you to see the ongoing traffic on your computer.
-href: /projects/converter
+href: /projects/pypaquets
 github: https://github.com/Karssou/PyPaquets
 cta: See details
 date: 2026-08-30
@@ -32,6 +32,7 @@ schemaOrg:
   - "Rich"
   - "Scappy"
 ---
+
 ## Why this project?
 
 When studying computer networking and analyzing local traffic, using heavy graphical tools like Wireshark can sometimes feel like overkill for quick inspection. On the other hand, traditional CLI tools like `tcpdump` lack visual structure and real-time interactive dashboards.
