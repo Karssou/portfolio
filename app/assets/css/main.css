@@ -97,3 +97,45 @@
   transform: translateX(-100%);
   opacity: 0;
 }
+
+@layer components {
+  .project-content {
+    @apply prose max-w-none;
+  }
+
+  .project-content h2 {
+    @apply mt-14 mb-8 pt-8 text-4xl font-semibold uppercase tracking-tight no-underline sm:text-4xl;
+  }
+  .project-content p {
+    @apply font-sora text-default text-base font-light leading-8;
+  }
+  .project-content strong {
+    @apply text-default font-bold;
+  }
+  .project-content a {
+    @apply font-title text-primary font-semibold no-underline;
+  }
+  .project-content li {
+    @apply text-default;
+  }
+  .project-content code {
+    @apply bg-background/70 text-primary border-border-default rounded border-2 px-1.5 py-0.5 font-mono text-sm;
+  }
+  .project-content code::before,
+  .project-content code::after {
+    content: none !important;
+  }
+
+  .project-content ul {
+    @apply my-6 ml-6 list-disc space-y-2;
+  }
+  .project-content ol {
+    @apply my-6 ml-6 list-decimal space-y-2;
+  }
+  .project-content li {
+    @apply text-default pl-1;
+  }
+  .project-content li::marker {
+    @apply text-primary font-bold;
+  }
+}

@@ -68,6 +68,16 @@ export default defineNuxtConfig({
     },
   },
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-dark",
+        },
+      },
+    },
+  },
+
   image: {
     format: ["avif"],
   },
@@ -115,9 +125,21 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: "Sora", weights: [400, 600, 700], subsets: ["latin", "latin-ext"] },
-      { name: "Stack Sans Headline", weights: [400, 700], subsets: ["latin", "latin-ext"] },
-      { name: "Inter", weights: [400, 500, 600, 700], subsets: ["latin", "latin-ext"] },
+      {
+        name: "Sora",
+        weights: [400, 600, 700],
+        subsets: ["latin", "latin-ext"],
+      },
+      {
+        name: "Stack Sans Headline",
+        weights: [400, 700],
+        subsets: ["latin", "latin-ext"],
+      },
+      {
+        name: "Inter",
+        weights: [400, 500, 600, 700],
+        subsets: ["latin", "latin-ext"],
+      },
     ],
     defaults: {
       subsets: ["latin", "latin-ext"],
