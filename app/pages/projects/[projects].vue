@@ -144,7 +144,7 @@ usePortfolioMotion(pageRoot);
             class="mt-10 border-t border-border-default pt-10 sm:mt-14 sm:pt-14"
           >
             <ContentRenderer
-              :value="project"
+              :value="project.body"
               class="project-content prose mt-6 max-w-none prose-headings:uppercase prose-headings:tracking-tight prose-h2:mt-14 prose-h2:pt-8 prose-h2:text-4xl prose-h2:no-underline prose-h2:font-semibold prose-h2:sm:text-4xl prose-p:leading-8 prose-p:font-sora prose-p:font-light prose-p:text-default prose-strong:text-default prose-strong:font-bold prose-a:text-primary prose-a:font-title prose-a:no-underline prose-a:font-semibold prose-li:text-default prose-li:marker:text-primary prose-code:rounded prose-code:bg-background/70 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-mono prose-code:text-sm prose-code:text-primary prose-code:border-2 prose-code:border-border-default prose-code:before:content-none prose-code:after:content-none"
             />
           </div>
