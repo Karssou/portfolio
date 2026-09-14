@@ -14,14 +14,34 @@ const toggleQuestion = (index: number) => {
   openIndex.value = openIndex.value === index ? null : index;
 };
 
-useSchemaOrg(
-  questions.value.map((q) =>
-    defineQuestion({
-      question: q.title,
-      answer: q.description,
-    }),
-  ),
-);
+useSchemaOrg([
+  defineWebPage({
+    "@type": "FAQPage",
+  }),
+  defineQuestion({
+    question: "Combien de temps faut-il pour créer mon site ?",
+    answer:
+      "Le délai de conception dépend de l’ampleur de votre projet. En moyenne, il faut compter entre 1 et 2 semaines pour un site vitrine...",
+  }),
+  defineQuestion({
+    question: "Est-ce que le site et le nom de domaine m’appartiendront ?",
+    answer: "Absolument ! Vous êtes à 100% propriétaire...",
+  }),
+  defineQuestion({
+    question: "Que dois-je fournir pour démarrer le projet ?",
+    answer:
+      "Pour démarrer, j’ai simplement besoin de vos éléments de base... Je collabore avec Jeff Bond, Senior SEO Copywriter...",
+  }),
+  defineQuestion({
+    question: "Quelle est votre stack technique de prédilection ?",
+    answer: "Je suis spécialisé dans le développement Full-Stack...",
+  }),
+  defineQuestion({
+    question: "Que se passe-t-il une fois le site mis en ligne ?",
+    answer:
+      "Une fois le site livré et mis en ligne, vous gardez une autonomie complète...",
+  }),
+]);
 </script>
 
 <template>

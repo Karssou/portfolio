@@ -19,6 +19,32 @@ onMounted(() => {
 });
 
 useSchemaOrg([
+  defineOrganization({
+    name: "Alexandre Larue",
+    url: "https://alexandre-larue.fr",
+    logo: "https://alexandre-larue.fr/favicon.ico",
+    email: "contact@alexandre-larue.fr",
+    telephone: "0645061735",
+    description:
+      "Développeur Full Stack et consultant tech indépendant basé à Nantes.",
+    sameAs: [
+      "https://github.com/Karssou",
+      "https://linkedin.com/in/alexandre-larue44",
+      "https://www.malt.fr/profile/alexandrelarue",
+      "https://fr.fiverr.com/s/XLGgggZ",
+      "https://www.pagesjaunes.fr/pros/65321190",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "professional inquiries",
+      url: "https://alexandre-larue.fr/#contact",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Nantes",
+      addressCountry: "FR",
+    },
+  }),
   definePerson({
     name: "Alexandre Larue",
     identifier: "#person",
