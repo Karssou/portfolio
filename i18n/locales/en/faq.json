@@ -1,0 +1,26 @@
+{
+  "title": "Frequently Asked Questions",
+  "description": "Still have questions?",
+  "questions": [
+    {
+      "title": "How long does it take to build my website?",
+      "description": "The timeline depends on the scope of your project. On average, a standard showcase website takes between 1 and 2 weeks once all content is gathered. For custom web applications or more complex integrations, timelines are assessed and scheduled right from the initial planning phase."
+    },
+    {
+      "title": "Will I own the website and the domain name?",
+      "description": "Absolutely! You own 100% of it. Unlike long-term rental or multi-year commitment contracts offered by some agencies, you are the sole owner of your domain name and source code upon final delivery of the project."
+    },
+    {
+      "title": "What do I need to provide to get the project started?",
+      "description": "To get started, I just need your basic elements: your visuals (logo, photos of completed work/projects), and your contact details. As for the web page copywriting, I partner with Jeff Bond, Senior SEO Copywriter, to ensure high-impact content optimized for search engines."
+    },
+    {
+      "title": "What is your preferred tech stack?",
+      "description": "I specialize in Full-Stack development. On the Frontend, I primarily work with Vue.js and Nuxt.js to deliver blazing-fast, SEO-optimized interfaces. On the Backend, I rely on Python (FastAPI) and Node.js to build robust, secure APIs."
+    },
+    {
+      "title": "What happens after the website goes live?",
+      "description": "Once the website is delivered and launched, you retain full autonomy. To ensure your peace of mind, I also offer an ongoing support and maintenance package (Hosting & Visibility): I handle secure hosting, technical updates, Google SEO tracking, and small content updates on demand."
+    }
+  ]
+}
