@@ -6,6 +6,7 @@ import contact from "./contact.json";
 import expertise from "./expertise.json";
 import service from "./services.json";
 import social from "./social.json";
+import faq from "./faq.json";
 
 export default {
   about,
@@ -16,4 +17,5 @@ export default {
   projects,
   social,
   service,
+  faq,
 };

@@ -1,0 +1,26 @@
+{
+  "title": "Foire aux questions",
+  "description": "Vous avez encore des questions ?",
+  "questions": [
+    {
+      "title": "Combien de temps faut-il pour créer mon site ?",
+      "description": "Le délai de conception dépend de l'ampleur de votre projet. En moyenne, il faut compter entre 1 et 2 semaines pour un site vitrine (une fois l'ensemble des contenus rassemblés). Pour une application web sur-mesure ou une intégration plus complexe, les délais sont évalués et planifiés dès le cadrage du projet."
+    },
+    {
+      "title": "Est-ce que le site et le nom de domaine m'appartiendront ?",
+      "description": "Absolument ! Vous êtes à 100% propriétaire. Contrairement aux contrats de location ou d'engagement sur plusieurs années proposés par certaines agences, vous êtes l'unique propriétaire de votre nom de domaine et du code source dès la livraison finale du projet."
+    },
+    {
+      "title": "Que dois-je fournir pour démarrer le projet ?",
+      "description": "Pour démarrer, j'ai simplement besoin de vos éléments de base : vos visuels (logo, photos de réalisations/chantiers) et vos coordonnées. En ce qui concerne la rédaction de votre page web, je collabore avec Jeff Bond, Senior SEO Copywriter, pour garantir un contenu percutant et optimisé pour les moteurs de recherche."
+    },
+    {
+      "title": "Quelle est votre stack technique de prédilection ?",
+      "description": "Je suis spécialisé dans le développement Full-Stack. Côté Frontend, je travaille principalement avec Vue.js et Nuxt.js pour offrir des interfaces ultra-rapides et optimisées SEO. Côté Backend, je m'appuie sur Python (FastAPI) et Node.js pour développer des API robustes et sécurisées."
+    },
+    {
+      "title": "Que se passe-t-il une fois le site mis en ligne ?",
+      "description": "Une fois le site livré et mis en ligne, vous gardez une autonomie complète. Pour assurer votre tranquillité d'esprit, je propose également un forfait d'accompagnement et maintenance (Hébergement & Visibilité) : je m'occupe de l'hébergement sécurisé, des mises à jour techniques, du suivi de votre référencement sur Google et des petites modifications de contenu à la demande"
+    }
+  ]
+}

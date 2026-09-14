@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 useSeoMeta({
   ogTitle: "Alexandre Larue | Portfolio",
   ogDescription:
@@ -50,6 +51,10 @@ defineOgImage("ImageOg.takumi", {
 
     <section id="services" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
       <LazyServicesSection />
+    </section>
+
+    <section id="faq" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
+      <LazyFAQSection hydrate-on-visible />
     </section>
 
     <section id="social" class="scroll-mt-28 px-6 pt-20 sm:px-8 lg:px-12">
